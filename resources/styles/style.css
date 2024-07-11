@@ -145,11 +145,22 @@
 .about-hall2 {height:100vh; background: url(./../images/temp_video.png) no-repeat center; background-size: cover;}
 
 .about-history {padding:180px 30px 300px;}
-.about-history h3 {max-width: 1560px; margin: 0 auto; font-family: 'Faktum Wide'; font-weight:700; font-size:48px; letter-spacing: -1px;}
-.about-history .list_history {max-width:1560px; margin:75px auto 0;}
-.about-history .list_history dt {padding:25px 0 15px; border-bottom:1px solid #171010; font-family: 'Faktum'; font-size:36px; letter-spacing:-0.5px;}
-.about-history .list_history dd {padding:80px 30px 130px; cursor:pointer;}
-.about-history .btn_more {display:block; margin:120px auto 0;}
+.about-history h3 {max-width: 1560px; margin: 0 auto 75px; font-family: 'Faktum Wide'; font-weight:700; font-size:48px; letter-spacing: -1px;}
+.about-history .list_history {max-width:1560px; margin:0 auto;}
+.about-history .list_history dt {display:flex; justify-content:space-between; align-items: center; padding:25px 0 15px; border-bottom:1px solid #171010; font-family: 'Faktum'; font-size:36px; letter-spacing:-0.5px; cursor: pointer;}
+.about-history .list_history dt::after {content:''; display:block; width:20px; height:16px; background:url(./../images/icon_accordion.svg) no-repeat center; background-size:contain; transform: rotate(180deg); transition: all 0.3s;}
+.about-history .list_history.opened dt::after {transform: rotate(360deg);}
+.about-history .list_history dd {overflow:hidden;}
+
+.about-history .btn_more {display:block; margin:120px auto 0; font-size:24px; font-weight:500;}
+.about-history .list_detail {padding: 80px 30px 130px;}
+.about-history .list_detail li {display:flex;}
+.about-history .list_detail li + li {margin-top:50px;}
+.about-history .list_detail .icon {display:flex; align-items: center; justify-content: center; flex:none; width:60px; height:60px;}
+.about-history .list_detail .icon img {flex:none; max-width:100%; max-height:100%;}
+.about-history .list_detail .txt {padding-top:5px; padding-left:70px;}
+.about-history .list_detail .txt strong {display:block; font-size:20px; font-weight:700; letter-spacing: -1px; word-break: keep-all;}
+.about-history .list_detail .txt span {display: block; margin-top:10px; font-size: 20px; letter-spacing: -1px; word-break: keep-all;}
 
 .about-grow {display:flex; height:100vh;}
 .about-grow .bg_grow {flex:auto; background:url(./../images/bg_grow_01.jpg) no-repeat center; background-size:cover;}

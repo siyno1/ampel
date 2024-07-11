@@ -405,5 +405,33 @@ $(document).ready(function(){
         }
     }
 
+    //about-motto================
+
+    //about-history
+
+    var historySec = document.querySelector('.about-history');
+    var accordionContents = historySec.querySelectorAll('.list_history dd');
+
+    gsap.set(accordionContents, { height:0 });
+
+    // list_history
+    $(".list_history dt").on("click", function(){
+        var $list = $(this).closest(".list_history");
+        var $accordionContents = $list.find("dd");
+
+        if ($list.hasClass("opened")) {
+            gsap.to($accordionContents[0],{
+                height:0
+            });
+
+            $list.removeClass("opened");
+        } else {
+            gsap.to($accordionContents[0],{
+                height:"auto"
+            });
+
+            $list.addClass("opened");
+        }
+    });
 
 });
