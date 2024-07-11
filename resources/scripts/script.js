@@ -1,22 +1,3 @@
-//============== scroll 및 인터렉션 관련 필수
-//lenis -- scroll smooth
-const lenis = new Lenis()
-
-// lenis.on('scroll', (e) => {
-    //console.log(e)
-// })
-
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
-// 반응형
-window.addEventListener("resize", ScrollTrigger.update);
-//============== scroll 및 인터렉션 관련 필수
-
 
 
 $(document).ready(function(){
@@ -32,6 +13,27 @@ $(document).ready(function(){
     if (isMain() === false) aniHeaderLogo();
 
 });//@ready
+
+//============== scroll 및 인터렉션 관련 필수
+//lenis -- scroll smooth
+var lenis = new Lenis();
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000);
+})
+
+gsap.ticker.lagSmoothing(0);
+
+// 반응형
+window.addEventListener("resize", ScrollTrigger.update);
+//============== scroll 및 인터렉션 관련 필수
 
 // 메인 페이지인지 확인
 function isMain() {
@@ -140,3 +142,5 @@ function aniHeaderLogo(containerAnimation) {
         }
     });
 }
+
+

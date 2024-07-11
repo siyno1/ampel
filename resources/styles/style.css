@@ -3,48 +3,11 @@
 #wrap {position:relative; min-height: 100%; background: #F9F5EF;}
 
 /* main */
-
-
-
-#amp_amp {
-    fill: none;
-    stroke: #171010;
-    stroke-width: 5;
-    stroke-dasharray: 3000;
-    stroke-dashoffset: 3000;
-}
-
-#amp_e_01 {
-    fill: none;
-    stroke: #171010;
-    stroke-width: 5;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-#amp_e_02 {
-    fill: none;
-    stroke: #171010;
-    stroke-width: 5;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-#amp_e_03 {
-    fill: none;
-    stroke: #171010;
-    stroke-width: 5;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-#amp_l  {
-    fill: none;
-    stroke: #171010;
-    stroke-width: 5;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
+#amp_amp { fill: none; stroke: #171010; stroke-width: 5; stroke-dasharray: 3000; stroke-dashoffset: 3000; }
+#amp_e_01 { fill: none; stroke: #171010; stroke-width: 5; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+#amp_e_02 { fill: none; stroke: #171010; stroke-width: 5; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+#amp_e_03 { fill: none; stroke: #171010; stroke-width: 5; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+#amp_l  { fill: none; stroke: #171010; stroke-width: 5; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 
 .main .parallax { overflow: hidden; }
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
@@ -69,7 +32,7 @@
 .about .header .gnb a {color:#F9F5EF;}
 .about .header .gnb a.contact {color: #171010;}
 
-.about-we {padding:160px 10px 85px; color:#F9F5EF; background: #171010;}
+.about-we {overflow:hidden; padding:160px 10px 85px; color:#F9F5EF; background: #171010;}
 .about-we .sec_typo {overflow:hidden; position:relative; padding-bottom:20px; z-index:1;}
 .about-we .typo {position: relative; font-family: 'Faktum'; font-size:195px; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
 .about-we .typo.t1 {padding-right:230px;text-align: right;}
@@ -83,7 +46,7 @@
 .about-we .txt_video {margin-top:50px; font-size:24px; letter-spacing:-1px;}
 .about-we .txt_we {margin-top:450px; font-family: 'Faktum'; font-size:16px; text-align:center; text-transform:uppercase; letter-spacing:-1px;}
 
-.about-infinite {position:relative; padding:115px 20px 85px;}
+.about-infinite {overflow:hidden; position:relative; padding:115px 20px 85px;}
 .about-infinite .slogan {font-family: 'Faktum Wide'; font-size:70px; font-weight:600; line-height:80%; text-transform:uppercase; letter-spacing:-2px;}
 .about-infinite .txt {margin-top:90px; font-size:24px; font-weight:700; letter-spacing:-1px;}
 .about-infinite .photos {display:flex; margin-top:60px; justify-content:center; gap:12px;}
@@ -93,11 +56,11 @@
 .about-video {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh;}
 .about-video video {min-width:100%; min-height:100%;}
 
-.about-solution {padding-bottom:340px;}
+.about-solution {overflow:hidden; padding-bottom:340px;}
 .about-solution .txt_intro {display:flex; justify-content:center; padding:270px 0 230px;}
 .about-solution .wrap_txt {position:relative;}
 .about-solution .wrap_txt p {font-size:50px; line-height:100%; font-weight:300; text-align:center; letter-spacing:-1.5px;}
-.about-solution .btn_solution {position:absolute; left:100%; top:50%; background:#fff; height:70px; margin-left:-20px; padding: 0 30px; border-radius:80px; font-size:24px; font-family: 'Faktum Wide'; font-weight:700; transform: translateY(-50%); box-shadow: 3px 11px 20px 0px rgba(0, 0, 0, 0.25);}
+.about-solution .wrap_txt .badge {display:block; position:absolute; left:100%; top:50%; background:#fff; height:70px; margin-left:-20px; padding: 0 30px; border-radius:80px; font-size:24px; line-height:70px; font-family: 'Faktum Wide'; font-weight:700; transform: translateY(-50%); box-shadow: 3px 11px 20px 0px rgba(0, 0, 0, 0.25);}
 
 .about-solution .list_business {display:flex; align-items: center; flex-direction:column; gap:25px; margin-top:230px; padding:0 20px;}
 .about-solution .list_business li {flex:none; display:flex; width:100%; max-width:1600px; border-bottom:5px solid #171010;}
@@ -106,7 +69,8 @@
 .about-solution .list_business .tags {display:flex; align-items:center; flex-wrap: wrap; justify-content:flex-end; gap:20px; flex:1; padding:15px 0 15px 15px;}
 .about-solution .list_business .tag {display:inline-block; height:68px; padding:0 20px; border:1px solid #171010; border-radius:50px; font-family: 'Faktum Wide'; font-size:24px; line-height:68px; font-weight:700; white-space: nowrap;}
 
-.about-solution .list_mindset {display:flex; margin-top:250px;}
+.about-solution .solution-slide {margin-top:250px;}
+.about-solution .list_mindset {}
 .about-solution .list_mindset li {text-align:center;}
 .about-solution .list_mindset .title {display:block; font-family: 'Faktum Wide'; font-size:32px; font-weight:700; line-height: 100%; letter-spacing: -0.5px; text-transform:uppercase;}
 .about-solution .list_mindset .thumbnail {overflow:hidden; position:relative; margin-top:78px;}
@@ -115,7 +79,7 @@
 .about-solution .list_mindset .name {display:block; margin-top:34px; font-family: 'Faktum Wide'; font-size:24px; font-weight:700; text-transform:uppercase; letter-spacing:-0.5px;}
 .about-solution .list_mindset .desc {margin-top:34px;}
 
-.about-better {display:flex; align-items:center; justify-content:center; height:100vh; padding:0 30px; background:#171010;}
+.about-better {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh; padding:0 30px; background:#171010;}
 .about-better .typo {display:flex; align-items:center; gap:8px; font-family: 'Faktum Wide'; font-size:75px; color:#fff; font-weight:600; text-transform:uppercase;}
 .about-better .typo span {flex:none;}
 .about-better .typo span.bar {display:inline-block; width:250px; height:7px; flex:1; background:#fff;}
@@ -127,13 +91,14 @@
 .about-make .desc_make .rt {padding-top:125px; text-align:right;}
 .about-make .desc_make .rt .txt {margin-bottom:55px; font-family: 'Faktum Wide'; font-size:32px; line-height:100%; letter-spacing:-1.5px; text-transform:uppercase;}
 
+.about-make .wrap_txt_make {overflow: hidden; position:relative;}
 .about-make .txt_make {font-family: 'Faktum Wide'; font-weight:500; font-size:195px; line-height:80%; letter-spacing: -11.7px;}
 .about-make .txt_make.lt {margin-top:255px;}
 .about-make .txt_make.rt {text-align:right;}
 
 .about-hall {height:100vh; background:url(./../images/img_about_hall.jpg) no-repeat center; background-size:cover;}
 
-.about-motto {height:100vh;}
+.about-motto {overflow:hidden; height:100vh;}
 .about-motto .list_motto {position:relative; height:100%; overflow:hidden;}
 .about-motto .list_motto li {position:absolute; left:50%; top:50%; display:flex; align-items:center; box-sizing:border-box; flex:none; width:100%; padding:0 15% 0 25%; font-weight: 700; letter-spacing: -1.5px; transform:translate(-50%, -50%);}
 .about-motto .list_motto strong {flex:none; width:210px; margin-right:265px; font-size:50px;}
@@ -144,7 +109,7 @@
 
 .about-hall2 {height:100vh; background: url(./../images/temp_video.png) no-repeat center; background-size: cover;}
 
-.about-history {padding:180px 30px 300px;}
+.about-history {overflow:hidden; padding:180px 30px 300px;}
 .about-history h3 {max-width: 1560px; margin: 0 auto 75px; font-family: 'Faktum Wide'; font-weight:700; font-size:48px; letter-spacing: -1px;}
 .about-history .list_history {max-width:1560px; margin:0 auto;}
 .about-history .list_history dt {display:flex; justify-content:space-between; align-items: center; padding:25px 0 15px; border-bottom:1px solid #171010; font-family: 'Faktum'; font-size:36px; letter-spacing:-0.5px; cursor: pointer;}
@@ -162,7 +127,7 @@
 .about-history .list_detail .txt strong {display:block; font-size:20px; font-weight:700; letter-spacing: -1px; word-break: keep-all;}
 .about-history .list_detail .txt span {display: block; margin-top:10px; font-size: 20px; letter-spacing: -1px; word-break: keep-all;}
 
-.about-grow {display:flex; height:100vh;}
+.about-grow {display:flex; overflow:hidden; height:100vh;}
 .about-grow .bg_grow {flex:auto; background:url(./../images/bg_grow_01.jpg) no-repeat center; background-size:cover;}
 .about-grow .txt_grow {display:flex; flex:none; flex-direction:column; box-sizing:border-box; width:992px; max-width:100%; padding:20px 20px 20px 45px;}
 .about-grow .txt_grow .t1 {text-align:right; font-family:'Faktum Wide'; font-size: 94px; font-weight:500; line-height:80%; text-transform:uppercase; letter-spacing:-1.5px;}

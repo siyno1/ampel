@@ -131,6 +131,7 @@ $(document).ready(function(){
     var solutionSec = document.querySelector('.about-solution');
     var solutionChar = solutionSec.querySelector('.txt_intro');
     var solutionChars = solutionChar.querySelectorAll('.txt_intro .char');
+    var solutionBadges = solutionSec.querySelectorAll('.badge');
 
     solutionChars.forEach(char => gsap.set(char.parentNode, { perspective: 1000 }));
 
@@ -155,6 +156,31 @@ $(document).ready(function(){
         }
     });
 
+
+    solutionBadges.forEach((badge, position) => {
+        var badgeTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: badge,
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: "play resume resume reset",
+                onEnter: () => gsap.set(badge, {opacity: 0})
+            }
+        });
+
+        badgeTl.fromTo(badge, {
+            'will-change': 'opacity, transform',
+            opacity: 0,
+            y:30
+        },{
+            ease: 'power1',
+            opacity: 1,
+            y:-10
+        }).to(badge, {
+            y:0
+        });
+    })
+
     var solutionMindset = solutionSec.querySelector('.list_mindset');
     var mindsetWords = solutionMindset.querySelectorAll('.title p');
 
@@ -162,7 +188,7 @@ $(document).ready(function(){
         scrollTrigger: {
             trigger: solutionMindset,
             start: 'top bottom',
-            end: 'center center',
+            end: 'center bottom',
             scrub: true
         }
     });
@@ -182,6 +208,14 @@ $(document).ready(function(){
             }
         }, 0);
     }
+
+    var solutionSlide = new Swiper(".solution-slide", {
+        slidesPerView:2.75,
+        centeredSlides:true,
+        spaceBetween:355
+    });
+
+
 
     //about-solution=================
 
