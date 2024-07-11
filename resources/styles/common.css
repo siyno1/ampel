@@ -73,11 +73,11 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .footer .credits {position:relative; overflow:hidden; height:160px; white-space:nowrap; font-size:0;}
 .footer .credits p {position:absolute; top:0; left:0; font-size:0; white-space: nowrap; animation: marquee 12s linear infinite;}
 .footer .credits p.mq2 {animation-delay: 6s; transform: translateX(100%);}
-.footer .credits span {display:inline-block; margin-right:30px; font-size: 128px; font-family: 'Faktum'; line-height: 160px; letter-spacing: -6.4px; text-transform: uppercase; }
+.footer .credits span {display:inline-block; margin-right:30px; font-size: 128px; font-family: 'Faktum Wide'; line-height: 160px; letter-spacing: -6.4px; text-transform: uppercase; }
 .footer .mail {display:inline-block; margin-top:30px; padding:10px 20px; border:1px solid #171010; border-radius:50px; font-family: 'Neue Montreal'; font-size:32px; font-weight:800; text-transform: uppercase;}
 .footer .tel {display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #171010; border-radius: 50px; font-family: 'Neue Montreal'; font-size: 32px;}
 .footer_info {margin-top:48px; padding-top:65px; border-top:1px solid #171010;}
-.footer_info .copyright {font-family: 'Faktum'; font-size:16px; font-weight:400; text-transform: uppercase;}
+.footer_info .copyright {font-family: 'Faktum Wide'; font-size:16px; font-weight:400; text-transform: uppercase;}
 .footer_info .copy {font-family: 'Pretendard'; font-weight:400;}
 .footer_info .corp {font-weight:700;}
 .footer_info address {margin-top:60px; font-family:'Neue Montreal'; font-size:16px; font-style:normal;}

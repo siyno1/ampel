@@ -131,24 +131,6 @@
     url(./../font/PP-Neue-Montreal/PPNeueMontreal-Thin.otf) format('opentype');
 }
 
-/* Faktum */
-
-@font-face {
-    font-family: 'Faktum';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Faktum-Regular'),
-        url(./../font/Faktum/faktum-regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Faktum';
-    font-weight: 100;
-    font-display: swap;
-    src: local('Faktum-Thin'),
-        url(./../font/Faktum/faktum-thin.ttf) format('truetype');
-}
-
 /* Faktum Wide */
 
 @font-face {
