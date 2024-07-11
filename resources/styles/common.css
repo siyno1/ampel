@@ -55,10 +55,6 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .header .logo span {display:inline-block; overflow:hidden; margin-right:2px; vertical-align:top;}
 .header .logo img {width:100%; object-fit:cover;}
 
-.header .logo .lg1 {width:186px;}
-.header .logo .lg2 {width:54px;}
-.header .logo .lg3 {width:57px;}
-.header .logo .lg4 {width:57px;}
 .header .logo .lg1 img {transform: translate(0, -130%);}
 .header .logo .lg2 img {transform: translate(-130%, 0);}
 .header .logo .lg3 img {transform: translate(0%, 130%);}
@@ -70,15 +66,15 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .header .gnb a.contact::after {content:''; display:block; position:absolute; right:22px; width:16px; height:16px; background:url(./../images/icon_arrow_right.svg) no-repeat center; background-size:contain;}
 
 .footer {overflow:hidden; box-sizing:border-box; height:100vh; padding:215px 20px 0;}
-.footer .credits {position:relative; overflow:hidden; height:160px; white-space:nowrap; font-size:0;}
+.footer .credits {position:relative; overflow:hidden; height:160px; margin:0 -20px; white-space:nowrap; font-size:0;}
 .footer .credits p {position:absolute; top:0; left:0; font-size:0; white-space: nowrap; animation: marquee 12s linear infinite;}
 .footer .credits p.mq2 {animation-delay: 6s; transform: translateX(100%);}
 .footer .credits span {display:inline-block; margin-right:30px; font-size: 128px; font-family: 'Faktum Wide'; line-height: 160px; letter-spacing: -6.4px; text-transform: uppercase; }
 .footer .mail {display:inline-block; margin-top:30px; padding:10px 20px; border:1px solid #171010; border-radius:50px; font-family: 'Neue Montreal'; font-size:32px; font-weight:800; text-transform: uppercase;}
 .footer .tel {display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #171010; border-radius: 50px; font-family: 'Neue Montreal'; font-size: 32px;}
 .footer_info {margin-top:48px; padding-top:65px; border-top:1px solid #171010;}
-.footer_info .copyright {font-family: 'Faktum Wide'; font-size:16px; font-weight:400; text-transform: uppercase;}
-.footer_info .copy {font-family: 'Pretendard'; font-weight:400;}
+.footer_info .copyright {font-family: 'Faktum Wide'; font-size:16px; font-weight:600; text-transform: uppercase;}
+.footer_info .copy {font-family: 'Pretendard'; font-weight:700;}
 .footer_info .corp {font-weight:700;}
 .footer_info address {margin-top:60px; font-family:'Neue Montreal'; font-size:16px; font-style:normal;}
 
