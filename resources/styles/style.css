@@ -60,9 +60,9 @@
 .main .parallax .list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; text-transform: uppercase; opacity:0; transform: translate(0, 20px);}
 .main .parallax .list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
 .main .parallax .list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px; opacity: 0; transform: translate(0, 20px);}
-.main .parallax .list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(/resources/images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
+.main .parallax .list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(./../images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
 .main .parallax .list_portfolio .detail::after {content:''; display:block; position:absolute; top:50%; left:50%; width:80px; height:80px; border:1px solid #171010; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.3s;}
-.main .parallax .list_portfolio .detail:hover::before {background-image: url(/resources/images/icon_link_arrow_hover.svg);}
+.main .parallax .list_portfolio .detail:hover::before {background-image: url(./../images/icon_link_arrow_hover.svg);}
 .main .parallax .list_portfolio .detail:hover::after {background:#171010;}
 
 /* about */
@@ -88,7 +88,7 @@
 .about-infinite .txt {margin-top:90px; font-size:24px; font-weight:700; letter-spacing:-1px;}
 .about-infinite .photos {display:flex; margin-top:60px; justify-content:center; gap:12px;}
 .about-infinite .wrap_ico {position: absolute; top: 215px; right: 110px; width: 260px; height: 260px;}
-.about-infinite .ico_infinite {display:block; width:100%; height:100%; background: url(/resources/images/icon_about_rotate_01.png) no-repeat center; background-size:contain; animation: rotate 10s linear infinite;}
+.about-infinite .ico_infinite {display:block; width:100%; height:100%; background: url(./../images/icon_about_rotate_01.png) no-repeat center; background-size:contain; animation: rotate 10s linear infinite;}
 
 .about-video {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh;}
 .about-video video {min-width:100%; min-height:100%;}
@@ -131,7 +131,7 @@
 .about-make .txt_make.lt {margin-top:255px;}
 .about-make .txt_make.rt {text-align:right;}
 
-.about-hall {height:100vh; background:url(/resources/images/img_about_hall.jpg) no-repeat center; background-size:cover;}
+.about-hall {height:100vh; background:url(./../images/img_about_hall.jpg) no-repeat center; background-size:cover;}
 
 .about-motto {height:100vh;}
 .about-motto .list_motto {display:flex; height:100%; align-items: center; overflow:hidden;}
@@ -139,7 +139,7 @@
 .about-motto .list_motto strong {flex:none; width:210px; margin-right:265px; font-size:50px;}
 .about-motto .list_motto p {font-size:24px; word-break: keep-all;}
 
-.about-hall2 {height:100vh; background: url(/resources/images/temp_video.png) no-repeat center; background-size: cover;}
+.about-hall2 {height:100vh; background: url(./../images/temp_video.png) no-repeat center; background-size: cover;}
 
 .about-history {padding:180px 30px 300px;}
 .about-history h3 {max-width: 1560px; margin: 0 auto; font-family: 'Faktum Wide'; font-weight:700; font-size:48px; letter-spacing: -1px;}
@@ -149,10 +149,10 @@
 .about-history .btn_more {display:block; margin:120px auto 0;}
 
 .about-grow {display:flex; height:100vh;}
-.about-grow .bg_grow {flex:auto; background:url(/resources/images/bg_grow_01.jpg) no-repeat center; background-size:cover;}
+.about-grow .bg_grow {flex:auto; background:url(./../images/bg_grow_01.jpg) no-repeat center; background-size:cover;}
 .about-grow .txt_grow {display:flex; flex:none; flex-direction:column; box-sizing:border-box; width:992px; max-width:100%; padding:20px 20px 20px 45px;}
 .about-grow .txt_grow .t1 {text-align:right; font-family:'Faktum Wide'; font-size: 94px; font-weight:500; line-height:80%; text-transform:uppercase; letter-spacing:-1.5px;}
-.about-grow .bg_txt_grow {margin-top:40px; flex:1; background: url(/resources/images/bg_grow_02.jpg) no-repeat center; background-size: contain;}
+.about-grow .bg_txt_grow {margin-top:40px; flex:1; background: url(./../images/bg_grow_02.jpg) no-repeat center; background-size: contain;}
 .about-grow .txt_grow .t2 {margin-top:60px; font-size:24px; font-weight:700; letter-spacing:-1px;;}
 .about-grow .txt_grow .t2 span {font-family:'Faktum Wide'; letter-spacing:-1px;}
 
@@ -167,4 +167,4 @@
 .contact .infos dd a {font-weight: 800; text-decoration: underline;}
 .contact .talk {margin-top:80px; text-align:center;}
 .contact .talk a {display:inline-block; position:relative; padding-right:60px; font-family: 'Faktum Wide'; font-weight:600; font-size:96px; letter-spacing:-5px; text-decoration:underline;}
-.contact .talk a::after {content:''; display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(/resources/images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+.contact .talk a::after {content:''; display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(./../images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
