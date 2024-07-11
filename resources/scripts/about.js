@@ -187,14 +187,11 @@ $(document).ready(function(){
 
     //about-better
     var betterSec = document.querySelector('.about-better');
+    var betterWords = betterSec.querySelectorAll('.word, .bar');
 
-    fx27Titles.forEach(title => {
+        betterWords.forEach(word => gsap.set(word.parentNode, { perspective: 1000 }));
 
-        const words = [...title.querySelectorAll('.word')];
-
-        words.forEach(word => gsap.set(word.parentNode, { perspective: 1000 }));
-
-        gsap.fromTo(words, {
+        gsap.fromTo(betterWords, {
             'will-change': 'opacity, transform',
             z: () => gsap.utils.random(500,950),
             opacity: 0,
@@ -211,18 +208,16 @@ $(document).ready(function(){
             yPercent: 0,
             z: 0,
             scrollTrigger: {
-                trigger: title,
+                trigger: betterSec,
                 start: 'center center',
-                end: '+=300%',
+                end: '+=200%',
                 scrub: true,
-                pin: title.parentNode,
+                pin: betterSec,
             },
             stagger: {
                 each: 0.006,
                 from: 'random'
             }
         });
-
-    });
 
 });

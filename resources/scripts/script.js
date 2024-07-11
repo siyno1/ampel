@@ -55,7 +55,7 @@ function aniHeaderLogo(containerAnimation) {
             css:{
                 transform:"translate(0,0)"
             }
-        },0);
+        });
     });
 
     gsap.to(logo1, {
@@ -73,7 +73,7 @@ function aniHeaderLogo(containerAnimation) {
             markers: false,
             scrub: 1
         }
-    },0);
+    });
 
     gsap.to(logo2, {
         css:{
@@ -90,7 +90,7 @@ function aniHeaderLogo(containerAnimation) {
             markers: false,
             scrub: 1
         }
-    },0);
+    });
 
     gsap.to(logo3, {
         css:{
@@ -107,7 +107,7 @@ function aniHeaderLogo(containerAnimation) {
             markers: false,
             scrub: 1
         }
-    },0);
+    });
 
     gsap.to(logo4, {
         css:{
@@ -124,7 +124,7 @@ function aniHeaderLogo(containerAnimation) {
             markers: false,
             scrub: 1
         }
-    },0);
+    });
 
     gsap.to(logo4Img, {
         css:{
@@ -138,5 +138,5 @@ function aniHeaderLogo(containerAnimation) {
             markers: false,
             scrub: 1
         }
-    },0);
+    });
 }
