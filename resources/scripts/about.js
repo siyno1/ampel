@@ -189,35 +189,221 @@ $(document).ready(function(){
     var betterSec = document.querySelector('.about-better');
     var betterWords = betterSec.querySelectorAll('.word, .bar');
 
-        betterWords.forEach(word => gsap.set(word.parentNode, { perspective: 1000 }));
+    betterWords.forEach(word => gsap.set(word.parentNode, { perspective: 1000 }));
 
-        gsap.fromTo(betterWords, {
-            'will-change': 'opacity, transform',
-            z: () => gsap.utils.random(500,950),
-            opacity: 0,
-            xPercent: (pos) => gsap.utils.random(-100,100),
-            yPercent: (pos) => gsap.utils.random(-10,10),
-            rotationX: () => gsap.utils.random(-90,90)
+    gsap.fromTo(betterWords, {
+        'will-change': 'opacity, transform',
+        z: () => gsap.utils.random(500,950),
+        opacity: 0,
+        xPercent: (pos) => gsap.utils.random(-100,100),
+        yPercent: (pos) => gsap.utils.random(-10,10),
+        rotationX: () => gsap.utils.random(-90,90)
+    },
+    {
+        ease: 'expo',
+        opacity: 1,
+        rotationX: 0,
+        rotationY: 0,
+        xPercent: 0,
+        yPercent: 0,
+        z: 0,
+        scrollTrigger: {
+            trigger: betterSec,
+            start: 'center center',
+            end: '+=150%',
+            scrub: true,
+            pin: betterSec,
         },
-        {
-            ease: 'expo',
-            opacity: 1,
-            rotationX: 0,
-            rotationY: 0,
-            xPercent: 0,
-            yPercent: 0,
-            z: 0,
-            scrollTrigger: {
-                trigger: betterSec,
-                start: 'center center',
-                end: '+=200%',
-                scrub: true,
-                pin: betterSec,
-            },
-            stagger: {
-                each: 0.006,
-                from: 'random'
-            }
+        stagger: {
+            each: 0.006,
+            from: 'random'
+        }
+    });
+    //about-better====================
+
+    //about-make
+    var makeSec = document.querySelector('.about-make');
+    var makeT1 = makeSec.querySelector('.lt');
+    var makeT1Txt = makeSec.querySelector('.t1');
+    var makeT1Chars = makeT1.querySelectorAll('.char');
+    var makeT1Img = makeT1.querySelector('img');
+    var makeT2 = makeSec.querySelector('.rt');
+    var makeT2Txt = makeSec.querySelector('.t2');
+    var makeT2Chars = makeT2.querySelectorAll('.char');
+    var makeT2Img = makeT2.querySelector('img');
+
+    var makeWrapTxt = makeSec.querySelector('.wrap_txt_make');
+    var makeChars = makeWrapTxt.querySelectorAll('.char');
+
+    gsap.fromTo(makeT1Chars, {
+        'will-change': 'transform',
+        transformOrigin: '50% 100%',
+        scaleY: 0
+    },
+    {
+        ease: 'power3.in',
+        opacity: 1,
+        scaleY: 1,
+        stagger: 0.05,
+        scrollTrigger: {
+            trigger: makeT1Txt,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true
+        }
+    });
+
+    gsap.fromTo(makeT2Chars, {
+        'will-change': 'transform',
+        transformOrigin: '50% 100%',
+        scaleY: 0
+    },
+    {
+        ease: 'power3.in',
+        opacity: 1,
+        scaleY: 1,
+        stagger: 0.05,
+        scrollTrigger: {
+            trigger: makeT2Txt,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true
+        }
+    });
+
+    gsap.fromTo(makeT1Img, {
+        'will-change': 'transform',
+        opacity:0,
+        y:100
+    },
+    {
+        ease: 'power3.in',
+        opacity:1,
+        y:0,
+        scrollTrigger: {
+            trigger: makeT1Img,
+            start: 'top bottom',
+            end: 'bottom-=10% bottom',
+            scrub: true
+        }
+    });
+
+    gsap.fromTo(makeT2Img, {
+        'will-change': 'transform',
+        opacity:0,
+        y:100
+    },
+    {
+        ease: 'power3.in',
+        opacity:1,
+        y:0,
+        scrollTrigger: {
+            trigger: makeT1Img,
+            start: 'top bottom',
+            end: 'bottom-=10% bottom',
+            scrub: true
+        }
+    });
+
+
+    makeChars.forEach(char => gsap.set(char.parentNode, { perspective: 1000 }));
+
+    gsap.fromTo(makeChars, {
+        'will-change': 'opacity, transform',
+        transformOrigin: '50% 100%',
+        opacity: 0,
+        rotationX: 90
+    },
+    {
+        ease: 'power4',
+        opacity: 1,
+        stagger:  {
+            each: 0.03,
+            from: 'random'
+        },
+        rotationX: 0,
+        scrollTrigger: {
+            trigger: makeWrapTxt,
+            start: 'center bottom',
+            end: 'bottom top+=20%',
+            scrub: true
+        }
+    });
+
+    //about-make=======================
+
+    //about-motto
+    var mottoSec = document.querySelector('.about-motto');
+    var mottoList = mottoSec.querySelectorAll('li');
+
+    var mottotitleTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: mottoSec,
+            start: 'center center',
+            end: '+=250%',
+            scrub: true,
+            pin:mottoSec
+        }
+    });
+
+    var mottoTextTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: mottoSec,
+            start: 'center center',
+            end: '+=250%',
+            scrub: true
+        }
+    });
+
+    var i_limit_mL = mottoList.length - 1;
+
+    for (var [index,element] of mottoList.entries()) {
+
+        mottotitleTl.fromTo(element.querySelector('.txt'),{
+            'will-change': 'opacity, transform',
+            opacity:0,
+            x:-100
+        },{
+            x:0,
+            opacity:1
         });
+
+        mottotitleTl.fromTo(element.querySelector('.badge'),{
+            'will-change': 'opacity, transform',
+            opacity:0,
+            y:30
+        },{
+            y:-10,
+            opacity:1
+        });
+
+        mottotitleTl.to(element.querySelector('.badge'),{
+            y:0
+        });
+
+        if (i_limit_mL > index) {
+            mottotitleTl.to(element.querySelector('.txt'),{
+                opacity:0
+            });
+        }
+
+
+
+        mottoTextTl.fromTo(element.querySelector('p'),{
+            'will-change': 'opacity, transform',
+            opacity:0,
+            x:100
+        },{
+            x:0,
+            opacity:1
+        });
+
+        if (i_limit_mL > index) {
+            mottoTextTl.to(element.querySelector('p'),{
+                opacity:0
+            });
+        }
+    }
+
 
 });

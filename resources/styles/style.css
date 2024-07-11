@@ -134,9 +134,12 @@
 .about-hall {height:100vh; background:url(./../images/img_about_hall.jpg) no-repeat center; background-size:cover;}
 
 .about-motto {height:100vh;}
-.about-motto .list_motto {display:flex; height:100%; align-items: center; overflow:hidden;}
-.about-motto .list_motto li {display:flex; align-items:center; box-sizing:border-box; flex:none; width:100%; padding:0 15% 0 25%; font-weight: 700; letter-spacing: -1.5px;}
+.about-motto .list_motto {position:relative; height:100%; overflow:hidden;}
+.about-motto .list_motto li {position:absolute; left:50%; top:50%; display:flex; align-items:center; box-sizing:border-box; flex:none; width:100%; padding:0 15% 0 25%; font-weight: 700; letter-spacing: -1.5px; transform:translate(-50%, -50%);}
 .about-motto .list_motto strong {flex:none; width:210px; margin-right:265px; font-size:50px;}
+.about-motto .list_motto span {display:inline-block; position: relative;}
+.about-motto .list_motto .badge {display:block; position:absolute; bottom:100%; left:100%; padding:0 30px; border-radius:50px; height:56px; margin-bottom:-18px; margin-left:-21px; font-family: 'Neue Montreal'; font-size:40px; font-weight: 800; line-height:56px; background:#fff; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
 .about-motto .list_motto p {font-size:24px; word-break: keep-all;}
 
 .about-hall2 {height:100vh; background: url(./../images/temp_video.png) no-repeat center; background-size: cover;}
