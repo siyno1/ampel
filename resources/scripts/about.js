@@ -408,7 +408,6 @@ $(document).ready(function(){
     //about-motto================
 
     //about-history
-
     var historySec = document.querySelector('.about-history');
     var accordionContents = historySec.querySelectorAll('.list_history dd');
 
@@ -432,6 +431,72 @@ $(document).ready(function(){
 
             $list.addClass("opened");
         }
+    });
+
+    //about-history================
+
+    //about-grow
+    var growSec = document.querySelector('.about-grow');
+    var growT1 = growSec.querySelector('.t1');
+    var growT2 = growSec.querySelector('.t2');
+
+    var growT1Words = growT1.querySelectorAll('.word');
+
+    for (var word of growT1Words) {
+        var chars = word.querySelectorAll('.char');
+
+        chars.forEach(char => gsap.set(char.parentNode, { perspective: 2000 }));
+
+        gsap.fromTo(chars, {
+            'will-change': 'opacity, transform',
+            transformOrigin: '100% 50%',
+            opacity: 0,
+            rotationY: -90,
+            z: -300
+        },
+        {
+            ease: 'expo',
+            opacity: 1,
+            rotationY: 0,
+            z: 0,
+            stagger: { each: 0.06, from: 'end'},
+            scrollTrigger: {
+                trigger: word,
+                start: 'bottom bottom+=20%',
+                end: 'bottom top',
+                scrub: 1
+            }
+        });
+
+    }
+
+    var lettersAndSymbols = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
+    var growT2Chars = growT2.querySelectorAll('.char');
+
+    growT2Chars.forEach((char, position) => {
+        var initialHTML = char.innerHTML;
+
+        gsap.fromTo(char, {
+            opacity: 0
+        },
+        {
+            duration: 0.03,
+            innerHTML: () => lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)],
+            repeat: 1,
+            repeatRefresh: true,
+            opacity: 1,
+            repeatDelay: 0.02,
+            delay: (position+1)*0.1,
+            onComplete: () => gsap.set(char, {innerHTML: initialHTML, delay: 0.03}),
+            scrollTrigger: {
+                trigger: growT2,
+                start: 'top bottom',
+                end: 'bottom center',
+                toggleActions: "play resume resume reset",
+                onEnter: () => gsap.set(char, {opacity: 0})
+            }
+        });
+
     });
 
 });

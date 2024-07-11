@@ -167,8 +167,8 @@
 .about-grow .txt_grow {display:flex; flex:none; flex-direction:column; box-sizing:border-box; width:992px; max-width:100%; padding:20px 20px 20px 45px;}
 .about-grow .txt_grow .t1 {text-align:right; font-family:'Faktum Wide'; font-size: 94px; font-weight:500; line-height:80%; text-transform:uppercase; letter-spacing:-1.5px;}
 .about-grow .bg_txt_grow {margin-top:40px; flex:1; background: url(./../images/bg_grow_02.jpg) no-repeat center; background-size: contain;}
-.about-grow .txt_grow .t2 {margin-top:60px; font-size:24px; font-weight:700; letter-spacing:-1px;;}
-.about-grow .txt_grow .t2 span {font-family:'Faktum Wide'; letter-spacing:-1px;}
+.about-grow .txt_grow .t2 {margin-top:60px; font-size:24px; font-weight:700; letter-spacing:-1px;}
+.about-grow .txt_grow .t2 span.bar {display:inline-block; width:160px; height:3px; background:#171010; vertical-align:middle;}
 
 .content_contact {padding:98px 0 100px;}
 .contact .txt {padding:0 20px;}
