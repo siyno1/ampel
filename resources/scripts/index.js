@@ -5,80 +5,6 @@ $(document).ready(function(){
         aniHeaderLogo();
     });
 
-    var amp_amp = document.getElementById("amp_amp");
-    var amp_e_01 = document.getElementById("amp_e_01");
-    var amp_e_02 = document.getElementById("amp_e_02");
-    var amp_e_03 = document.getElementById("amp_e_03");
-    var amp_l = document.getElementById("amp_l");
-
-    var logoTl = gsap.timeline();
-
-    logoTl.to(amp_amp, {
-        duration:5,
-        css:{
-            strokeDashoffset:0,
-            fill:"#171710"
-        }
-    },0);
-
-    logoTl.to(amp_amp,{
-        duration:1,
-        stroke:"transparent"
-    },2);
-
-
-    logoTl.to(amp_e_01,{
-        duration:5,
-        css:{
-            strokeDashoffset:0,
-            fill:"#171710"
-        }
-    },0);
-
-    logoTl.to(amp_e_01,{
-        duration:1,
-        stroke:"transparent"
-    },2);
-
-    logoTl.to(amp_e_02,{
-        duration:5,
-        css:{
-            strokeDashoffset:0,
-            fill:"#171710"
-        }
-    },1);
-
-    logoTl.to(amp_e_02,{
-        duration:1,
-        stroke:"transparent"
-    },2);
-
-    logoTl.to(amp_e_03,{
-        duration:5,
-        css:{
-            strokeDashoffset:0,
-            fill:"#171710"
-        }
-    },0.5);
-
-    logoTl.to(amp_e_03,{
-        duration:1,
-        stroke:"transparent"
-    },2);
-
-    logoTl.to(amp_l,{
-        duration:5,
-        css:{
-            strokeDashoffset:0,
-            fill:"#171710"
-        }
-    },0);
-
-    logoTl.to(amp_l,{
-        duration:1,
-        stroke:"transparent"
-    },2);
-
 
     //메인 스크롤링
     var horizontal = document.querySelector(".horizontal");
@@ -212,3 +138,80 @@ $(document).ready(function(){
     }));
 
 });
+
+//메인 임시 비주얼
+function tempVisual() {
+    var amp_amp = document.getElementById("amp_amp");
+    var amp_e_01 = document.getElementById("amp_e_01");
+    var amp_e_02 = document.getElementById("amp_e_02");
+    var amp_e_03 = document.getElementById("amp_e_03");
+    var amp_l = document.getElementById("amp_l");
+
+    var logoTl = gsap.timeline();
+
+    logoTl.to(amp_amp, {
+        duration:5,
+        css:{
+            strokeDashoffset:0,
+            fill:"#171710"
+        }
+    },0);
+
+    logoTl.to(amp_amp,{
+        duration:1,
+        stroke:"transparent"
+    },2);
+
+
+    logoTl.to(amp_e_01,{
+        duration:5,
+        css:{
+            strokeDashoffset:0,
+            fill:"#171710"
+        }
+    },0);
+
+    logoTl.to(amp_e_01,{
+        duration:1,
+        stroke:"transparent"
+    },2);
+
+    logoTl.to(amp_e_02,{
+        duration:5,
+        css:{
+            strokeDashoffset:0,
+            fill:"#171710"
+        }
+    },1);
+
+    logoTl.to(amp_e_02,{
+        duration:1,
+        stroke:"transparent"
+    },2);
+
+    logoTl.to(amp_e_03,{
+        duration:5,
+        css:{
+            strokeDashoffset:0,
+            fill:"#171710"
+        }
+    },0.5);
+
+    logoTl.to(amp_e_03,{
+        duration:1,
+        stroke:"transparent"
+    },2);
+
+    logoTl.to(amp_l,{
+        duration:5,
+        css:{
+            strokeDashoffset:0,
+            fill:"#171710"
+        }
+    },0);
+
+    logoTl.to(amp_l,{
+        duration:1,
+        stroke:"transparent"
+    },2);
+}
