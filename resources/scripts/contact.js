@@ -4,8 +4,9 @@ $(document).ready(function(){
 
     var contactT1 = document.querySelector('.t1');
     var contactT1Chars = contactT1.querySelectorAll('.char');
+    var contactT1Icon = contactT1.querySelectorAll('.wrap_ico');
 
-    gsap.timeline().fromTo(contactT1Chars, {
+    gsap.fromTo(contactT1Chars, {
         'will-change': 'transform',
         scale: 3,
         yPercent: -900
@@ -15,6 +16,18 @@ $(document).ready(function(){
         scale: 1,
         yPercent: 0,
         stagger: 0.1
+    }, 0);
+
+    gsap.fromTo(contactT1Icon, {
+        'will-change': 'transform',
+        xPercent: 80,
+        yPercent: -80
+    },
+    {
+        duration:2,
+        ease: 'back(3)',
+        xPercent: 0,
+        yPercent: 0
     }, 0);
 
 

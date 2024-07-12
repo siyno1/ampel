@@ -51,7 +51,6 @@
 .about-infinite .txt {margin-top:90px; font-size:24px; font-weight:700; letter-spacing:-1px;}
 .about-infinite .photos {display:flex; margin-top:60px; justify-content:center; gap:12px;}
 .about-infinite .wrap_ico {position: absolute; top: 215px; right: 110px; width: 260px; height: 260px;}
-.about-infinite .ico_infinite {display:block; width:100%; height:100%; background: url(./../images/icon_about_rotate_01.png) no-repeat center; background-size:contain; animation: rotate 10s linear infinite;}
 
 .about-video {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh;}
 .about-video video {min-width:100%; min-height:100%;}
@@ -163,8 +162,11 @@
 
 /* contact */
 .content_contact {padding:98px 0 100px;}
-.contact .txt {padding:0 20px;}
+.contact .txt {position:relative; padding:0 20px;}
 .contact .t1 {padding-top:90px; font-family: 'Faktum Wide'; font-size:200px; font-weight:500; line-height:80%; letter-spacing: -10px; text-transform: uppercase;}
+.contact .t1-wrap {display:inline-block; position:relative;}
+.contact .wrap_ico {display:block; position:absolute; top:70px; left:100%; width:160px; height:160px; margin-left:20px;}
+
 .contact .t2 {margin-top:100px; font-family: 'Faktum Wide'; font-size: 36px; font-weight:600; line-height: 100%; letter-spacing: -1px; text-transform: uppercase;}
 .contact .map {margin-top:90px; padding:0 20px;}
 .contact .infos {display:flex; justify-content:center; margin-top:125px;}
