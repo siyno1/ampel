@@ -10,7 +10,9 @@ $(document).ready(function(){
 
     //메인이 아닌경우 로고 스크립트 실행
     //메인인 경우는 index.js 에서 실행 (메인은 가로 스크롤 상황이라 다르게 적용되어있음)
-    if (isMain() === false) aniHeaderLogo();
+    $(window).on("load", function(){
+        if (isMain() === false) aniHeaderLogo();
+    });
 
 });//@ready
 
@@ -41,11 +43,7 @@ function isMain() {
 }
 
 // 상단 로고 애니메이션
-function aniHeaderLogo(containerAnimation) {
-    var logo1 = document.querySelector(".lg1");
-    var logo2 = document.querySelector(".lg2");
-    var logo3 = document.querySelector(".lg3");
-    var logo4 = document.querySelector(".lg4");
+function aniHeaderLogo() {
     var logo4Img = document.querySelector(".lg4 img")
     var logos = document.querySelector("h1.logo");
     var logosImg = logos.querySelectorAll("img");
@@ -60,13 +58,16 @@ function aniHeaderLogo(containerAnimation) {
         });
     });
 
-    gsap.to(logo4Img, {
+    gsap.fromTo(logo4Img, {
+        css:{
+            transform:"translate(130%,0)"
+        },
+    },{
         css:{
             transform:"translate(0,0)"
         },
         scrollTrigger: {
             trigger:logos,
-            containerAnimation:containerAnimation ? containerAnimation : null,
             start:"top top",
             end:"+=100",
             markers: false,

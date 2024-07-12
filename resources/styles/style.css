@@ -138,8 +138,6 @@
 .content_work {padding: 98px 0 100px;}
 .title_work {display:flex; align-items: center; justify-content:space-between; padding:75px 20px 0;}
 .title_work h2 {font-family: 'Faktum Wide'; font-size:64px; font-weight:500; text-transform:uppercase;}
-.title_work h2 .word { overflow:hidden; }
-.title_work h2 .char { transform: translate3d(0, 110%, 0); }
 
 .title_work .filter {display:flex; gap:64px;}
 .title_work .filter li {border-bottom:1px solid transparent; font-weight:500; cursor: pointer; text-transform: uppercase;}
@@ -154,8 +152,6 @@
 .list_work li .year,
 .list_work li .type {display:inline-block; font-family: 'Faktum Wide'; font-size:16px; font-weight:500;}
 .list_work li .year {margin-right:8px;}
-.list_work li .word {overflow: hidden;}
-.list_work li .char {transform: translate3d(0, 110%, 0);}
 
 .list_work li .title {display:block; margin-top:6px; font-size:16px; font-weight:500;}
 .list_work li .detail { display: block; position: absolute; top:20px; right: 0; width: 60px; height: 60px; }

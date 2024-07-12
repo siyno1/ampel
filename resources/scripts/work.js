@@ -21,13 +21,19 @@ $(document).ready(function(){
     }));
 
 
-    var titleWork = document.querySelector('.title_work h2');
 
-    gsap.fromTo(titleWork.querySelectorAll('.char'), {
+    var titleWork = document.querySelector('.title_work h2');
+    var titleWorkChars = titleWork.querySelectorAll('.char');
+    titleWorkChars.forEach(char => gsap.set(char.parentNode, { perspective: "12.5vw", overflow:"hidden" }));
+
+    gsap.fromTo(titleWorkChars, {
         'will-change': 'transform',
+        transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
+        rotateX:-100,
     },{
-        transform: "translate3d(0, 0, 0)",
-        stagger: { each: 0.05 }
+        duration:1,
+        transform: "translate3d(0, 0, 0) rotateX(0)",
+        stagger: { each: 0.08 }
     });
 
     var listSec = document.querySelector('.list_work');
@@ -38,23 +44,31 @@ $(document).ready(function(){
     var titles = listSec.querySelectorAll('.title');
 
     infos.forEach((info, position) => {
-        var char = info.querySelectorAll('.year .char, .type .char');
+        var chars = info.querySelectorAll('.year .char, .type .char');
         var titles = info.querySelectorAll('.title .char');
 
+        chars.forEach(char => gsap.set(char.parentNode, { perspective: "12.5vw", overflow:"hidden" }));
+        titles.forEach(char => gsap.set(char.parentNode, { perspective: "12.5vw", overflow:"hidden" }));
 
-        gsap.fromTo(char, {
+
+        gsap.fromTo(chars, {
             'will-change': 'transform',
+            transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
+            rotateX:-100,
         },{
-            transform: "translate3d(0, 0, 0)",
-            stagger: { each: 0.05 }
+            duration:1,
+            transform: "translate3d(0, 0, 0) rotateX(0)",
+            stagger: { each: 0.08 }
         });
 
         gsap.fromTo(titles, {
             'will-change': 'transform',
+            transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
+            rotateX:-100,
         },{
-            transform: "translate3d(0, 0, 0)",
-            stagger: { each: 0.05 }
+            duration:1,
+            transform: "translate3d(0, 0, 0) rotateX(0)",
+            stagger: { each: 0.08 }
         });
     })
 });
-

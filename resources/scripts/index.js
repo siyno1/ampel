@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
     // 메인 로고 애니메이션
-    aniHeaderLogo(mainVisual);
+    $(window).on("load", function(){
+        aniHeaderLogo();
+    });
 
     var amp_amp = document.getElementById("amp_amp");
     var amp_e_01 = document.getElementById("amp_e_01");
