@@ -1,16 +1,17 @@
 
 
 $(document).ready(function(){
-    //상단 바로가기 버튼
-    var $btnTop = $(".btn_top");
-
-    $btnTop.on("click", function(){
-        gsap.to(window, { duration: 1, scrollTo: 0, autoKill: true });
-    });
 
     //메인이 아닌경우 로고 스크립트 실행
     //메인인 경우는 index.js 에서 실행 (메인은 가로 스크롤 상황이라 다르게 적용되어있음)
     $(window).on("load", function(){
+        //상단 바로가기 버튼
+        var $btnTop = $(".btn_top");
+
+        $btnTop.on("click", function(){
+            gsap.to(window, { duration: 1, scrollTo: 0 });
+        });
+
         if (isMain() === false) aniHeaderLogo();
     });
 
@@ -44,6 +45,8 @@ function isMain() {
 
 // 상단 로고 애니메이션
 function aniHeaderLogo() {
+    console.log('logo');
+
     var logo4Img = document.querySelector(".lg4 img")
     var logos = document.querySelector("h1.logo");
     var logosImg = logos.querySelectorAll("img");

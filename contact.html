@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>암펠</title>
     <link rel="stylesheet" href="./resources/styles/font.css">
+    <link rel="stylesheet" href="./resources/styles/splitting.css">
+    <link rel="stylesheet" href="./resources/styles/splitting-cells.css">
     <link rel="stylesheet" href="./resources/styles/common.css">
     <link rel="stylesheet" href="./resources/styles/style.css">
 
     <script src="./resources/scripts/jquery-3.7.1.min.js"></script>
     <script src="./resources/scripts/lenis.min.js"></script>
     <script src="./resources/scripts/gsap.min.js"></script>
+    <script src="./resources/scripts/splitting.min.js"></script>
     <script src="./resources/scripts/ScrollTrigger.min.js"></script>
     <script src="./resources/scripts/ScrollToPlugin.min.js"></script>
     <script src="./resources/scripts/script.js"></script>
@@ -50,7 +53,7 @@
         <!-- pages -->
         <section class="contents">
             <article class="content_contact">
-                <p class="txt t1">Hello:)<br>Contact<br>ampel</p>
+                <p class="txt t1" data-splitting>Hello:)<br>Contact<br>ampel</p>
                 <p class="txt t2">We’d love to chat<br>about working<br>together in the future</p>
 
                 <div class="map">
@@ -63,22 +66,22 @@
                 <div class="infos">
                     <div>
                         <dl>
-                            <dt>Email us</dt>
-                            <dd><a href="mailto:ampelinc@ampel.co.kr">ampelinc@ampel.co.kr</a></dd>
+                            <dt data-splitting>Email us</dt>
+                            <dd data-splitting><a href="mailto:ampelinc@ampel.co.kr">ampelinc@ampel.co.kr</a></dd>
                         </dl>
                         <dl>
-                            <dt>Call us</dt>
-                            <dd><a href="tel:+820319218192">+82) 031 921 8192</a></dd>
+                            <dt data-splitting>Call us</dt>
+                            <dd data-splitting><a class="tel" href="tel:+820319218192">+82) 031 921 8192</a></dd>
                         </dl>
                         <dl>
-                            <dt><span data-clipboard>Find us</span></dt>
-                            <dd>AMPEL BD 60 Aehyeon-ro<br>Ilsandong-gu Goyang-si Gyeonggi-do<br>Republic of Korea</dd>
+                            <dt data-splitting><span data-clipboard>Find us</span></dt>
+                            <dd data-splitting>AMPEL BD 60 Aehyeon-ro<br>Ilsandong-gu Goyang-si Gyeonggi-do<br>Republic of Korea</dd>
                         </dl>
                     </div>
                 </div>
 
                 <div class="talk">
-                    <a href="mailto:ampelinc@ampel.co.kr">Let's Talk</a>
+                    <a href="mailto:ampelinc@ampel.co.kr">Let's Talk<span class="badge"></span></a>
                 </div>
             </article>
         </section>
