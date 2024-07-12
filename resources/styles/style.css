@@ -12,9 +12,9 @@
 .main .parallax { overflow: hidden; }
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
 
-.main .main_visual {display:flex; justify-content:center; align-items:center; overflow:hidden; box-sizing:border-box; flex:none; width:95vw; height: 100vh; padding-top:98px;}
+.main .main_visual {display:flex; justify-content:center; align-items:center; overflow:hidden; box-sizing:border-box; flex:none; width:95vw; height: 100vh;}
 .main .main_visual img {display:block;}
-.main .main_visual video {min-width: 100%; min-height: 100%;}
+.main .main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
 
 .main .parallax .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
 .main .parallax .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
