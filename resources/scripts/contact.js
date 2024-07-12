@@ -5,15 +5,7 @@ $(document).ready(function(){
     var contactT1 = document.querySelector('.t1');
     var contactT1Chars = contactT1.querySelectorAll('.char');
 
-    gsap.timeline()
-    .fromTo(contactT1, {
-        'will-change': 'transform',
-        xPercent: 100
-    }, {
-        ease: 'none',
-        xPercent: 0
-    })
-    .fromTo(contactT1Chars, {
+    gsap.timeline().fromTo(contactT1Chars, {
         'will-change': 'transform',
         scale: 3,
         yPercent: -900
@@ -22,7 +14,7 @@ $(document).ready(function(){
         ease: 'back(2)',
         scale: 1,
         yPercent: 0,
-        stagger: 0.08
+        stagger: 0.1
     }, 0);
 
 
