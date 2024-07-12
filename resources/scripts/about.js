@@ -69,6 +69,7 @@ $(document).ready(function(){
     var infiniteChars = infiniteSec.querySelectorAll('.slogan .char');
     var infiniteTxt = infiniteSec.querySelector('.txt');
     var infiniteIcon = infiniteSec.querySelector('.wrap_ico');
+    var infinitePhotos = infiniteSec.querySelector('.photos');
 
     gsap.fromTo(infiniteChars, {
         'will-change': 'transform',
@@ -82,10 +83,9 @@ $(document).ready(function(){
         stagger: 0.05,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center center',
-            end: '+=150%',
-            scrub: true,
-            pin: infiniteSec,
+            start: 'center bottom',
+            end: 'bottom bottom',
+            scrub: true
         }
     });
 
@@ -100,8 +100,8 @@ $(document).ready(function(){
         opacity:1,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center center',
-            end: '+=100%',
+            start: 'center bottom',
+            end: 'bottom bottom',
             scrub: true
         }
     });
@@ -118,8 +118,25 @@ $(document).ready(function(){
         opacity:1,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center center',
-            end: '+=100%',
+            start: 'center bottom',
+            end: 'bottom bottom',
+            scrub: true
+        }
+    });
+
+    gsap.fromTo(infinitePhotos.querySelectorAll('img'), {
+        'will-change': 'transform',
+        y:100,
+        opacity:0
+    },{
+        ease: 'power3.in',
+        y:0,
+        stagger: 0.08,
+        opacity:1,
+        scrollTrigger: {
+            trigger: infiniteSec,
+            start: 'center bottom',
+            end: 'bottom bottom',
             scrub: true
         }
     });
@@ -244,9 +261,9 @@ $(document).ready(function(){
         scrollTrigger: {
             trigger: betterSec,
             start: 'center center',
-            end: '+=150%',
+            end: '+=100%',
             scrub: true,
-            pin: betterSec,
+            pin: betterSec
         },
         stagger: {
             each: 0.006,
