@@ -88,6 +88,11 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     100% { transform: translate(-100%, 0); }
 }
 
+@keyframes marqueeReverse {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100%, 0); }
+}
+
 @keyframes rotate {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}

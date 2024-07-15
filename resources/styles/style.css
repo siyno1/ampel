@@ -49,25 +49,25 @@
 .about .header .gnb a {color:#F9F5EF;}
 .about .header .gnb a.contact {color: #171010;}
 
-.about-we {overflow:hidden; padding:160px 10px 85px; color:#F9F5EF; background: #171010;}
-.about-we .sec_typo {overflow:hidden; position:relative; padding-bottom:20px; z-index:1;}
-.about-we .typo {position: relative; font-family: 'Faktum Wide'; font-size:195px; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
-.about-we .typo.t1 {padding-right:265px;text-align: right;}
-.about-we .typo.t2 {text-align: right;}
+.about-we {overflow:hidden; padding:160px 0 140px; color:#F9F5EF; background: #171010;}
+.about-we .sec_typo {overflow:hidden; position:relative; padding:0 80px 20px; z-index:1;}
+.about-we .typo {position: relative; font-family: 'Faktum Wide'; font-size:195px; font-weight:300; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
+.about-we .typo.t1 {padding-right:225px;text-align: right;}
+.about-we .typo.t2 {padding-right:20px; text-align: right;}
 .about-we .typo.t2::before {content:''; display:inline-block; width:800px; height:15px; vertical-align:middle; background:#F9F5EF;}
-.about-we .typo.t4 {padding-left:410px;}
+.about-we .typo.t4 {padding-left:540px;}
 
-.about-we .video {display: flex; justify-content: flex-end; margin-top:-110px; padding-right:155px;}
+.about-we .video {display: flex; justify-content:center; margin-top:-100px;}
 .about-we .wrap_video {width:750px;}
 .about-we .wrap_video video {width:100%;}
-.about-we .txt_video {margin-top:50px; font-size:24px; letter-spacing:-1px;}
-.about-we .txt_we {margin-top:450px; font-family: 'Faktum Wide'; font-size:16px; text-align:center; text-transform:uppercase; letter-spacing:-1px;}
+.about-we .txt_video {margin-top:140px; font-size:24px; text-align:center; letter-spacing:-1px;}
+.about-we .txt_we {margin-top:140px; font-family: 'Faktum Wide'; font-size:16px; text-align:center; text-transform:uppercase; letter-spacing:-1px;}
 
-.about-infinite {overflow:hidden; position:relative; padding:115px 20px 85px;}
+.about-infinite {overflow:hidden; position:relative; padding:115px 155px 85px;}
 .about-infinite .slogan {font-family: 'Faktum Wide'; font-size:70px; font-weight:600; line-height:80%; text-transform:uppercase; letter-spacing:-2px;}
 .about-infinite .txt {margin-top:90px; font-size:24px; font-weight:700; letter-spacing:-1px;}
 .about-infinite .photos {display:flex; margin-top:60px; justify-content:center; gap:12px;}
-.about-infinite .wrap_ico {position: absolute; top: 215px; right: 110px; width: 260px; height: 260px;}
+.about-infinite .wrap_ico {position: absolute; top: 215px; right: 155px; width: 260px; height: 260px;}
 
 .about-video {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh;}
 .about-video video {min-width:100%; min-height:100%;}
@@ -99,17 +99,27 @@
 .about-better .typo span {flex:none;}
 .about-better .typo span.bar {display:inline-block; width:250px; height:7px; flex:1; background:#fff;}
 
-.about-make {padding:0 20px 255px;}
-.about-make .desc_make {display:flex; justify-content:space-between;}
+.about-make {padding:0 0 255px;}
+.about-make .desc_make {display:flex; padding:0 155px; justify-content:space-between;}
 .about-make .desc_make .lt {padding-top:565px;}
 .about-make .desc_make .lt .txt {margin-bottom:55px; font-size:24px; font-weight:700; letter-spacing:-1px;}
 .about-make .desc_make .rt {padding-top:125px; text-align:right;}
 .about-make .desc_make .rt .txt {margin-bottom:55px; font-family: 'Faktum Wide'; font-size:32px; line-height:100%; letter-spacing:-1.5px; text-transform:uppercase;}
 
-.about-make .wrap_txt_make {overflow: hidden; position:relative;}
+/* .about-make .wrap_txt_make {overflow: hidden; position:relative;}
 .about-make .txt_make {font-family: 'Faktum Wide'; font-weight:500; font-size:195px; line-height:80%; letter-spacing: -11.7px;}
 .about-make .txt_make.lt {margin-top:255px;}
-.about-make .txt_make.rt {text-align:right;}
+.about-make .txt_make.rt {text-align:right;} */
+
+.about-make .wrap_txt_make {margin: 255px 0 0;}
+.about-make .wrap_txt_make .marquee,
+.about-make .wrap_txt_make .marquee2 {position: relative; overflow: hidden; height:156px; padding:5px 0; white-space: nowrap; font-size: 0;}
+
+.about-make .wrap_txt_make .marquee p {position:absolute; top:5px; left:0; font-size:0; animation: marquee 60s linear infinite;}
+.about-make .wrap_txt_make .marquee p.mq2 { animation-delay: 30s; transform: translateX(100%); }
+.about-make .wrap_txt_make .marquee2 p { position: absolute; top:5px; right:0; font-size:0; animation: marqueeReverse 60s linear infinite; }
+.about-make .wrap_txt_make .marquee2 p.mq2 { animation-delay: 30s; transform: translateX(-100%); }
+.about-make .wrap_txt_make span {display:inline-block; margin-right:30px; font-family: 'Faktum Wide'; font-weight: 500; font-size: 195px; line-height: 80%; letter-spacing: -11.7px;}
 
 .about-hall {height:100vh; background:url(./../images/img_about_hall.jpg) no-repeat center; background-size:cover;}
 

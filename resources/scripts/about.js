@@ -49,7 +49,7 @@ $(document).ready(function(){
         scrollTrigger: {
             trigger:weVideoSec,
             start:"top top",
-            end:"bottom top",
+            end:"bottom+=200 top",
             scrub: 1
         }
     });
@@ -58,7 +58,7 @@ $(document).ready(function(){
         opacity:1,
         y:0
     },{
-        y:180,
+        y:-50,
         opacity:0
     });
 
@@ -83,8 +83,8 @@ $(document).ready(function(){
         stagger: 0.05,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center bottom',
-            end: 'bottom bottom',
+            start: 'top center',
+            end: 'center-=10% center',
             scrub: true
         }
     });
@@ -100,8 +100,8 @@ $(document).ready(function(){
         opacity:1,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center bottom',
-            end: 'bottom bottom',
+            start: 'top center',
+            end: 'center-=10% center',
             scrub: true
         }
     });
@@ -112,14 +112,14 @@ $(document).ready(function(){
         x:200,
         opacity:0
     },{
-        ease: 'power3.in',
+        ease: 'back(3)',
         x:0,
         y:0,
         opacity:1,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center bottom',
-            end: 'bottom bottom',
+            start: 'top center',
+            end: 'center-=10% center',
             scrub: true
         }
     });
@@ -135,8 +135,8 @@ $(document).ready(function(){
         opacity:1,
         scrollTrigger: {
             trigger: infiniteSec,
-            start: 'center bottom',
-            end: 'bottom bottom',
+            start: 'top center',
+            end: 'center-=10% center',
             scrub: true
         }
     });
