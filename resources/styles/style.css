@@ -35,7 +35,7 @@
 .list_featured {box-sizing:border-box; border-top:1px solid #171010; z-index:1;}
 .list_featured li {display:flex; padding:25px 0; border-bottom:1px solid #171010;}
 .list_featured .num {flex:none; font-family: 'Faktum Wide'; margin-top:-10px; margin-right:20px; font-size:16px; font-weight:800;}
-.list_featured .title { font-size: 36px; font-weight: 300; letter-spacing: -1px; word-break: keep-all; }
+.list_featured .title { overflow:hidden; font-size: 36px; font-weight: 300; letter-spacing: -1px; white-space: nowrap; text-overflow: ellipsis;}
 .list_featured .type {flex: none; font-family: 'Faktum Wide'; margin-top:-10px; font-size: 16px; font-weight: 800;}
 .main_featured .bg1 {margin-top:100px; margin-right:225px; width:405px; height:755px; background:url(./../images/img_main_featured_01.jpg) no-repeat center; background-size:cover;}
 .main_featured .bg2 {margin-top:571px; margin-left:180px; width: 610px; height: 556px; background: url(./../images/img_main_featured_02.jpg) no-repeat center; background-size: cover;}
