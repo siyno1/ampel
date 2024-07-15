@@ -234,18 +234,14 @@ $(document).ready(function(){
 
         var tagAnimation = gsap.fromTo(tags, {
             opacity:0,
-            scaleY:0,
-            height:0,
-            transformOrigin:"50% 100%",
-            overflow:"hidden"
+            height:0
         },{
-            ease: 'power3.out',
+            ease: 'back(2)',
             paused: true,
             opacity:1,
-            scaleY:1,
             height:"auto",
             stagger:  {
-                each: 0.08
+                each: 0.1
             },
         })
 

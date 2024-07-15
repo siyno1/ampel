@@ -67,8 +67,8 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 
 .footer {overflow:hidden; box-sizing:border-box; position:relative; height:100vh; padding:215px 20px 0; background: #F9F5EF; z-index:1;}
 .footer .credits {position:relative; overflow:hidden; height:160px; margin:0 -20px; white-space:nowrap; font-size:0;}
-.footer .credits p {position:absolute; top:0; left:0; font-size:0; white-space: nowrap; animation: marquee 12s linear infinite;}
-.footer .credits p.mq2 {animation-delay: 6s; transform: translateX(100%);}
+.footer .credits p {position:absolute; top:0; left:0; font-size:0; white-space: nowrap; animation: marquee 24s linear infinite;}
+.footer .credits p.mq2 {animation-delay: 12s; transform: translateX(100%);}
 .footer .credits span {display:inline-block; margin-right:30px; font-size: 128px; font-family: 'Faktum Wide'; line-height: 160px; letter-spacing: -6.4px; text-transform: uppercase; }
 .footer .mail {display:inline-block; margin-top:30px; padding:10px 20px; border:1px solid #171010; border-radius:50px; font-family: 'Neue Montreal'; font-size:32px; font-weight:800; text-transform: uppercase;}
 .footer .tel {display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #171010; border-radius: 50px; font-family: 'Neue Montreal'; font-size: 32px;}
