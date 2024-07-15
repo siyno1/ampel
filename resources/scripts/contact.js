@@ -77,4 +77,9 @@ $(document).ready(function(){
             y:0
         });
     })
+
+
+    $("[data-clipboard]").on("click", function(){
+        navigator.clipboard.writeText("AMPEL BD 60 Aehyeon-ro Ilsandong-gu Goyang-si Gyeonggi-do Republic of Korea");
+    });
 });

@@ -12,22 +12,33 @@
 .main .parallax { overflow: hidden; }
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
 
-.main .main_visual {display:flex; justify-content:center; align-items:center; overflow:hidden; box-sizing:border-box; flex:none; width:95vw; height: 100vh;}
-.main .main_visual img {display:block;}
-.main .main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
+.main_visual {display:flex; justify-content:center; align-items:center; overflow:hidden; box-sizing:border-box; flex:none; width:95vw; height: 100vh;}
+.main_visual img {display:block;}
+.main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
 
-.main .parallax .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
-.main .parallax .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
-.main .parallax .list_portfolio li {flex:none; width:40vw; transform: translate(0, 20%);}
-.main .parallax .list_portfolio .thumbnail {display:block; margin-top:50px; padding-bottom:40%; background-repeat:no-repeat; background-position:center; background-size:cover;}
-.main .parallax .list_portfolio .info {box-sizing:border-box; position: relative; height:460px; padding:28px 20px 40px;}
-.main .parallax .list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; text-transform: uppercase; opacity:0; transform: translate(0, 20px);}
-.main .parallax .list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
-.main .parallax .list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px; opacity: 0; transform: translate(0, 20px);}
-.main .parallax .list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(./../images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
-.main .parallax .list_portfolio .detail::after {content:''; display:block; position:absolute; top:50%; left:50%; width:80px; height:80px; border:1px solid #171010; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.3s;}
-.main .parallax .list_portfolio .detail:hover::before {background-image: url(./../images/icon_link_arrow_hover.svg);}
-.main .parallax .list_portfolio .detail:hover::after {background:#171010;}
+.main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
+.list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
+.list_portfolio li {flex:none; width:40vw; transform: translate(0, 20%);}
+.list_portfolio .thumbnail {display:block; margin-top:50px; padding-bottom:40%; background-repeat:no-repeat; background-position:center; background-size:cover;}
+.list_portfolio .info {box-sizing:border-box; position: relative; height:460px; padding:28px 20px 40px;}
+.list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; text-transform: uppercase; opacity:0; transform: translate(0, 20px);}
+.list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
+.list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px; opacity: 0; transform: translate(0, 20px);}
+.list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(./../images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
+.list_portfolio .detail::after {content:''; display:block; position:absolute; top:50%; left:50%; width:80px; height:80px; border:1px solid #171010; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.3s;}
+.list_portfolio .detail:hover::before {background-image: url(./../images/icon_link_arrow_hover.svg);}
+.list_portfolio .detail:hover::after {background:#171010;}
+
+.main_featured {display:flex; justify-content:space-between; overflow:hidden; position:relative; padding-bottom:100px;}
+.floating_featured {box-sizing:border-box; position: absolute; left: 0; top: 0; width:100%; padding:0 20px; z-index:1;}
+.title_featured {display:block;  width:100%; padding:100px 0 70px; font-family:'Faktum Wide'; font-size:21px; font-weight:700;}
+.list_featured {box-sizing:border-box; border-top:1px solid #171010; z-index:1;}
+.list_featured li {display:flex; padding:25px 0; border-bottom:1px solid #171010;}
+.list_featured .num {flex:none; font-family: 'Faktum Wide'; margin-top:-10px; margin-right:20px; font-size:16px; font-weight:800;}
+.list_featured .title { font-size: 36px; font-weight: 300; letter-spacing: -1px; word-break: keep-all; }
+.list_featured .type {flex: none; font-family: 'Faktum Wide'; margin-top:-10px; font-size: 16px; font-weight: 800;}
+.main_featured .bg1 {margin-top:100px; margin-right:225px; width:405px; height:755px; background:url(./../images/img_main_featured_01.jpg) no-repeat center; background-size:cover;}
+.main_featured .bg2 {margin-top:571px; margin-left:180px; width: 610px; height: 556px; background: url(./../images/img_main_featured_02.jpg) no-repeat center; background-size: cover;}
 
 /* about */
 .about .header .gnb a {color:#F9F5EF;}

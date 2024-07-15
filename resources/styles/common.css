@@ -65,7 +65,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .header .gnb a.contact {position:relative; width:165px; padding:0 20px; border-radius:50px; background:#fff;}
 .header .gnb a.contact::after {content:''; display:block; position:absolute; right:22px; width:16px; height:16px; background:url(./../images/icon_arrow_right.svg) no-repeat center; background-size:contain;}
 
-.footer {overflow:hidden; box-sizing:border-box; height:100vh; padding:215px 20px 0;}
+.footer {overflow:hidden; box-sizing:border-box; position:relative; height:100vh; padding:215px 20px 0; background: #F9F5EF; z-index:1;}
 .footer .credits {position:relative; overflow:hidden; height:160px; margin:0 -20px; white-space:nowrap; font-size:0;}
 .footer .credits p {position:absolute; top:0; left:0; font-size:0; white-space: nowrap; animation: marquee 12s linear infinite;}
 .footer .credits p.mq2 {animation-delay: 6s; transform: translateX(100%);}
