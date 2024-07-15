@@ -178,8 +178,8 @@ $(document).ready(function(){
         var badgeTl = gsap.timeline({
             scrollTrigger: {
                 trigger: badge,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'bottom bottom',
+                end: 'bottom+=100% bottom',
                 toggleActions: "play resume resume reset",
                 onEnter: () => gsap.set(badge, {opacity: 0})
             }
@@ -225,6 +225,34 @@ $(document).ready(function(){
             }
         }, 0);
     }
+
+    var solutionBusiness = document.querySelectorAll(".list_business li");
+
+    solutionBusiness.forEach((business, position) => {
+
+        var tags = business.querySelectorAll(".tag");
+
+        var tagAnimation = gsap.fromTo(tags, {
+            opacity:0,
+            scaleY:0,
+            height:0,
+            transformOrigin:"50% 100%",
+            overflow:"hidden"
+        },{
+            ease: 'power3.out',
+            paused: true,
+            opacity:1,
+            scaleY:1,
+            height:"auto",
+            stagger:  {
+                each: 0.08
+            },
+        })
+
+        business.addEventListener("mouseenter", () => tagAnimation.play());
+        business.addEventListener("mouseleave", () => tagAnimation.reverse());
+
+    });
 
     var solutionSlide = new Swiper(".solution-slide", {
         slidesPerView:2.75,
