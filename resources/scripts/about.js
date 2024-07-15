@@ -236,12 +236,12 @@ $(document).ready(function(){
             opacity:0,
             height:0
         },{
-            ease: 'back(2)',
+            ease: 'expo',
             paused: true,
             opacity:1,
             height:"auto",
             stagger:  {
-                each: 0.1
+                each: 0.08
             },
         })
 
@@ -255,8 +255,6 @@ $(document).ready(function(){
         centeredSlides:true,
         spaceBetween:355
     });
-
-
 
     //about-solution=================
 
@@ -383,6 +381,7 @@ $(document).ready(function(){
 
     makeChars.forEach(char => gsap.set(char.parentNode, { perspective: 1000 }));
 
+    /* 애니메이션 초안
     gsap.fromTo(makeChars, {
         'will-change': 'opacity, transform',
         transformOrigin: '50% 100%',
@@ -403,7 +402,7 @@ $(document).ready(function(){
             end: 'bottom top+=20%',
             scrub: true
         }
-    });
+    });*/
 
     //about-make=======================
 
@@ -515,8 +514,12 @@ $(document).ready(function(){
     var growT1 = growSec.querySelector('.t1');
     var growT2 = growSec.querySelector('.t2');
 
+    var lettersAndSymbols = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
+    var lettersAndSymbolsEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
     var growT1Words = growT1.querySelectorAll('.word');
+    var growT1Chars = growT1.querySelectorAll('.char');
 
+    /* 애니메이션 초안
     for (var word of growT1Words) {
         var chars = word.querySelectorAll('.char');
 
@@ -543,9 +546,35 @@ $(document).ready(function(){
             }
         });
 
-    }
+    }*/
 
-    var lettersAndSymbols = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
+    growT1Chars.forEach((char, position) => {
+        var initialHTML = char.innerHTML;
+
+        gsap.fromTo(char, {
+            opacity: 0
+        },
+        {
+            duration: 0.03,
+            innerHTML: () => lettersAndSymbolsEng[Math.floor(Math.random() * lettersAndSymbolsEng.length)],
+            repeat: 1,
+            repeatRefresh: true,
+            opacity: 1,
+            repeatDelay: 0.02,
+            delay: (position+1)*0.15,
+            onComplete: () => gsap.set(char, {innerHTML: initialHTML, delay: 0.03}),
+            scrollTrigger: {
+                trigger: growT1,
+                start: 'top bottom',
+                end: 'bottom center',
+                toggleActions: "play resume resume reset",
+                onEnter: () => gsap.set(char, {opacity: 0})
+            }
+        });
+
+    });
+
+
     var growT2Chars = growT2.querySelectorAll('.char');
 
     growT2Chars.forEach((char, position) => {
