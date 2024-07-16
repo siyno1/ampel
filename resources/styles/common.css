@@ -80,8 +80,9 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 
 /* 공통요소 */
 .ico_circle { display:block; width: 100%; height: 100%; background: url(./../images/icon_about_rotate_01.png) no-repeat center; background-size: contain; animation: rotate 8s linear infinite; }
-
-.btn_top {position:absolute; bottom:100px; right:20px; width:43px; height:43px; background:url(./../images/icon_top_arrow.svg) no-repeat center; background-size:contain;}
+.btn_top {position:absolute; bottom:100px; right:20px; width:43px; height:43px; background:url(./../images/icon_top_arrow.svg) no-repeat center; background-size:contain; z-index:10;}
+.video_sec {display: flex; justify-content: center; align-items: center; overflow: hidden; box-sizing: border-box; width: 100%; height: 100vh;}
+.video_sec video { min-width: 100%; min-height: 100%; object-fit: cover; }
 
 @keyframes marquee {
     0% { transform: translate(0, 0); }

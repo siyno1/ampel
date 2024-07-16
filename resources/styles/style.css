@@ -12,7 +12,7 @@
 .main .parallax { overflow: hidden; }
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
 
-.main_visual {display:flex; justify-content:center; align-items:center; overflow:hidden; box-sizing:border-box; flex:none; width:95vw; height: 100vh;}
+.main_visual {flex:none; width:95vw;}
 .main_visual img {display:block;}
 .main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
 
@@ -42,8 +42,7 @@
 .main_featured .bg1 {padding:100px 225px 0 0; text-align:right;}
 .main_featured .bg2 {padding:300px 0 0 180px;}
 
-.main_visual2 { display: flex; justify-content: center; align-items: center; overflow: hidden; box-sizing: border-box; flex: none; position: relative; width: 100%; height: 100vh; z-index: 1; }
-.main_visual2 video { min-width: 100%; min-height: 100%; object-fit: cover; }
+.main_visual2 { position:relative; z-index:1; }
 
 /* about */
 .about .header .gnb a {color:#F9F5EF;}
@@ -69,8 +68,6 @@
 .about-infinite .photos {display:flex; margin-top:60px; justify-content:center; gap:12px;}
 .about-infinite .wrap_ico {position: absolute; top: 215px; right: 155px; width: 260px; height: 260px;}
 
-.about-video {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh;}
-.about-video video {min-width:100%; min-height:100%;}
 
 .about-solution {overflow:hidden; padding-bottom:340px;}
 .about-solution .txt_intro {display:flex; justify-content:center; padding:270px 0 230px;}
