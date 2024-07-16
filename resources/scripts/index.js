@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $(window).on("load", function(){
 
-
         var gsapMatchMedia = gsap.matchMedia();
 
         gsapMatchMedia.add("(min-width: 768px)", () => {//PC 분기점
