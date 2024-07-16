@@ -80,6 +80,6 @@ $(document).ready(function(){
 
 
     $("[data-clipboard]").on("click", function(){
-        navigator.clipboard.writeText("AMPEL BD 60 Aehyeon-ro Ilsandong-gu Goyang-si Gyeonggi-do Republic of Korea");
+        navigator.clipboard.writeText("경기도 고양시 일산동구 애현로 60 암펠BD");
     });
 });

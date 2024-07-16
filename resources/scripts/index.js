@@ -1,118 +1,127 @@
 $(document).ready(function(){
-
     $(window).on("load", function(){
-        // 메인 로고 애니메이션
-        aniHeaderLogo();
 
-        //메인 스크롤링
-        var horizontal = document.querySelector(".horizontal");
 
-        var mainVisual = gsap.to(horizontal, {
-            xPercent: -100,
-            marginLeft: "100vw",
-            ease: "none",
-            scrollTrigger: {
-                trigger: horizontal,
-                start: "top top",
-                end:horizontal.offsetWidth * 0.5,
-                pin: true,
-                anticipatePin: 1,
-                scrub: 1,
-                invalidateOnRefresh: true
-            }
+        var gsapMatchMedia = gsap.matchMedia();
+
+        gsapMatchMedia.add("(min-width: 768px)", () => {//PC 분기점
+            //메인 스크롤링
+            var horizontal = document.querySelector(".horizontal");
+
+            var mainVisual = gsap.to(horizontal, {
+                xPercent: -100,
+                marginLeft: "100vw",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: horizontal,
+                    start: "top top",
+                    end:horizontal.offsetWidth * 0.5,
+                    pin: true,
+                    anticipatePin: 1,
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            //메인 포트폴리오
+
+            var portfolios = document.querySelectorAll(".list_portfolio > li");
+            portfolios.forEach(function(element, index){
+
+                var $this = $(element);
+                var $thumbnail = $this.find(".thumbnail")[0];
+                var $tags = $this.find(".tags")[0];
+                var $name = $this.find(".name")[0];
+                var $detail = $this.find(".detail")[0];
+
+                gsap.to(element, {
+                    css:{
+                        transform:"translate(0, 0)"
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger:element,
+                        containerAnimation:mainVisual,
+                        start:"left right",
+                        end:"+=" + element.offsetWidth,
+                        markers: false,
+                        scrub: 1
+                    }
+                });
+
+                gsap.to($thumbnail, {
+                    css:{
+                        marginTop:"0",
+                        paddingBottom:"56%"
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger:element,
+                        containerAnimation:mainVisual,
+                        start:"left right",
+                        end:"+=" + element.offsetWidth,
+                        markers: false,
+                        scrub: 1
+                    }
+                });
+
+                gsap.to($tags, {
+                    css:{
+                        opacity:1,
+                        transform:"translate(0,0)"
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger:element,
+                        containerAnimation:mainVisual,
+                        start:"left right-=" + (element.offsetWidth / 2),
+                        end:"+=" + (element.offsetWidth / 2),
+                        markers: false,
+                        scrub: 1
+                    }
+                });
+
+                gsap.to($name, {
+                    css:{
+                        opacity:1,
+                        transform:"translate(0,0)"
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger:element,
+                        containerAnimation:mainVisual,
+                        start:"left right-=" + (element.offsetWidth / 2),
+                        end:"+=" + (element.offsetWidth / 2),
+                        markers: false,
+                        scrub: 1
+                    }
+                });
+
+                gsap.to($detail, {
+                    css:{
+                        opacity:1,
+                        transform:"translate(0,0)"
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger:element,
+                        containerAnimation:mainVisual,
+                        start:"left right-=" + (element.offsetWidth),
+                        end:110,
+                        markers: false,
+                        scrub: 1
+                    }
+                });
+            });
         });
 
-        //메인 포트폴리오
+        gsapMatchMedia.add("(max-width: 767px)", () => {//모바일 분기점
 
-        var portfolios = document.querySelectorAll(".list_portfolio > li");
-
-        portfolios.forEach(function(element, index){
-
-            var $this = $(element);
-            var $thumbnail = $this.find(".thumbnail")[0];
-            var $tags = $this.find(".tags")[0];
-            var $name = $this.find(".name")[0];
-            var $detail = $this.find(".detail")[0];
-
-            gsap.to(element, {
-                css:{
-                    transform:"translate(0, 0)"
-                },
-                ease: "none",
-                scrollTrigger: {
-                    trigger:element,
-                    containerAnimation:mainVisual,
-                    start:"left right",
-                    end:"+=" + element.offsetWidth,
-                    markers: false,
-                    scrub: 1
-                }
-            });
-
-            gsap.to($thumbnail, {
-                css:{
-                    marginTop:"0",
-                    paddingBottom:"56%"
-                },
-                ease: "none",
-                scrollTrigger: {
-                    trigger:element,
-                    containerAnimation:mainVisual,
-                    start:"left right",
-                    end:"+=" + element.offsetWidth,
-                    markers: false,
-                    scrub: 1
-                }
-            });
-
-            gsap.to($tags, {
-                css:{
-                    opacity:1,
-                    transform:"translate(0,0)"
-                },
-                ease: "none",
-                scrollTrigger: {
-                    trigger:element,
-                    containerAnimation:mainVisual,
-                    start:"left right-=" + (element.offsetWidth / 2),
-                    end:"+=" + (element.offsetWidth / 2),
-                    markers: false,
-                    scrub: 1
-                }
-            });
-
-            gsap.to($name, {
-                css:{
-                    opacity:1,
-                    transform:"translate(0,0)"
-                },
-                ease: "none",
-                scrollTrigger: {
-                    trigger:element,
-                    containerAnimation:mainVisual,
-                    start:"left right-=" + (element.offsetWidth / 2),
-                    end:"+=" + (element.offsetWidth / 2),
-                    markers: false,
-                    scrub: 1
-                }
-            });
-
-            gsap.to($detail, {
-                css:{
-                    opacity:1,
-                    transform:"translate(0,0)"
-                },
-                ease: "none",
-                scrollTrigger: {
-                    trigger:element,
-                    containerAnimation:mainVisual,
-                    start:"left right-=" + (element.offsetWidth),
-                    end:110,
-                    markers: false,
-                    scrub: 1
-                }
-            });
         });
+
+
+
+
 
 
         // 포트폴리오 버튼
@@ -138,7 +147,6 @@ $(document).ready(function(){
 
         var featuredSec = document.querySelector('.main_featured');
         var floatingElement = featuredSec.querySelector('.floating_featured');
-
         var featuredFloating = gsap.to(floatingElement, {
             scrollTrigger: {
                 trigger: floatingElement,
