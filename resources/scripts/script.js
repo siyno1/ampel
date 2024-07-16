@@ -42,7 +42,7 @@ var Ampel = {
      */
     logoAnimation:function(){
         var logo4Img = document.querySelector(".lg4 img")
-        var logos = document.querySelector("h1.logo");
+        var logos = document.querySelector("h1.header_logo");
         var logosImg = logos.querySelectorAll("img");
 
         logosImg.forEach(function(element, index){
