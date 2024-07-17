@@ -91,7 +91,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .footer .credits span {display:inline-block; margin-right:30px; font-size: 128px; font-family: 'Faktum Wide'; line-height: 160px; letter-spacing: -6.4px; text-transform: uppercase; }
 .footer .mail {display:inline-block; margin-top:30px; padding:10px 20px; border:1px solid #171010; border-radius:50px; font-family: 'Neue Montreal'; font-size:32px; font-weight:800; text-transform: uppercase;}
 .footer .tel {display: inline-block; margin-top: 20px; padding: 10px 20px; border: 1px solid #171010; border-radius: 50px; font-family: 'Neue Montreal'; font-size: 32px;}
-.footer_info {margin-top:48px; padding-top:65px; border-top:1px solid #171010;}
+.footer_info {margin-top:50px; padding-top:65px; border-top:1px solid #171010;}
 .footer_info .copyright {font-family: 'Faktum Wide'; font-size:16px; font-weight:600; text-transform: uppercase;}
 .footer_info .copy {font-family: 'Pretendard'; font-weight:700;}
 .footer_info .corp {font-weight:700;}
@@ -133,5 +133,13 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     .header .gnb {display:none;}
     .header .btn_gnb {display:block; margin-left:auto;}
 
-    .footer {height:auto; padding-bottom:40px;}
+    .footer {height:auto; padding:116px 15px 60px;}
+    .footer .credits {height:40px; margin:0 -15px;}
+    .footer .credits span {font-size:33px; line-height:normal; font-weight:700; letter-spacing: -1px;}
+    .footer .mail {margin-top:25px; padding:10px 15px; font-size:20px; font-weight:800;}
+    .footer .tel {margin-top:15px; padding:10px 15px; font-size:20px; font-weight:530;}
+    .footer_info {margin-top:45px; padding-top:45px;}
+    .footer_info .copyright {font-size:14px;}
+    .footer_info address {margin-top:25px; font-size:14px;}
+    .btn_top {right:17px; bottom:70px;}
 }
