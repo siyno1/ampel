@@ -13,13 +13,13 @@
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
 
 .main_visual {flex:none; width:95vw;}
-.main_visual img {display:block;}
 .main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
 
 .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
 .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
 .list_portfolio li {flex:none; width:40vw; transform: translate(0, 20%);}
-.list_portfolio .thumbnail {display:block; margin-top:50px; padding-bottom:40%; background-repeat:no-repeat; background-position:center; background-size:cover;}
+.list_portfolio .thumbnail {display:block; position:relative; overflow:hidden; padding-bottom:40%;}
+.list_portfolio .thumbnail img {position:absolute; left:50%; top:50%; width:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .list_portfolio .info {box-sizing:border-box; position: relative; height:460px; padding:28px 20px 40px;}
 .list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; text-transform: uppercase; opacity:0; transform: translate(0, 20px);}
 .list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
@@ -30,10 +30,11 @@
 .list_portfolio .detail:hover::after {background:#171010;}
 
 .main_featured {overflow:hidden; position:relative; padding-bottom:150px;}
+.wrap_floating_featured {mix-blend-mode: difference;}
 .floating_featured {box-sizing:border-box; position: absolute; left: 0; top: 0; width:100%; padding:0 20px; z-index:1;}
-.title_featured {display:block;  width:100%; padding:100px 0 70px; font-family:'Faktum Wide'; font-size:21px; font-weight:700;}
-.list_featured {box-sizing:border-box; border-top:1px solid #171010; z-index:1;}
-.list_featured li {display:flex; padding:25px 0; border-bottom:1px solid #171010;}
+.title_featured {display:block;  width:100%; padding:100px 0 70px; font-family:'Faktum Wide'; font-size:21px; font-weight:700; color:#e2e5ff; /* 반전 시 #171010*/}
+.list_featured {box-sizing:border-box; border-top:1px solid #e2e5ff; z-index:1;}
+.list_featured li {display:flex; padding:25px 0; border-bottom:1px solid #e2e5ff; color:#e2e5ff;}
 .list_featured .num {flex:none; font-family: 'Faktum Wide'; margin-top:-10px; margin-right:20px; font-size:16px; font-weight:800;}
 .list_featured .title { overflow:hidden; font-size: 36px; font-weight: 300; letter-spacing: -1px; white-space: nowrap; text-overflow: ellipsis;}
 .list_featured .type {flex: none; font-family: 'Faktum Wide'; margin-top:-10px; font-size: 16px; font-weight: 800;}
@@ -41,6 +42,10 @@
 .main_featured .featured_bg img {max-width:100%;}
 .main_featured .bg1 {padding:100px 225px 0 0; text-align:right;}
 .main_featured .bg2 {padding:300px 0 0 180px;}
+.main_featured .bg3 {padding:195px 0 0; text-align:center;}
+.main_featured .bg4 {padding:220px 95px 0 0; text-align:right;}
+.main_featured .bg5 {padding:130px 0 0 120px;}
+
 
 .main_visual2 { position:relative; z-index:1; }
 
@@ -201,3 +206,14 @@
 .contact .talk {margin-top:80px; text-align:center;}
 .contact .talk a {display:inline-block; position:relative; padding-right:60px; font-family: 'Faktum Wide'; font-weight:600; font-size:96px; letter-spacing:-5px; text-decoration:underline;}
 .contact .talk .badge {display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(./../images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+/* 768해상도 아래는 모바일로 */
+@media all and (max-width:768px) {
+    .main .parallax .horizontal {flex-direction:column; width:auto;}
+    .main_visual {width:auto;}
+
+    .main_portfolio {height:auto;}
+    .list_portfolio li {width:100%; transform: none;}
+    .list_portfolio .thumbnail {margin-top:0; padding:0;}
+    .list_portfolio .thumbnail img {position:static; transform: none;}
+}

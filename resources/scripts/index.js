@@ -145,13 +145,15 @@ $(document).ready(function(){
         // featured
 
         var featuredSec = document.querySelector('.main_featured');
+        var floatingWrap = featuredSec.querySelector('.wrap_floating_featured');
         var floatingElement = featuredSec.querySelector('.floating_featured');
         var featuredFloating = gsap.to(floatingElement, {
             scrollTrigger: {
-                trigger: floatingElement,
+                trigger: featuredSec,
                 start:"top top",
-                end:"+=200%",
-                pin: true,
+                end:"bottom+="+ window.innerHeight +" bottom",
+                pin: floatingElement,
+                pinSpacer:floatingWrap,
                 pinSpacing: false,
                 invalidateOnRefresh: true,
                 scrub: 1
