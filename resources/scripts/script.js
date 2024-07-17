@@ -94,5 +94,51 @@ $(document).ready(function(){
         $btnTop.on("click", Ampel.goTop);
 
         Ampel.logoAnimation();
+
+
+
+
+        var $gnb = document.querySelector(".gnb_mobile");
+        var $menus = $gnb.querySelectorAll("a");
+        var $copyright = $gnb.querySelector(".copyright");
+
+        var gnbTl = gsap.timeline({
+            paused:true
+        });
+
+        gnbTl.fromTo($gnb, {
+            'will-change': 'opacity, transform',
+            transformOrigin:"0% 100%",
+            opacity:0,
+            scaleY:0,
+            display:"none"
+        },{
+            duration:0.5,
+            scaleY:1,
+            opacity:1,
+            display:"block"
+        }).fromTo($menus, {
+            'will-change': 'opacity, transform',
+            y:20,
+            opacity:0
+        },{
+            y:0,
+            opacity:1,
+            stagger:0.1
+        },0.4).fromTo($copyright, {
+            'will-change': 'opacity',
+            opacity:0
+        },{
+            opacity:1
+        },0.2);
+
+
+        $(".btn_gnb").on("click", function(){
+            gnbTl.play();
+        });
+
+        $(".btn_gnb_close").on("click", function(){
+            gnbTl.reverse();
+        });
     });
 });//@ready
