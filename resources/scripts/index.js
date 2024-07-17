@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    Splitting();
+
     $(window).on("load", function(){
 
         var gsapMatchMedia = gsap.matchMedia();
@@ -26,12 +29,10 @@ $(document).ready(function(){
 
             var portfolios = document.querySelectorAll(".list_portfolio > li");
             portfolios.forEach(function(element, index){
-
-                var $this = $(element);
-                var $thumbnail = $this.find(".thumbnail")[0];
-                var $tags = $this.find(".tags")[0];
-                var $name = $this.find(".name")[0];
-                var $detail = $this.find(".detail")[0];
+                var $thumbnail = element.querySelector(".thumbnail");
+                var $tags = element.querySelector(".tags");
+                var $name = element.querySelector(".name");
+                var $detail = element.querySelector(".detail");
 
                 gsap.to(element, {
                     css:{
@@ -115,6 +116,55 @@ $(document).ready(function(){
         });
 
         gsapMatchMedia.add("(max-width: 767px)", () => {//모바일 분기점
+
+            //메인 포트폴리오
+
+            var portfoliosWrap = document.querySelector('.list_portfolio');
+            var portfolios = portfoliosWrap.querySelectorAll(".list_portfolio > li");
+            var portfolioTotalIndex = portfolios.length - 1;
+
+            portfolios.forEach(function(element, index){
+                var isLast = portfolioTotalIndex === index;
+                var calcBottom = element.offsetHeight * (portfolioTotalIndex - index);
+
+                gsap.to(element, {
+                    ease: "none",
+                    scrollTrigger: {
+                        pin:true,
+                        pinSpacing:false,
+                        trigger:element,
+                        start:"top-=" + index * 10 + " top",
+                        end:isLast ? "0" : "+=" + (calcBottom - (index * 10)),
+                        scrub: 1
+                    }
+                });
+
+                var chars = element.querySelectorAll('.char');
+
+                gsap.fromTo(chars, {
+                    'will-change': 'opacity, transform',
+                    opacity: 0,
+                    yPercent: 120,
+                    scaleY: 2.3,
+                    scaleX: 0.7,
+                    transformOrigin: '50% 0%'
+                },
+                {
+                    duration:1,
+                    ease: 'back.inOut(2)',
+                    opacity: 1,
+                    yPercent: 0,
+                    scaleY: 1,
+                    scaleX: 1,
+                    stagger: 0.03,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top center',
+                        end:'center center',
+                        scrub:true
+                    }
+                });
+            });
 
         });
 
@@ -241,4 +291,46 @@ function tempVisual() {
         duration:1,
         stroke:"transparent"
     },2);
+}
+
+
+function tempPortfolioSlide () {
+    var portfolioSlide = new Swiper(".main_portfolio", {
+        on:{
+            slideChange:function(swiper){
+                swiper.slides[swiper.previousIndex].animation.pause(0)
+                swiper.slides[swiper.activeIndex].animation.restart()
+            }
+        }
+    });
+
+    portfolioSlide.slides.forEach((slide, index)=>{
+        var $tags = slide.querySelector(".tags");
+        var $name = slide.querySelector(".name");
+        var $detail = slide.querySelector(".detail");
+
+        var tl = gsap.timeline({paused:true})
+
+        tl.to($tags, {
+            opacity:1,
+            transform:"translate(0,0)",
+            ease: "none"
+        }).to($name, {
+            opacity:1,
+            transform:"translate(0,0)",
+            ease: "none"
+        },0).to($detail, {
+            opacity:1,
+            transform:"translate(0,0)",
+            ease: "none"
+        },0);
+
+        slide.animation = tl;
+    })
+
+    portfolioSlide.slides[0].animation.play();
+
+    return function() {
+        portfolioSlide.destroy();
+    }
 }

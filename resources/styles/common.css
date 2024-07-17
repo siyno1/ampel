@@ -115,7 +115,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     .header_logo .lg3 img {width:16px;}
     .header_logo span.lg4 {display:none;}
 
-    .header {position:fixed; height:60px; padding:0;}
+    .header {position:fixed; height:60px; padding:0; mix-blend-mode: difference;}
     .header .gnb {display:none;}
     .header .btn_gnb {display:block; margin-left:auto;}
 
