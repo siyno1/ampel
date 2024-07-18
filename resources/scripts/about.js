@@ -2,6 +2,8 @@ $(document).ready(function(){
 
     Splitting();
 
+    var gsapMatchMedia = gsap.matchMedia();
+
     //about-we
     var weSec = document.querySelector('.about-we');
     var weTypo = weSec.querySelector('.sec_typo');
@@ -124,22 +126,27 @@ $(document).ready(function(){
         }
     });
 
-    gsap.fromTo(infinitePhotos.querySelectorAll('img'), {
-        'will-change': 'transform',
-        y:100,
-        opacity:0
-    },{
-        ease: 'power3.in',
-        y:0,
-        stagger: 0.08,
-        opacity:1,
-        scrollTrigger: {
-            trigger: infiniteSec,
-            start: 'top center',
-            end: 'center-=10% center',
-            scrub: 1
-        }
-    });
+    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+        ScrollTrigger.saveStyles(infinitePhotos.querySelectorAll('img'));
+
+        gsap.fromTo(infinitePhotos.querySelectorAll('img'), {
+            'will-change': 'transform',
+            y:100,
+            opacity:0
+        },{
+            ease: 'power3.in',
+            y:0,
+            stagger: 0.08,
+            opacity:1,
+            scrollTrigger: {
+                trigger: infiniteSec,
+                start: 'top center',
+                end: 'center-=10% center',
+                scrub: 1
+            }
+        });
+    })
+
 
     //about-infinite============
 
@@ -251,9 +258,14 @@ $(document).ready(function(){
     });
 
     var solutionSlide = new Swiper(".solution-slide", {
-        slidesPerView:2.75,
-        centeredSlides:true,
-        spaceBetween:355
+        slidesPerView:1,
+        centeredSlides:false,
+        breakpoints:{
+            769: {
+                slidesPerView:2,
+                centeredSlides:true
+            }
+        }
     });
 
     //about-solution=================
@@ -608,6 +620,17 @@ $(document).ready(function(){
             }
         });
 
+    });
+
+    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+        var infiniteSlide = new Swiper(".slide_photo", {
+            slidesPerView:"auto",
+            spaceBetween:5
+        });
+
+        return function() {
+            infiniteSlide.destroy();
+        }
     });
 
 });
