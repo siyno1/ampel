@@ -133,10 +133,9 @@ $(document).ready(function(){
                         pin:true,
                         pinSpacing:false,
                         trigger:element,
-                        start:"top+=5 top",
+                        start:"top+=10 top",
                         end:"+=100%",
-                        scrub: 1,
-                        anticipatePin:1
+                        scrub: 1
                     }
                 });
 
@@ -151,18 +150,17 @@ $(document).ready(function(){
                     transformOrigin: '50% 0%'
                 },
                 {
-                    duration:1,
                     ease: 'back.inOut(2)',
                     opacity: 1,
                     yPercent: 0,
                     scaleY: 1,
                     scaleX: 1,
-                    stagger: 0.03,
+                    stagger: 0.02,
                     scrollTrigger: {
                         trigger: element,
                         start: 'top center',
                         end:'center center',
-                        scrub:1
+                        scrub:2
                     }
                 });
             });
