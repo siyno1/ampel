@@ -306,6 +306,7 @@ $(document).ready(function(){
             });
 
             tagTl.to(title,{
+                duration:0.2,
                 opacity:0,
                 height:0
             });
@@ -322,8 +323,8 @@ $(document).ready(function(){
                 opacity:1,
                 height:"auto",
                 stagger:  {
-                    each: 0.08
-                },
+                    each: 0.05
+                }
             })
 
             business.addEventListener("mouseenter", () => tagTl.play());
@@ -401,7 +402,8 @@ $(document).ready(function(){
             start: 'center center',
             end: '+=100%',
             scrub: 0.5,
-            pin: betterSec
+            pin: betterSec,
+            anticipatePin:1
         },
         stagger: {
             each: 0.006,
@@ -523,77 +525,80 @@ $(document).ready(function(){
     //about-make=======================
 
     //about-motto
-    var mottoSec = document.querySelector('.about-motto');
-    var mottoList = mottoSec.querySelectorAll('li');
+    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+        var mottoSec = document.querySelector('.about-motto');
+        var mottoList = mottoSec.querySelectorAll('li');
 
-    var mottotitleTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: mottoSec,
-            start: 'center center',
-            end: '+=250%',
-            scrub: true,
-            pin:mottoSec
-        }
-    });
-
-    var mottoTextTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: mottoSec,
-            start: 'center center',
-            end: '+=250%',
-            scrub: true
-        }
-    });
-
-    var i_limit_mL = mottoList.length - 1;
-
-    for (var [index,element] of mottoList.entries()) {
-
-        mottotitleTl.fromTo(element.querySelector('.txt'),{
-            'will-change': 'opacity, transform',
-            opacity:0,
-            x:-100
-        },{
-            x:0,
-            opacity:1
+        var mottotitleTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: mottoSec,
+                start: 'center center',
+                end: '+=250%',
+                scrub: true,
+                pin:mottoSec
+            }
         });
 
-        mottotitleTl.fromTo(element.querySelector('.badge'),{
-            'will-change': 'opacity, transform',
-            opacity:0,
-            y:30
-        },{
-            y:-10,
-            opacity:1
+        var mottoTextTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: mottoSec,
+                start: 'center center',
+                end: '+=250%',
+                scrub: true
+            }
         });
 
-        mottotitleTl.to(element.querySelector('.badge'),{
-            y:0
-        });
+        var i_limit_mL = mottoList.length - 1;
 
-        if (i_limit_mL > index) {
-            mottotitleTl.to(element.querySelector('.txt'),{
-                opacity:0
+        for (var [index,element] of mottoList.entries()) {
+
+            mottotitleTl.fromTo(element.querySelector('.txt'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                x:-100
+            },{
+                x:0,
+                opacity:1
             });
-        }
 
-
-
-        mottoTextTl.fromTo(element.querySelector('p'),{
-            'will-change': 'opacity, transform',
-            opacity:0,
-            x:100
-        },{
-            x:0,
-            opacity:1
-        });
-
-        if (i_limit_mL > index) {
-            mottoTextTl.to(element.querySelector('p'),{
-                opacity:0
+            mottotitleTl.fromTo(element.querySelector('.badge'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                y:30
+            },{
+                y:-10,
+                opacity:1
             });
+
+            mottotitleTl.to(element.querySelector('.badge'),{
+                y:0
+            });
+
+            if (i_limit_mL > index) {
+                mottotitleTl.to(element.querySelector('.txt'),{
+                    opacity:0
+                });
+            }
+
+
+
+            mottoTextTl.fromTo(element.querySelector('p'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                x:100
+            },{
+                x:0,
+                opacity:1
+            });
+
+            if (i_limit_mL > index) {
+                mottoTextTl.to(element.querySelector('p'),{
+                    opacity:0
+                });
+            }
         }
-    }
+    })
+
 
     //about-motto================
 
