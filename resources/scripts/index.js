@@ -133,8 +133,8 @@ $(document).ready(function(){
                         pin:true,
                         pinSpacing:false,
                         trigger:element,
-                        start:"top-=" + index * 10 + " top",
-                        end:isLast ? "0" : "+=" + (calcBottom - (index * 10)),
+                        start:"top+=5 top",
+                        end:"+=100%",
                         scrub: 1,
                         anticipatePin:1
                     }
