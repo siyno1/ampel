@@ -55,7 +55,7 @@
 
 .about-we {overflow:hidden; padding:160px 0 140px; color:#F9F5EF; background: #171010;}
 .about-we .sec_typo {overflow:hidden; position:relative; padding:0 80px 20px; z-index:1;}
-.about-we .typo {position: relative; font-family: 'Faktum Wide'; font-size:195px; font-weight:700; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
+.about-we .typo {position: relative; font-family: 'Faktum Wide'; font-size:195px; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
 .about-we .typo.t1 {padding-right:225px;text-align: right;}
 .about-we .typo.t2 {padding-right:20px; text-align: right;}
 .about-we .typo.t2::before {content:''; display:inline-block; width:800px; height:15px; vertical-align:middle; background:#F9F5EF;}
@@ -64,7 +64,7 @@
 .about-we .video {display: flex; justify-content:center; margin-top:-100px;}
 .about-we .wrap_video {width:750px;}
 .about-we .wrap_video video {width:100%;}
-.about-we .txt_video {margin-top:140px; font-size:24px; text-align:center; letter-spacing:-1px;}
+.about-we .txt_video {margin-top:140px; font-size:24px; font-weight:700; text-align:center; letter-spacing:-1px;}
 .about-we .txt_we {margin-top:140px; font-family: 'Faktum Wide'; font-size:16px; text-align:center; text-transform:uppercase; letter-spacing:-1px;}
 
 .about-infinite {overflow:hidden; position:relative; padding:115px 155px 115px;}
