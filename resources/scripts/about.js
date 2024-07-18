@@ -155,8 +155,9 @@ $(document).ready(function(){
     var solutionSec = document.querySelector('.about-solution');
     var solutionChar = solutionSec.querySelector('.txt_intro');
     var solutionChars = solutionChar.querySelectorAll('.txt_intro .char');
-    var solutionBadges = solutionSec.querySelectorAll('.badge');
+    var solutionBadge = solutionSec.querySelector('.wrap_txt .badge');
 
+    ScrollTrigger.saveStyles(solutionBadge);
     solutionChars.forEach(char => gsap.set(char.parentNode, { perspective: 1000 }));
 
     gsap.fromTo(solutionChars, {
@@ -180,30 +181,30 @@ $(document).ready(function(){
         }
     });
 
+    var badgeTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: solutionBadge,
+            start: 'bottom bottom',
+            end: 'bottom+=100% bottom',
+            toggleActions: "play resume resume reset",
+            onEnter: () => gsap.set(solutionBadge, {opacity: 0})
+        }
+    });
 
-    solutionBadges.forEach((badge, position) => {
-        var badgeTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: badge,
-                start: 'bottom bottom',
-                end: 'bottom+=100% bottom',
-                toggleActions: "play resume resume reset",
-                onEnter: () => gsap.set(badge, {opacity: 0})
-            }
-        });
+    badgeTl.fromTo(solutionBadge, {
+        'will-change': 'opacity, transform',
+        opacity: 0,
+        y:30
+    },{
+        ease: 'power1',
+        opacity: 1,
+        y:-10
+    }).to(solutionBadge, {
+        y:0
+    });
 
-        badgeTl.fromTo(badge, {
-            'will-change': 'opacity, transform',
-            opacity: 0,
-            y:30
-        },{
-            ease: 'power1',
-            opacity: 1,
-            y:-10
-        }).to(badge, {
-            y:0
-        });
-    })
+
+
 
     var solutionMindset = solutionSec.querySelector('.list_mindset');
     var mindsetWords = solutionMindset.querySelectorAll('.title p');
@@ -233,29 +234,132 @@ $(document).ready(function(){
         }, 0);
     }
 
-    var solutionBusiness = document.querySelectorAll(".list_business li");
+    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+        var solutionBusiness = document.querySelectorAll(".list_business li");
 
-    solutionBusiness.forEach((business, position) => {
+        solutionBusiness.forEach((business, position) => {
+            var tags = business.querySelectorAll(".tag");
+            var badge = business.querySelector(".badge");
 
-        var tags = business.querySelectorAll(".tag");
+            ScrollTrigger.saveStyles(tags);
+            var tagAnimation = gsap.fromTo(tags, {
+                opacity:0,
+                height:0
+            },{
+                ease: 'expo',
+                paused: true,
+                opacity:1,
+                height:"auto",
+                stagger:  {
+                    each: 0.08
+                },
+            })
 
-        var tagAnimation = gsap.fromTo(tags, {
-            opacity:0,
-            height:0
-        },{
-            ease: 'expo',
-            paused: true,
-            opacity:1,
-            height:"auto",
-            stagger:  {
-                each: 0.08
-            },
-        })
+            business.addEventListener("mouseenter", () => tagAnimation.play());
+            business.addEventListener("mouseleave", () => tagAnimation.reverse());
 
-        business.addEventListener("mouseenter", () => tagAnimation.play());
-        business.addEventListener("mouseleave", () => tagAnimation.reverse());
+            var badgeTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: badge,
+                    start: 'bottom bottom',
+                    end: 'bottom+=100% bottom',
+                    toggleActions: "play resume resume reset",
+                    onEnter: () => gsap.set(badge, {opacity: 0})
+                }
+            });
 
-    });
+            badgeTl.fromTo(badge, {
+                'will-change': 'opacity, transform',
+                opacity: 0,
+                y:30
+            },{
+                ease: 'power1',
+                opacity: 1,
+                y:-10
+            }).to(badge, {
+                y:0
+            });
+
+        });
+
+
+        return function(){
+            solutionBusiness.forEach((business, position) => {
+                business.replaceWith(business.cloneNode(true));
+            })
+        }
+    })
+
+    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+        var solutionBusiness = document.querySelectorAll(".list_business li");
+
+        solutionBusiness.forEach((business, position) => {
+            var title = business.querySelector("strong");
+            var tagsWrap = business.querySelector(".tags");
+            var tags = business.querySelectorAll(".tag");
+            var badge = business.querySelector(".badge");
+
+            ScrollTrigger.saveStyles(tags);
+
+            var tagTl = gsap.timeline({
+                paused: true
+            });
+
+            tagTl.to(title,{
+                opacity:0,
+                height:0
+            });
+
+            tagTl.to(tagsWrap, {
+                display:"flex"
+            });
+
+            tagTl.fromTo(tags, {
+                opacity:0,
+                height:0
+            },{
+                ease: 'expo',
+                opacity:1,
+                height:"auto",
+                stagger:  {
+                    each: 0.08
+                },
+            })
+
+            business.addEventListener("mouseenter", () => tagTl.play());
+            business.addEventListener("mouseleave", () => tagTl.reverse());
+
+            var badgeTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: badge,
+                    start: 'bottom bottom',
+                    end: 'bottom+=100% bottom',
+                    toggleActions: "play resume resume reset",
+                    onEnter: () => gsap.set(badge, {opacity: 0})
+                }
+            });
+
+            badgeTl.fromTo(badge, {
+                'will-change': 'opacity, transform',
+                opacity: 0,
+                y:30
+            },{
+                ease: 'power1',
+                opacity: 1,
+                y:-10
+            }).to(badge, {
+                y:0
+            });
+        });
+
+        return function(){
+            solutionBusiness.forEach((business, position) => {
+                business.replaceWith(business.cloneNode(true));
+            })
+        }
+    })
+
+
 
     var solutionSlide = new Swiper(".solution-slide", {
         slidesPerView:1,
