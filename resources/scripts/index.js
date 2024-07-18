@@ -6,7 +6,7 @@ $(document).ready(function(){
 
         var gsapMatchMedia = gsap.matchMedia();
 
-        gsapMatchMedia.add("(min-width: 768px)", () => {//PC 분기점
+        gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
             //메인 스크롤링
             var horizontal = document.querySelector(".horizontal");
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
                     end:horizontal.offsetWidth * 0.5,
                     pin: true,
                     anticipatePin: 1,
-                    scrub: 1,
+                    scrub: 2,
                     invalidateOnRefresh: true
                 }
             });
@@ -115,7 +115,7 @@ $(document).ready(function(){
             });
         });
 
-        gsapMatchMedia.add("(max-width: 767px)", () => {//모바일 분기점
+        gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
 
             //메인 포트폴리오
 
@@ -135,7 +135,8 @@ $(document).ready(function(){
                         trigger:element,
                         start:"top-=" + index * 10 + " top",
                         end:isLast ? "0" : "+=" + (calcBottom - (index * 10)),
-                        scrub: 1
+                        scrub: 1,
+                        anticipatePin:1
                     }
                 });
 
@@ -161,7 +162,7 @@ $(document).ready(function(){
                         trigger: element,
                         start: 'top center',
                         end:'center center',
-                        scrub:true
+                        scrub:1
                     }
                 });
             });
@@ -206,7 +207,8 @@ $(document).ready(function(){
                 pinSpacer:floatingWrap,
                 pinSpacing: false,
                 invalidateOnRefresh: true,
-                scrub: 1
+                scrub: 1,
+                anticipatePin:1
             }
         });
     });

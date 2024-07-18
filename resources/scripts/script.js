@@ -8,7 +8,10 @@ var Ampel = {
      * lenis
      * scroll 및 인터렉션 관련 필수요소
     **/
-    lenis:new Lenis(),
+    lenis:new Lenis({
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    }),
     raf:function(time){
         Ampel.lenis.raf(time);
         requestAnimationFrame(Ampel.raf);

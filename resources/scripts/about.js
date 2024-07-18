@@ -85,7 +85,7 @@ $(document).ready(function(){
             trigger: infiniteSec,
             start: 'top center',
             end: 'center-=10% center',
-            scrub: true
+            scrub: 1.5
         }
     });
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
             trigger: infiniteSec,
             start: 'top center',
             end: 'center-=10% center',
-            scrub: true
+            scrub: 2
         }
     });
 
@@ -120,7 +120,7 @@ $(document).ready(function(){
             trigger: infiniteSec,
             start: 'top center',
             end: 'center-=10% center',
-            scrub: true
+            scrub: 2
         }
     });
 
@@ -137,7 +137,7 @@ $(document).ready(function(){
             trigger: infiniteSec,
             start: 'top center',
             end: 'center-=10% center',
-            scrub: true
+            scrub: 1
         }
     });
 
@@ -206,7 +206,7 @@ $(document).ready(function(){
             trigger: solutionMindset,
             start: 'top bottom',
             end: 'center bottom',
-            scrub: true
+            scrub: 2
         }
     });
 
@@ -284,7 +284,7 @@ $(document).ready(function(){
             trigger: betterSec,
             start: 'center center',
             end: '+=100%',
-            scrub: true,
+            scrub: 0.5,
             pin: betterSec
         },
         stagger: {
@@ -322,7 +322,7 @@ $(document).ready(function(){
             trigger: makeT1Txt,
             start: 'top bottom',
             end: 'bottom center',
-            scrub: true
+            scrub: 2
         }
     });
 
@@ -340,7 +340,7 @@ $(document).ready(function(){
             trigger: makeT2Txt,
             start: 'top bottom',
             end: 'bottom center',
-            scrub: true
+            scrub: 2
         }
     });
 
