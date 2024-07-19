@@ -142,4 +142,6 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     .footer_info .copyright {font-size:14px;}
     .footer_info address {margin-top:25px; font-size:14px;}
     .btn_top {right:17px; bottom:70px;}
+
+    .video_sec {height:auto;}
 }

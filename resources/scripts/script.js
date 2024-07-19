@@ -87,12 +87,12 @@ var Ampel = {
  * 사이트 전역에 실행되는 스크립트
  */
 $(document).ready(function(){
-    ScrollTrigger.config({normalizeScroll:true})
     Ampel.init();
     /**
      * 이미지까지 로드 이후에 스크립트 실행
-     */
-    $(window).on("load", function(){
+    */
+   $(window).on("load", function(){
+        // ScrollTrigger.normalizeScroll(true);
         //상단 바로가기 버튼
         var $btnTop = $(".btn_top");
         $btnTop.on("click", Ampel.goTop);
@@ -144,5 +144,7 @@ $(document).ready(function(){
         $(".btn_gnb_close").on("click", function(){
             gnbTl.reverse();
         });
+
+        ScrollTrigger.normalizeScroll(true);
     });
 });//@ready

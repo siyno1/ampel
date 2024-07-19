@@ -22,6 +22,7 @@
 .list_portfolio .thumbnail img {position:absolute; left:50%; top:50%; width:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .list_portfolio .info {box-sizing:border-box; position: relative; min-height:460px; padding:28px 20px 40px;}
 .list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; text-transform: uppercase; opacity:0; transform: translate(0, 20px);}
+.list_portfolio .tags .year {white-space: nowrap;}
 .list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
 .list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px; opacity: 0; transform: translate(0, 20px);}
 .list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(./../images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
@@ -139,7 +140,7 @@
 
 .about-motto .list_motto p {font-size:24px; word-break: keep-all;}
 
-.about-hall2 {height:100vh; background: url(./../images/temp_video.png) no-repeat center; background-size: cover;}
+.about-hall2 {height:100vh; /* background: url(./../images/temp_video.png) no-repeat center; background-size: cover;*/}
 
 .about-history {overflow:hidden; padding:180px 30px 300px;}
 .about-history h3 {max-width: 1560px; margin: 0 auto 75px; font-family: 'Faktum Wide'; font-weight:700; font-size:48px; letter-spacing: -1px;}
@@ -224,7 +225,7 @@
 @media all and (max-width:769px) {
     /* main . index */
     .main .parallax .horizontal {display:block; width:auto;}
-    .main_visual {width:auto;}
+    .main_visual {width:auto; height:auto;}
 
     .main_portfolio {height:auto;}
     .list_portfolio {display:block;}
@@ -233,13 +234,15 @@
     .list_portfolio .thumbnail {margin-top:0; padding:0;}
     .list_portfolio .thumbnail img {position:static; transform: none;}
     .list_portfolio .info {display:flex; align-items: center; justify-content: space-between; gap:5px; min-height:auto; padding:25px 10px 50px 15px; background:#F9F5EF;}
-    .list_portfolio .wrap_info {overflow:hidden;}
+    /* .list_portfolio .wrap_info {} */
     .list_portfolio .tags {justify-content: flex-start; gap:10px; font-size:16px; font-weight:500; opacity: 1; transform:none;}
-    .list_portfolio .type {overflow:hidden; padding-right:2px; white-space: nowrap; text-overflow: ellipsis;}
-    .list_portfolio .name {display:block; height:auto; margin-top:5px; font-size:20px; font-weight:500; text-align:left; white-space: nowrap; opacity: 1; transform: none;}
+    .list_portfolio .type {white-space: nowrap;}
+    .list_portfolio .name {display:block; height:auto; margin-top:5px; font-size:20px; font-weight:500; text-align:left; opacity: 1; transform: none;}
     .list_portfolio .detail {position:static; flex:none; width:53px; height:53px; background:url(./../images/mobile/icon_link_arrow.svg) no-repeat center; opacity: 1; transform: none;}
     .list_portfolio .detail::before {content:none;}
     .list_portfolio .detail::after {content:none;}
+
+    .main_visual2 {height:auto;}
 
     .main_featured {background:#F9F5EF;}
     .floating_featured {padding:0 15px;}
@@ -319,6 +322,8 @@
     .about-motto .list_motto strong {display:block; width:auto; margin:0; font-size:32px; font-weight:700; letter-spacing: -1px;}
     .about-motto .list_motto .badge {width:30px; height:38px; margin-bottom:-13px; margin-left:-14px; padding:0 9px; font-size:24px; text-align:center; line-height:38px;}
     .about-motto .list_motto p {font-size:16px; font-weight:700; line-height:24px; letter-spacing: -0.5px;}
+
+    .about-hall2 {height:auto;}
 
     .about-history {padding:40px 15px 90px;}
     .about-history h3 {margin-bottom:20px; font-size:28px; letter-spacing: -0.5px;}
