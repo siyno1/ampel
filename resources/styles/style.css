@@ -335,4 +335,39 @@
     .about-grow .bg_txt_grow {margin-top:55px; padding-bottom:100%;}
     .about-grow .txt_grow .t2 {margin-top:55px; font-size:16px;}
     .about-grow .txt_grow .t2 span.bar {width:100px; height:2px;}
+
+    /* work */
+    .content_work {padding-top:5px;}
+    .title_work {position:relative;}
+    .title_work h2 {font-size:40px;}
+    .title_work .filter {flex-direction:column; position:absolute; right:20px; top:95px;}
+    .title_work .filter li {display:none; text-align:right;}
+    .title_work .filter li.active {display:block;}
+    .title_work .filter li.active::before {content:'+';}
+
+    .wrap_work {margin-top:40px;}
+    .list_work {flex-direction: column; gap:70px; flex-wrap:nowrap;}
+
+    .list_work li,
+    .list_work li.work-small,
+    .list_work li.work-large {flex:none; width:auto;}
+    .list_work li .detail {background:url(./../images/mobile/icon_link_arrow.svg) no-repeat center;}
+    .list_work li .detail::before,
+    .list_work li .detail::after {content:none;}
+
+    /* contact */
+    .content_contact {overflow:hidden; padding:60px 0 10px;}
+    .contact .txt {padding:0 15px;}
+    .contact .t1 {padding-top:50px; font-size:58px; letter-spacing: -1px;}
+    .contact .wrap_ico {top:-40px; left:auto; right:10px; width:55px; height:55px; margin:0;}
+    .contact .t2 {margin-top:40px; font-size:20px;}
+    .contact .map {margin-top:40px; padding:0 15px;}
+
+    .contact .infos {margin-top:40px; text-align:center;}
+    .contact .infos dd {margin:10px 0 40px;}
+    .contact .infos dd a {font-weight:normal; border-bottom: 1px solid #171010;}
+
+    .contact .talk {margin-top:30px;}
+    .contact .talk a {padding-right:53px; font-size:48px; font-weight:normal; letter-spacing: -2.4px;}
+    .contact .talk .badge {top:-8px; left: auto; right:0; width:62px; height:40px; margin:0; background-size:30px;}
 }
