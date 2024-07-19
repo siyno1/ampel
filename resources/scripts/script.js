@@ -89,6 +89,8 @@ var Ampel = {
 $(document).ready(function(){
     Ampel.init();
     Ampel.logoAnimation();
+    ScrollTrigger.normalizeScroll(true);
+    Ampel.windowResize();
     /**
      * 이미지까지 로드 이후에 스크립트 실행
     */
@@ -97,11 +99,6 @@ $(document).ready(function(){
         //상단 바로가기 버튼
         var $btnTop = $(".btn_top");
         $btnTop.on("click", Ampel.goTop);
-
-
-
-
-
 
         var $gnb = document.querySelector(".gnb_mobile");
         var $menus = $gnb.querySelectorAll("a");
@@ -146,6 +143,5 @@ $(document).ready(function(){
             gnbTl.reverse();
         });
 
-        ScrollTrigger.normalizeScroll(true);
     });
 });//@ready
