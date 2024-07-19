@@ -13,7 +13,7 @@ $(document).ready(function(){
           var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
           ScrollTrigger.create({
             trigger: colorSection,
-            start: "top bottom",
+            start: "top center",
             onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
             onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
           });
