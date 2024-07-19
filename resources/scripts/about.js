@@ -4,6 +4,22 @@ $(document).ready(function(){
 
     var gsapMatchMedia = gsap.matchMedia();
 
+    // 전체페이지 scrolling
+
+    window.addEventListener("load", function() {
+        var backgroundElement = document.querySelector("#wrap");
+        var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
+        scrollColorElems.forEach((colorSection, i) => {
+          var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
+          ScrollTrigger.create({
+            trigger: colorSection,
+            start: "top bottom",
+            onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
+            onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
+          });
+        });
+    });
+
     //about-we
     var weSec = document.querySelector('.about-we');
     var weTypo = weSec.querySelector('.sec_typo');

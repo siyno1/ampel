@@ -50,10 +50,11 @@
 .main_visual2 { position:relative; z-index:1; }
 
 /* about */
+#wrap.about {background:#171010;}
 .about .header .gnb a {color:#F9F5EF;}
 .about .header .gnb a.contact {color: #171010;}
 
-.about-we {overflow:hidden; padding:160px 0 140px; color:#F9F5EF; background: #171010;}
+.about-we {overflow:hidden; padding:160px 0 140px; color:#F9F5EF; /* background: #171010; */}
 .about-we .sec_typo {overflow:hidden; position:relative; padding:0 80px 20px; z-index:1;}
 .about-we .typo {position: relative; font-family: 'Faktum Wide'; font-size:195px; line-height:80%; letter-spacing: -11.7px; text-transform:uppercase; z-index:1;}
 .about-we .typo.t1 {padding-right:225px; text-align: right;}
@@ -99,7 +100,7 @@
 .about-solution .list_mindset .name {display:block; margin-top:34px; font-family: 'Faktum Wide'; font-size:24px; font-weight:700; text-transform:uppercase; letter-spacing:-0.5px;}
 .about-solution .list_mindset .desc {margin-top:34px;}
 
-.about-better {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh; padding:0 30px; background:#171010;}
+.about-better {display:flex; align-items:center; justify-content:center; overflow:hidden; height:100vh; padding:0 30px; /* background:#171010; */}
 .about-better .typo {display:flex; align-items:center; gap:8px; font-family: 'Faktum Wide'; font-size:75px; color:#fff; font-weight:600; text-transform:uppercase;}
 .about-better .typo span {flex:none;}
 .about-better .typo span.bar {display:inline-block; width:250px; height:7px; flex:1; background:#fff;}
