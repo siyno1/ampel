@@ -48,6 +48,8 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 
 [data-clipboard] {display:inline-block; padding-right:25px; background: url(./../images/icon_clipboard.svg) no-repeat right center; background-size:contain; cursor: pointer;}
 
+.vod-mobile {display:none;}
+
 /* 레이아웃 */
 .wrapper {position:relative; max-width:1920px; margin:0 auto;}
 
@@ -121,6 +123,8 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 
 /* 768해상도 아래는 모바일로 */
 @media all and (max-width:768px) {
+    .vod-desktop {display:none;}
+    .vod-mobile {display:block;}
 
     .header_logo {top:0; left:0; height:60px;}
     .header_logo a {padding-left: 16px;}
