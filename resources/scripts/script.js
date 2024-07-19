@@ -88,6 +88,7 @@ var Ampel = {
  */
 $(document).ready(function(){
     Ampel.init();
+    Ampel.logoAnimation();
     /**
      * 이미지까지 로드 이후에 스크립트 실행
     */
@@ -97,7 +98,7 @@ $(document).ready(function(){
         var $btnTop = $(".btn_top");
         $btnTop.on("click", Ampel.goTop);
 
-        Ampel.logoAnimation();
+
 
 
 
