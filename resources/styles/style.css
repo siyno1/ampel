@@ -327,4 +327,12 @@
     .about-history .list_detail .txt {padding-top:2px; padding-left:60px;}
     .about-history .list_detail .txt strong {font-size:13px;}
     .about-history .list_detail .txt span {margin-top:10px; font-size:13px;}
+
+    .about-grow {display:block; height:auto;}
+    .about-grow .bg_grow {padding-bottom:115%;}
+    .about-grow .txt_grow {padding:40px 15px 0;}
+    .about-grow .txt_grow .t1 {text-align:left; font-size:48px; font-weight:700; letter-spacing: -1px;}
+    .about-grow .bg_txt_grow {margin-top:55px; padding-bottom:100%;}
+    .about-grow .txt_grow .t2 {margin-top:55px; font-size:16px;}
+    .about-grow .txt_grow .t2 span.bar {width:100px; height:2px;}
 }
