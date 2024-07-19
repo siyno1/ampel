@@ -155,9 +155,10 @@
 .about-history .list_detail li + li {margin-top:50px;}
 .about-history .list_detail .icon {display:flex; align-items: center; justify-content: center; flex:none; width:60px; height:60px;}
 .about-history .list_detail .icon img {flex:none; max-width:100%; max-height:100%;}
-.about-history .list_detail .txt {padding-top:5px; padding-left:70px;}
+.about-history .list_detail .month {font-family:'Faktum Wide'; font-size:24px; font-weight:700;}
+.about-history .list_detail .txt {padding-top:3px; padding-left:70px;}
 .about-history .list_detail .txt strong {display:block; font-size:20px; font-weight:700; letter-spacing: -1px; word-break: keep-all;}
-.about-history .list_detail .txt span {display: block; margin-top:10px; font-size: 20px; letter-spacing: -1px; word-break: keep-all;}
+.about-history .list_detail .txt span {display: block; margin-top:10px; font-family: 'Faktum Wide'; font-size: 20px; letter-spacing: -1px; word-break: keep-all; text-transform: uppercase;}
 
 .about-grow {display:flex; overflow:hidden; height:100vh;}
 .about-grow .bg_grow {flex:auto; background:url(./../images/bg_grow_01.jpg) no-repeat center; background-size:cover;}

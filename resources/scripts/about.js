@@ -10,13 +10,13 @@ $(document).ready(function(){
         var backgroundElement = document.querySelector("#wrap");
         var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
         scrollColorElems.forEach((colorSection, i) => {
-          var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
-          ScrollTrigger.create({
-            trigger: colorSection,
-            start: "top center",
-            onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
-            onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
-          });
+            var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
+            ScrollTrigger.create({
+                trigger: colorSection,
+                start: "top center",
+                onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
+                onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
+            });
         });
     });
 
