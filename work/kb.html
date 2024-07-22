@@ -18,7 +18,7 @@
     <script src="./../resources/scripts/script.js"></script>
     <style>
         #wrap.work-kb {background-color:#fff;}
-        .work_intro {background-image:url(./../resources/images/work/kb/img_intro.jpg);}
+        .work_intro_bg {background-image:url(./../resources/images/work/kb/img_intro.jpg);}
 
         .work_kb_01 {padding:0 0 150px; text-align:center;}
         .work_kb_01 img {max-width:100%;}
@@ -37,7 +37,7 @@
         .work_kb_03 .kb_pc + .kb_pc {margin-top:100px;}
 
         @media all and (max-width:769px) {
-            .work_intro {background-image:url(./../resources/images/work/kb/img_intro_mobile.jpg);}
+            .work_intro_bg {background-image:url(./../resources/images/work/kb/img_intro_mobile.jpg);}
             .work_kb_01 {padding:0 0 120px;}
 
             .work_kb_02 {padding:70px 50px 110px;}
@@ -111,12 +111,16 @@
             <!-- work detail 페이지는 work를 접두사로 사용함 -->
             <div class="work_cnt">
                 <div class="work_intro">
-                    <h2 class="work_title">
-                        <picture>
-                            <source srcset="./../resources/images/work/kb/img_intro_title_mobile.png" media="(max-width:768px)">
-                            <img src="./../resources/images/work/kb/img_intro_title.png" alt="STARBANKING">
-                        </picture>
-                    </h2>
+                    <div class="work_intro_wrap">
+                        <div class="work_intro_bg">
+                            <h2 class="work_title">
+                                <picture>
+                                    <source srcset="./../resources/images/work/kb/img_intro_title_mobile.png" media="(max-width:768px)">
+                                    <img src="./../resources/images/work/kb/img_intro_title.png" alt="STARBANKING">
+                                </picture>
+                            </h2>
+                        </div>
+                    </div>
                 </div>
                 <div class="work_info">
                     <div class="wrapper">
