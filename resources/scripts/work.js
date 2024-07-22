@@ -1,6 +1,23 @@
 $(document).ready(function(){
     Splitting();
 
+    $(".filter li").on("click", function(e){
+        e.stopPropagation();
+        var $this = $(this);
+        var $parent = $this.closest(".filter");
+        var filterable = $parent.find("li:visible").length > 1;
+
+        if (filterable === false) {
+            $parent.addClass("opened");
+            return;
+        }
+
+        $parent.find("li").removeClass("active");
+        $this.addClass("active");
+        $parent.removeClass("opened");
+
+    });
+
     // 포트폴리오 버튼
     var btnDetails = document.querySelectorAll('.detail');
 
@@ -71,4 +88,10 @@ $(document).ready(function(){
             stagger: { each: 0.08 }
         });
     })
+});
+
+$(document).on("click", function(){
+    if ($(".opened").length) {
+        $(".opened").removeClass("opened");
+    }
 });

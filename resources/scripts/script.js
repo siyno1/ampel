@@ -4,6 +4,7 @@
  */
 
 var Ampel = {
+    isMobile:navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) !== null,
     /*
      * lenis
      * scroll 및 인터렉션 관련 필수요소
