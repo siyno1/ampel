@@ -225,6 +225,7 @@
 .work_info_summary strong {display:block; font-size:16px; font-weight:600;}
 .work_info_summary span {display:block; margin-top:10px; padding-top:10px; border-top:2px solid #28282C; font-size:15px; font-weight:400;}
 .work_info_txt {margin-top:60px; font-size:15px; line-height:160%; word-break:keep-all;}
+.work_info_txt + .work_info_txt {margin-top:0;}
 .link_site {display:flex; align-items:center; gap:10px; width:fit-content; margin-top:36px; padding:18px 24px; border-radius: 50px; font-size:18px; font-weight:500; color:#fff; background:#28282c;}
 .link_site::after {content:''; display:block; width:20px; height:20px; background:url(./../images/work/icon_arrow_right.png) no-repeat center;}
 
@@ -391,4 +392,18 @@
     .contact .talk {margin-top:30px;}
     .contact .talk a {padding-right:53px; font-size:48px; font-weight:normal; letter-spacing: -2.4px;}
     .contact .talk .badge {top:-8px; left: auto; right:0; width:62px; height:40px; margin:0; background-size:30px;}
+
+    /* work 상세 공통 */
+    .work_intro {height:auto; padding:330px 0;}
+    .work_title {padding-left:20px;}
+    .work_info {padding:80px 20px 120px;}
+    .work_info_title {font-size:20px; font-weight:500;}
+    .work_info_summary {flex-direction: column; gap:40px; margin-top:32px;}
+    .work_info_summary li {width:auto;}
+    .work_info_summary strong {font-size:14px;}
+    .work_info_summary span {font-size:14px;}
+    .work_info_txt {font-size:14px;}
+    .work_info_txt + .work_info_txt {margin-top:24px;}
+    .link_site {margin-top:32px; font-size:14px;}
+    .link_site::after {width:16px; height:16px; background-size:14px;}
 }

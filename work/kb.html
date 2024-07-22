@@ -19,16 +19,36 @@
     <style>
         #wrap.work-kb {background-color:#fff;}
         .work_intro {background-image:url(./../resources/images/work/kb/img_intro.jpg);}
-        .work_kb_01 {padding:0 15px 340px; text-align:center;}
+
+        .work_kb_01 {padding:0 0 150px; text-align:center;}
         .work_kb_01 img {max-width:100%;}
-
         .work_kb_02 {padding:160px 100px; background:#ffde2d;}
-        .work_kb_02 ul {display:flex; flex-wrap:wrap; gap:12.5vw 0; position:relative;}
-        .work_kb_02 li {width:25%;}
-        .work_kb_02 li.image {border-radius:32px; box-shadow:16px 16px 20px 0px rgba(0, 0, 0, 0.05);}
+        .work_kb_02 ul {display:flex; flex-wrap:wrap; gap:12.5vw 0; position:relative; margin:0 -10px;}
         .work_kb_02 img {max-width:100%;}
-        .work_kb_02 .mascot {position:absolute; right:30px; bottom:0; width:auto; max-width:calc(50% - 30px);}
+        .work_kb_02 li.image,
+        .work_kb_02 li.empty {box-sizing:border-box; width:25%; padding:0 10px; text-align:center;}
+        .work_kb_02 li.image img {filter:drop-shadow(16px 16px 20px rgba(0, 0, 0, 0.05));}
+        .work_kb_02 .mascot {position:absolute; right:30px; bottom:0; width:auto; max-width:calc(40% - 30px);}
 
+        .work_kb_03 {padding:165px 15px 300px; text-align:center;}
+        .work_kb_03 img {max-width:100%;}
+        .work_kb_03 .kb_pc {margin-top:230px;}
+        .work_kb_03 .kb_pc + .kb_pc {margin-top:100px;}
+
+        @media all and (max-width:769px) {
+            .work_intro {background-image:url(./../resources/images/work/kb/img_intro_mobile.jpg);}
+            .work_kb_01 {padding:0 0 120px;}
+
+            .work_kb_02 {padding:70px 50px 110px;}
+            .work_kb_02 ul {flex-direction: column; gap:42px;}
+            .work_kb_02 li.image {width:100%;}
+            .work_kb_02 li.empty {display:none;}
+            .work_kb_02 .mascot {position:static; width:100%; max-width: none; padding:50px 0; text-align:center;}
+
+            .work_kb_03 {padding-top:75px;}
+            .work_kb_03 .kb_pc {margin-top:70px;}
+            .work_kb_03 .kb_pc + .kb_pc {margin-top:35px;}
+        }
     </style>
 </head>
 <body>
@@ -115,7 +135,8 @@
                             </li>
                         </ul>
 
-                        <p class="work_info_txt">비대면 가계여신 경쟁력 강화를 중심으로 비대면 대출 상품 라인업 정비, 비대면 전용 신상품 출시, 공공마이데이터 연계 등 신청 프로세스 개선하였습니다.<br>고객의 거래 편의성을 최우선으로 고려하여 UX를 설계하였으며, 영업점 방문이 어려운 고객들이 보다 편리하게 대출을 신청할 수 있도록 금융서비스의 접근성을 높였습니다.</p>
+                        <p class="work_info_txt">비대면 가계여신 경쟁력 강화를 중심으로 비대면 대출 상품 라인업 정비, 비대면 전용 신상품 출시, 공공마이데이터 연계 등 신청 프로세스 개선하였습니다.</p>
+                        <p class="work_info_txt">고객의 거래 편의성을 최우선으로 고려하여 UX를 설계하였으며, 영업점 방문이 어려운 고객들이 보다 편리하게 대출을 신청할 수 있도록 금융서비스의 접근성을 높였습니다.</p>
                         <a class="link_site" href="">사이트 바로가기</a>
                     </div>
                 </div>
@@ -153,10 +174,15 @@
                     </div>
                 </div>
                 <div class="work_kb_03">
-                    <picture>
-                        <source srcset="./../resources/images/work/kb/img_01_mobile.png" media="(max-width:768px)">
-                        <img src="./../resources/images/work/kb/img_03.png" alt="STARBANKING">
-                    </picture>
+                    <div class="kb_friends">
+                        <img src="./../resources/images/work/kb/img_03_friends.png" alt="">
+                    </div>
+                    <div class="kb_pc">
+                        <img src="./../resources/images/work/kb/img_03_01.png" alt="">
+                    </div>
+                    <div class="kb_pc">
+                        <img src="./../resources/images/work/kb/img_03_02.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
