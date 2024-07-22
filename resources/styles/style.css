@@ -360,15 +360,15 @@
     .about-grow .txt_grow .t2 span.bar {width:100px; height:2px;}
 
     /* work */
-    .content_work {padding-top:5px;}
-    .title_work {position:relative;}
+    .content_work {padding-top:60px;}
+    .title_work {position:relative; padding-top:5px;}
     .title_work h2 {font-size:40px;}
-    .title_work .filter {flex-direction:column; position:absolute; right:20px; top:95px;}
+    .title_work .filter {flex-direction:column; position:absolute; right:20px; top:19px;}
     .title_work .filter li {display:none; text-align:right;}
     .title_work .filter li.active {display:block;}
     .title_work .filter li.active::before {content:'+';}
 
-    .wrap_work {margin-top:40px;}
+    .wrap_work {margin-top:20px;}
     .list_work {flex-direction: column; gap:70px; flex-wrap:nowrap;}
 
     .list_work li,
