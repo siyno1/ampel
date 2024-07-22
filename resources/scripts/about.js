@@ -615,6 +615,55 @@ $(document).ready(function(){
         }
     })
 
+    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+        var mottoSec = document.querySelector('.about-motto');
+        var mottoList = mottoSec.querySelectorAll('li');
+
+        for (var [index,element] of mottoList.entries()) {
+            var mottoMobileTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top bottom-=20%',
+                    end: 'bottom bottom-=20%',
+                    scrub: 1
+                }
+            });
+
+            mottoMobileTl.fromTo(element.querySelector('.txt'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                x:-100
+            },{
+                x:0,
+                opacity:1
+            });
+
+            mottoMobileTl.fromTo(element.querySelector('.badge'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                y:30
+            },{
+                y:-10,
+                opacity:1
+            });
+
+            mottoMobileTl.to(element.querySelector('.badge'),{
+                y:0
+            });
+
+
+
+            mottoMobileTl.fromTo(element.querySelector('p'),{
+                'will-change': 'opacity, transform',
+                opacity:0,
+                x:100
+            },{
+                x:0,
+                opacity:1
+            });
+        }
+    });
+
 
     //about-motto================
 
