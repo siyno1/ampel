@@ -13,7 +13,6 @@
 .main .parallax .horizontal {display: flex; flex-wrap: nowrap; width: fit-content;}
 
 .main_visual {flex:none; width:95vw;}
-.main_visual video {min-width:100%; min-height:100%; object-fit:cover;}
 
 .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
 .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
