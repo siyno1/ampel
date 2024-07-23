@@ -133,7 +133,7 @@ $(document).ready(function(){
                         pin:true,
                         pinSpacing:false,
                         trigger:element,
-                        start:"top+=10 top",
+                        start:"top top",
                         end:"+=100%",
                         scrub: 1
                     }

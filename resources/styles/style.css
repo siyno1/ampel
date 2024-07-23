@@ -247,7 +247,7 @@
     .list_portfolio li + li {margin-top:10px;}
     .list_portfolio .thumbnail {margin-top:0; padding:0;}
     .list_portfolio .thumbnail img {position:static; transform: none;}
-    .list_portfolio .info {display:flex; align-items: center; justify-content: space-between; gap:5px; min-height:auto; padding:25px 10px 50px 15px; background:#F9F5EF;}
+    .list_portfolio .info {display:flex; align-items: center; justify-content: space-between; gap:5px; min-height:auto; padding:25px 10px 150px 15px; background:#F9F5EF;}
     /* .list_portfolio .wrap_info {} */
     .list_portfolio .tags {justify-content: flex-start; gap:10px; font-size:16px; font-weight:500; opacity: 1; transform:none;}
     .list_portfolio .type {white-space: nowrap;}
