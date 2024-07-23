@@ -102,7 +102,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .btn_top {position:absolute; bottom:100px; right:20px; width:43px; height:43px; background:url(./../images/icon_top_arrow.svg) no-repeat center; background-size:contain; z-index:10;}
 .video_sec {display: flex; justify-content: center; align-items: center; overflow: hidden; box-sizing: border-box; width: 100%; height: 100vh;}
 .video_sec video { min-width: 100%; min-height: 100%; object-fit: cover; }
-.vod-mobile {display:none;}
+.vod-desktop {display:none;}
 
 
 @keyframes rotate {
@@ -110,11 +110,15 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     100% {transform: rotate(360deg);}
 }
 
+/* 비디오 로드 관련하여, 모바일 우선 접근하도록 min-width 사용 */
+@media all and (min-width:768px) {
+    .vod-desktop {display:flex;}
+    .vod-mobile {display:none;}
+}
+
 
 /* 768해상도 아래는 모바일로 */
 @media all and (max-width:768px) {
-    .vod-desktop {display:none;}
-    .vod-mobile {display:flex;}
 
     .header_logo {top:0; left:0; height:60px;}
     .header_logo a {padding-left: 16px;}
