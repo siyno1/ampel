@@ -81,6 +81,32 @@ var Ampel = {
      */
     goTop:function(){
         gsap.to(window, { duration: 1, scrollTo: 0 });
+    },
+    marquee:function(){
+        var marquee = document.querySelectorAll('.marquee');
+
+        if(!marquee) return
+        marquee.forEach(item => {
+            var marqueeContent = item.querySelector('span');
+
+            // Duration
+            var duration = 5;
+
+            // Element Clone
+            var marqueeContentClone = marqueeContent.cloneNode(true);
+            item.append(marqueeContentClone);
+
+            // Marquee animation
+            var marqueeContentAll = item.querySelectorAll('span');
+            marqueeContentAll.forEach(element => {
+                gsap.to(element, {
+                    x: "-100%",
+                    repeat: -1,
+                    duration: duration,
+                    ease: 'linear'
+                })
+            })
+        })
     }
 }
 
@@ -92,6 +118,7 @@ $(document).ready(function(){
     Ampel.logoAnimation();
     ScrollTrigger.normalizeScroll(true);
     Ampel.windowResize();
+    Ampel.marquee();
     /**
      * 이미지까지 로드 이후에 스크립트 실행
     */
