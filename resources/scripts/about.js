@@ -620,6 +620,7 @@ $(document).ready(function(){
         var mottoList = mottoSec.querySelectorAll('li');
 
         for (var [index,element] of mottoList.entries()) {
+
             var mottoMobileTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: element,

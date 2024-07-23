@@ -90,22 +90,36 @@ var Ampel = {
             var marqueeContent = item.querySelector('span');
 
             // Duration
-            var duration = 5;
+            var duration = 10;
 
             // Element Clone
-            var marqueeContentClone = marqueeContent.cloneNode(true);
-            item.append(marqueeContentClone);
+            // var marqueeContentClone = marqueeContent.cloneNode(true);
+            // item.append(marqueeContentClone);
 
             // Marquee animation
             var marqueeContentAll = item.querySelectorAll('span');
-            marqueeContentAll.forEach(element => {
-                gsap.to(element, {
-                    x: "-100%",
-                    repeat: -1,
-                    duration: duration,
-                    ease: 'linear'
+
+
+            if (item.classList.contains('reverse')) {
+                marqueeContentAll.forEach(element => {
+                    gsap.to(element, {
+                        x: "100%",
+                        repeat: -1,
+                        duration: duration,
+                        ease: 'linear'
+                    })
                 })
-            })
+            } else {
+                marqueeContentAll.forEach(element => {
+                    gsap.to(element, {
+                        x: "-100%",
+                        repeat: -1,
+                        duration: duration,
+                        ease: 'linear'
+                    })
+                })
+            }
+
         })
     }
 }
