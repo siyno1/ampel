@@ -386,6 +386,10 @@ $(document).ready(function(){
                 slidesPerView:2,
                 centeredSlides:true
             }
+        },
+        navigation:{
+            nextEl:".solution-slide-next",
+            prevEl:".solution-slide-prev"
         }
     });
 
