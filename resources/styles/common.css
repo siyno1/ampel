@@ -112,7 +112,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 }
 
 /* 비디오 로드 관련하여, 모바일 우선 접근하도록 min-width 사용 */
-@media all and (min-width:768px) {
+@media all and (min-width:769px) {
     .vod-desktop {display:flex;}
     .vod-mobile {display:none;}
 
