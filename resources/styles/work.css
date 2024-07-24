@@ -1,7 +1,49 @@
-/* kb */
-#wrap.kb {background-color:#fff;}
-#wrap.kb .work_intro_bg {background-image:url(./../../resources/images/work/kb/img_intro.jpg);}
+/* work 상세 공통 */
+#wrap.work-detail {font-family: 'Faktum Wide'; background-color:#fff;}
+#wrap.work-detail .work_title .mob_br {display:block;}
+#wrap.work-detail .work_title .pc_br {display:none;}
+.work_intro {position:relative; height:100vh;}
+.work_intro_wrap {clip: rect(0, auto, auto, 0); position:absolute; top:0; left:0; width:100%; height:100%;}
+.work_intro_bg {display:flex; align-items: center; position:fixed; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-position:center; background-size: cover;}
+.work_title {flex:1; padding:0 140px; font-size:48px; font-weight:700; word-break:keep-all;}
+.work_title img {display:block; max-width:100%;}
+.work_info {box-sizing:border-box; max-width:990px; margin:0 auto; padding:100px 15px;}
+.work_info_title {font-size:28px; font-weight:700;}
+.work_info_summary {display:flex; justify-content: space-between; margin-top:36px;}
+.work_info_summary li {width:200px;}
+.work_info_summary strong {display:block; font-size:16px; font-weight:600;}
+.work_info_summary span {display:block; margin-top:10px; padding-top:10px; border-top:2px solid #171010; font-size:15px; font-weight:400;}
+.work_info_txt {margin-top:60px; font-size:15px; line-height:160%; word-break:keep-all;}
+.work_info_txt + .work_info_txt {margin-top:0;}
+.link_site {display:flex; align-items:center; gap:10px; width:fit-content; margin-top:36px; padding:18px 24px; border-radius: 50px; font-size:18px; font-weight:500; color:#fff; background:#28282c;}
+.link_site::after {content:''; display:block; width:20px; height:20px; background:url(./../images/work/icon_arrow_right.png) no-repeat center;}
 
+/* 모바일 우선으로 반응형 처리하는것이 모바일 성능에 유리함. */
+@media all and (min-width:769px) {
+    .work_title {font-size:5.2vw;}
+    #wrap.work-detail .work_title .mob_br {display:none;}
+    #wrap.work-detail .work_title .pc_br {display:block;}
+}
+
+@media all and (max-width:769px) {
+    /* work 상세 공통 */
+    .work_intro {height:80vh;}
+    .work_intro_bg {height:80vh;}
+    .work_title {padding-left:20px;}
+    .work_info {padding:80px 20px 120px;}
+    .work_info_title {font-size:20px; font-weight:500;}
+    .work_info_summary {flex-direction: column; gap:40px; margin-top:32px;}
+    .work_info_summary li {width:auto;}
+    .work_info_summary strong {font-size:14px;}
+    .work_info_summary span {font-size:14px;}
+    .work_info_txt {font-size:14px;}
+    .work_info_txt + .work_info_txt {margin-top:24px;}
+    .link_site {margin-top:32px; font-size:14px;}
+    .link_site::after {width:16px; height:16px; background-size:14px;}
+}
+
+/* kb */
+#wrap.kb .work_intro_bg {background-image:url(./../../resources/images/work/kb/img_intro.jpg);}
 #wrap.kb .work_kb_01 {padding:0 0 150px; text-align:center;}
 #wrap.kb .work_kb_01 img {max-width:100%;}
 #wrap.kb .work_kb_02 {padding:160px 100px; background:#ffde2d;}
@@ -11,7 +53,6 @@
 #wrap.kb .work_kb_02 li.empty {box-sizing:border-box; width:25%; padding:0 10px; text-align:center;}
 #wrap.kb .work_kb_02 li.image img {filter:drop-shadow(16px 16px 20px rgba(0, 0, 0, 0.05));}
 #wrap.kb .work_kb_02 .mascot {position:absolute; right:30px; bottom:0; width:auto; max-width:calc(40% - 30px);}
-
 #wrap.kb .work_kb_03 {padding:165px 15px 300px; text-align:center;}
 #wrap.kb .work_kb_03 img {max-width:100%;}
 #wrap.kb .work_kb_03 .kb_pc {margin-top:230px;}
@@ -21,14 +62,46 @@
 @media all and (max-width:769px) {
     #wrap.kb .work_intro_bg {background-image:url(./../../resources/images/work/kb/img_intro_mobile.jpg);}
     #wrap.kb .work_kb_01 {padding:0 0 120px;}
-
     #wrap.kb .work_kb_02 {padding:70px 50px 110px;}
     #wrap.kb .work_kb_02 ul {flex-direction: column; gap:42px;}
     #wrap.kb .work_kb_02 li.image {width:100%;}
     #wrap.kb .work_kb_02 li.empty {display:none;}
     #wrap.kb .work_kb_02 .mascot {position:static; width:100%; max-width: none; padding:50px 0; text-align:center;}
-
     #wrap.kb .work_kb_03 {padding-top:75px;}
     #wrap.kb .work_kb_03 .kb_pc {margin-top:70px;}
     #wrap.kb .work_kb_03 .kb_pc + .kb_pc {margin-top:35px;}
+}
+
+/* ibk_box */
+#wrap.ibk_box .work_intro_bg {background-image:url(./../../resources/images/work/ibk_box/img_intro_mobile.jpg);}
+
+#wrap.ibk_box .work_title {padding-right:0; color:#fff;}
+#wrap.ibk_box .work_title .onlypc {display:none;}
+#wrap.ibk_box .work_ibk_box {margin-top:100px; padding-bottom:350px; text-align:center; background: linear-gradient(180deg, #FFF 0%, rgba(97, 73, 53, 0.80) 50%, #191918 100%);}
+#wrap.ibk_box .work_ibk_box img {max-width:100%;}
+#wrap.ibk_box .work_ibk_box_01 {box-sizing:border-box; max-width:890px; margin:0 auto; padding:0 15px; text-align:center;}
+#wrap.ibk_box .work_ibk_box_02 {margin-top:30px; padding:0 15px;}
+#wrap.ibk_box .work_ibk_box_03 {display:none;}
+
+@media all and (min-width:769px) {
+    #wrap.ibk_box .work_intro_bg {background-image:url(./../../resources/images/work/ibk_box/img_intro.jpg);}
+    #wrap.ibk_box .work_title .onlypc {display:block;}
+    #wrap.ibk_box .work_ibk_box_02 {margin-top:100px;}
+    #wrap.ibk_box .work_ibk_box_03 {display:block; margin-top:190px; padding:0 15px;}
+}
+
+/* seolbi */
+#wrap.seolbi .work_intro_bg {background-image:url(./../../resources/images/work/seolbi/img_intro_mobile.jpg);}
+#wrap.seolbi .work_title {padding-right:0; color:#fff;}
+#wrap.seolbi .work_seolbi_box img {max-width:100%;}
+#wrap.seolbi .work_seolbi_box_01 {padding:100px 15px 130px; background: linear-gradient(180deg, #2B3844 0%, #010202 100%);}
+#wrap.seolbi .work_seolbi_box_01 li + li {margin-top:40px; }
+#wrap.seolbi .work_seolbi_box_02 {overflow:hidden; padding:120px 0 140px; background: linear-gradient(180deg, #E8E8E8 0%, #939393 100%);}
+#wrap.seolbi .work_seolbi_box_02 ul {display:flex; flex-wrap: nowrap; gap:30px; justify-content: center;}
+#wrap.seolbi .work_seolbi_box_02 li {min-width:130px;}
+
+@media all and (min-width:769px) {
+    #wrap.seolbi .work_intro_bg {background-image:url(./../../resources/images/work/seolbi/img_intro.jpg);}
+    #wrap.seolbi .work_seolbi_02 {margin-top:100px;}
+    #wrap.seolbi .work_seolbi_03 {display:block; margin-top:190px; padding:0 15px;}
 }

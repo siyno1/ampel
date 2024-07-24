@@ -1,5 +1,5 @@
 @charset "UTF-8";
- 
+
 #wrap {position:relative; min-height: 100%; background: #F9F5EF;}
 
 /* main */
@@ -213,23 +213,6 @@
 .contact .talk a {display:inline-block; position:relative; padding-right:60px; font-family: 'Faktum Wide'; font-weight:600; font-size:96px; letter-spacing:-5px; text-decoration:underline;}
 .contact .talk .badge {display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(./../images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
 
-/* work 상세 공통 */
-#wrap.work-detail {font-family: 'Faktum Wide';}
-.work_intro {position:relative; height:100vh;}
-.work_intro_wrap {clip: rect(0, auto, auto, 0); position:absolute; top:0; left:0; width:100%; height:100%;}
-.work_intro_bg {display:flex; align-items: center; position:fixed; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-position:center; background-size: cover;}
-.work_title {flex:1; padding:0 140px;}
-.work_title img {max-width:100%;}
-.work_info {box-sizing:border-box; max-width:990px; margin:0 auto; padding:100px 15px; color:#28282C;}
-.work_info_title {font-size:28px; font-weight:700;}
-.work_info_summary {display:flex; justify-content: space-between; margin-top:36px;}
-.work_info_summary li {width:200px;}
-.work_info_summary strong {display:block; font-size:16px; font-weight:600;}
-.work_info_summary span {display:block; margin-top:10px; padding-top:10px; border-top:2px solid #28282C; font-size:15px; font-weight:400;}
-.work_info_txt {margin-top:60px; font-size:15px; line-height:160%; word-break:keep-all;}
-.work_info_txt + .work_info_txt {margin-top:0;}
-.link_site {display:flex; align-items:center; gap:10px; width:fit-content; margin-top:36px; padding:18px 24px; border-radius: 50px; font-size:18px; font-weight:500; color:#fff; background:#28282c;}
-.link_site::after {content:''; display:block; width:20px; height:20px; background:url(./../images/work/icon_arrow_right.png) no-repeat center;}
 
 @media all and (max-width:1920px) {
     .about-we .typo {font-size:10.1563vw;}
@@ -399,18 +382,5 @@
     .contact .talk a {padding-right:53px; font-size:48px; font-weight:normal; letter-spacing: -2.4px;}
     .contact .talk .badge {top:-8px; left: auto; right:0; width:62px; height:40px; margin:0; background-size:30px;}
 
-    /* work 상세 공통 */
-    .work_intro {height:80vh;}
-    .work_intro_bg {height:80vh;}
-    .work_title {padding-left:20px;}
-    .work_info {padding:80px 20px 120px;}
-    .work_info_title {font-size:20px; font-weight:500;}
-    .work_info_summary {flex-direction: column; gap:40px; margin-top:32px;}
-    .work_info_summary li {width:auto;}
-    .work_info_summary strong {font-size:14px;}
-    .work_info_summary span {font-size:14px;}
-    .work_info_txt {font-size:14px;}
-    .work_info_txt + .work_info_txt {margin-top:24px;}
-    .link_site {margin-top:32px; font-size:14px;}
-    .link_site::after {width:16px; height:16px; background-size:14px;}
+
 }
