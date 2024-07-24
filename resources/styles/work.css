@@ -8,7 +8,7 @@
 .work_title {flex:1; padding:0 140px; font-size:48px; font-weight:700; word-break:keep-all;}
 .work_title img {display:block; max-width:100%;}
 .work_info {box-sizing:border-box; max-width:990px; margin:0 auto; padding:100px 15px;}
-.work_info_title {font-size:28px; font-weight:700;}
+.work_info_title {font-size:28px; font-weight:700; word-break: keep-all;}
 .work_info_summary {display:flex; justify-content: space-between; margin-top:36px;}
 .work_info_summary li {width:200px;}
 .work_info_summary strong {display:block; font-size:16px; font-weight:600;}
@@ -91,8 +91,8 @@
 }
 
 /* seolbi */
-#wrap.seolbi .work_intro_bg {background-image:url(./../../resources/images/work/seolbi/img_intro_mobile.jpg);}
-#wrap.seolbi .work_title {padding-right:0; color:#fff;}
+#wrap.seolbi .work_intro_bg {align-items: flex-end; background-image:url(./../../resources/images/work/seolbi/img_intro_mobile.jpg);}
+#wrap.seolbi .work_title {padding-right:0; padding-bottom:100px; color:#fff;}
 #wrap.seolbi .work_seolbi_box {text-align:center;}
 #wrap.seolbi .work_seolbi_box img {max-width:100%;}
 #wrap.seolbi .work_seolbi_01 {padding:100px 15px 130px; background: linear-gradient(180deg, #2B3844 0%, #010202 100%);}
@@ -111,20 +111,18 @@
 
 
 @media all and (min-width:769px) {
-    #wrap.seolbi .work_intro_bg {background-image:url(./../../resources/images/work/seolbi/img_intro.jpg);}
-
+    #wrap.seolbi .work_intro_bg {align-items: center; background-image:url(./../../resources/images/work/seolbi/img_intro.jpg);}
+    #wrap.seolbi .work_title {padding-bottom:0;}
     #wrap.seolbi .work_seolbi_01 {padding:220px 0 310px;}
     #wrap.seolbi .work_seolbi_01 li + li {margin-top:180px; }
     #wrap.seolbi .work_seolbi_02 {padding:450px 0;}
     #wrap.seolbi .work_seolbi_02 ul {gap:0;}
     #wrap.seolbi .work_seolbi_02 li {max-width:none;}
-
     #wrap.seolbi .work_seolbi_03 {padding:320px 15px;}
     #wrap.seolbi .work_seolbi_03 ul {display:block;}
     #wrap.seolbi .work_seolbi_03 ul::after {content:''; display:block; clear:both;}
     #wrap.seolbi .work_seolbi_03 li {margin:2%; float:left; width:46%; text-align:right;}
     #wrap.seolbi .work_seolbi_03 li:nth-child(2) {float:right; padding-top:12%; text-align:left;}
-
     #wrap.seolbi .work_seolbi_04 {padding:320px 15px;}
     #wrap.seolbi .work_seolbi_04 ul {flex-direction: row; justify-content: center; gap:20px;}
     #wrap.seolbi .work_seolbi_04 li {flex:none;}
