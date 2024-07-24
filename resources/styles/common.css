@@ -58,7 +58,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 .header_logo {display:flex; align-items:stretch; position:fixed; top:10px; left:20px; height:78px; will-change: transform; z-index:11; mix-blend-mode: difference;}
 .header_logo a {display:flex; align-items:center; gap:2px; font-size:0;}
 .header_logo span {display:inline-block; overflow:hidden; vertical-align:top;}
-.header_logo img {width:100%; object-fit:cover;}
+.header_logo img {display:block; width:100%; object-fit:cover;}
 .header_logo .lg1 img {transform: translate(0, -130%);}
 .header_logo .lg2 img {transform: translate(-130%, 0);}
 .header_logo .lg3 img {transform: translate(0%, 130%);}
@@ -126,7 +126,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
     .header_logo a {padding-left: 16px;}
     .header_logo .lg1 img {width:55px;}
     .header_logo .lg2 img {width:16px;}
-    .header_logo .lg3 img {width:16px;}
+    .header_logo .lg3 img {width:17px;}
     .header_logo span.lg4 {display:none;}
 
     .header {position:fixed; height:60px; padding:0; mix-blend-mode: difference;}

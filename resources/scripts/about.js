@@ -60,25 +60,26 @@ $(document).ready(function(){
 
     //we 비디오 섹션
     var weVideoSec = weSec.querySelector('.wrap_video');
-    var weVideo = weVideoSec.querySelector('video');
+    var weVideos = weVideoSec.querySelectorAll('video');
     var weVideoText = weVideoSec.querySelector('.txt_video');
 
-    var videoTl = gsap.timeline({
-        scrollTrigger: {
-            trigger:weVideoSec,
-            start:"top top",
-            end:"bottom+=200 top",
-            scrub: 1
-        }
+    weVideos.forEach((video, index) => {
+        gsap.fromTo(video, {
+            opacity:1,
+            y:0
+        },{
+            y:-50,
+            opacity:0,
+            scrollTrigger: {
+                trigger:video,
+                start:"top top",
+                end:"bottom top",
+                scrub: 1
+            }
+        });
     });
 
-    videoTl.fromTo(weVideoSec, {
-        opacity:1,
-        y:0
-    },{
-        y:-50,
-        opacity:0
-    });
+
 
     //about-we=========================
     //about-infinite
