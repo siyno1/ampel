@@ -197,3 +197,36 @@
     #wrap.foodnet .work_foodnet_05 li ~ li {display:block;}
     #wrap.foodnet .work_foodnet_06 {padding:300px 0;}
 }
+
+/* ibk_ventures */
+#wrap.ibk_ventures .work_intro_bg {background-image:url(./../../resources/images/work/ibk_ventures/img_intro_mobile.jpg);}
+#wrap.ibk_ventures .work_title {color:#fff; padding:0 0 0 20px;}
+#wrap.ibk_ventures .work_ibk_ventures_box {text-align:center;}
+#wrap.ibk_ventures .work_ibk_ventures_box img {max-width:100%;}
+#wrap.ibk_ventures .work_ibk_ventures_01 {padding-top:56%; background:url(./../../resources/images/work/ibk_ventures/img_01_mob.jpg) no-repeat center; background-size:cover;}
+#wrap.ibk_ventures .work_ibk_ventures_02 {padding:80px 40px; background:#E9EEF2;}
+#wrap.ibk_ventures .work_ibk_ventures_02 ul {display:flex; flex-direction: column; gap:15px;}
+#wrap.ibk_ventures .work_ibk_ventures_03 ul {display:flex; flex-direction: column; padding:30px 0;}
+
+@media all and (min-width:769px) {
+    #wrap.ibk_ventures .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_ventures/img_intro.jpg);}
+    #wrap.ibk_ventures .work_title {padding:0 140px; letter-spacing: 40px;}
+    #wrap.ibk_ventures .work_ibk_ventures_01 {background-image:url(./../../resources/images/work/ibk_ventures/img_01.jpg);}
+    #wrap.ibk_ventures .work_ibk_ventures_02 {padding:260px 250px;}
+    #wrap.ibk_ventures .work_ibk_ventures_02 ul {gap:80px;}
+    #wrap.ibk_ventures .work_ibk_ventures_03 {padding:150px 0 200px;;}
+    #wrap.ibk_ventures .work_ibk_ventures_03 ul {flex-direction:row; flex-wrap:wrap; justify-content: center;}
+    #wrap.ibk_ventures .work_ibk_ventures_03 li {max-width:33.33%;}
+}
+
+/* shinhan_bank */
+#wrap.shinhan_bank .work_intro_bg {background-image:url(./../../resources/images/work/shinhan_bank/img_intro_mobile.jpg);}
+#wrap.shinhan_bank .work_title {color:#fff; padding:0 0 0 20px;}
+#wrap.shinhan_bank .work_shinhan_bank_box {text-align:center;}
+#wrap.shinhan_bank .work_shinhan_bank_box img {max-width:100%;}
+
+
+@media all and (min-width:769px) {
+    #wrap.shinhan_bank .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/shinhan_bank/img_intro.jpg);}
+    #wrap.shinhan_bank .work_title {padding:0 140px; letter-spacing: 40px;}
+}
