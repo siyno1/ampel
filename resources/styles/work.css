@@ -25,7 +25,7 @@
     #wrap.work-detail .work_title .pc_br {display:block;}
 }
 
-@media all and (max-width:769px) {
+@media all and (max-width:768px) {
     /* work 상세 공통 */
     .work_intro {height:80vh;}
     .work_intro_bg {height:80vh;}
@@ -59,7 +59,7 @@
 #wrap.kb .work_kb_03 .kb_pc img {filter:drop-shadow(16px 16px 20px rgba(0, 0, 0, 0.05));}
 #wrap.kb .work_kb_03 .kb_pc + .kb_pc {margin-top:100px;}
 
-@media all and (max-width:769px) {
+@media all and (max-width:768px) {
     #wrap.kb .work_intro_bg {background-image:url(./../../resources/images/work/kb/img_intro_mobile.jpg);}
     #wrap.kb .work_kb_01 {padding:0 0 120px;}
     #wrap.kb .work_kb_02 {padding:70px 50px 110px;}
@@ -100,15 +100,10 @@
 #wrap.seolbi .work_seolbi_02 {overflow:hidden; padding:120px 0 140px; background: linear-gradient(180deg, #E8E8E8 0%, #939393 100%);}
 #wrap.seolbi .work_seolbi_02 ul {display:flex; flex-wrap: nowrap; gap:20px; justify-content: center;}
 #wrap.seolbi .work_seolbi_02 li {min-width:150px;}
-
 #wrap.seolbi .work_seolbi_03 {display:block; padding:140px 30px; background: linear-gradient(180deg, #2777B0 0%, #1B76B0 100%);}
 #wrap.seolbi .work_seolbi_03 ul {display:flex; flex-direction:column; gap:40px;}
-
 #wrap.seolbi .work_seolbi_04 {padding:140px 15px 170px; background: linear-gradient(180deg, #2B3844 0%, #010202 100%);}
 #wrap.seolbi .work_seolbi_04 ul {display:flex; flex-direction: column; gap:55px;}
-
-
-
 
 @media all and (min-width:769px) {
     #wrap.seolbi .work_intro_bg {align-items: center; background-image:url(./../../resources/images/work/seolbi/img_intro.jpg);}
@@ -126,4 +121,56 @@
     #wrap.seolbi .work_seolbi_04 {padding:320px 15px;}
     #wrap.seolbi .work_seolbi_04 ul {flex-direction: row; justify-content: center; gap:20px;}
     #wrap.seolbi .work_seolbi_04 li {flex:none;}
+}
+
+/* mydata */
+#wrap.mydata .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/mydata/img_intro_mobile.jpg); background-position:top center;}
+#wrap.mydata .work_title {text-align:center; padding:70px 0;}
+#wrap.mydata .work_mydata_box {text-align:center;}
+#wrap.mydata .work_mydata_box img {max-width:100%;}
+#wrap.mydata .work_mydata_01 {background:#e2f3fd;}
+#wrap.mydata .work_mydata_03 {background:#e2f3fd;}
+
+@media all and (min-width:769px) {
+    #wrap.mydata .work_intro_bg {align-items: center; background-image:url(./../../resources/images/work/mydata/img_intro.jpg); background-position:center;}
+    #wrap.mydata .work_title {padding:0 140px; text-align:left;}
+}
+
+/* winwin */
+#wrap.winwin .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/winwin/img_intro_mobile.jpg);}
+#wrap.winwin .work_title {text-align:center; padding:70px 0; color:#fff;}
+#wrap.winwin .work_winwin_box {text-align:center;}
+#wrap.winwin .work_winwin_box img {max-width:100%;}
+#wrap.winwin .work_winwin_01 {margin-top:-100px;}
+#wrap.winwin .work_winwin_02 {background:#262161;}
+#wrap.winwin .work_winwin_03 {padding:80px 0 200px;}
+#wrap.winwin .mascot {width:270px;}
+
+
+@media all and (min-width:769px) {
+    #wrap.winwin .work_intro_bg {align-items: center; background-image:url(./../../resources/images/work/winwin/img_intro.jpg);}
+    #wrap.winwin .work_title {padding:0 140px; text-align:left;}
+    #wrap.winwin .work_winwin_03 {padding-top:100px;}
+    #wrap.winwin .mascot {width:auto;}
+}
+
+
+/* sol */
+#wrap.sol .work_intro_bg {background-image:url(./../../resources/images/work/sol/img_intro_mobile.jpg);}
+#wrap.sol .work_title {color:#fff; padding:0 0 0 20px;}
+#wrap.sol .work_sol_box {text-align:center;}
+#wrap.sol .work_sol_box img {max-width:100%;}
+#wrap.sol .work_sol_02 {background:#D9D9D9;}
+#wrap.sol .mascot {margin:-30px 0 50px;}
+#wrap.sol .mascot img {width:85px;}
+#wrap.sol .work_sol_03 {padding:80px 0 100px;}
+
+
+@media all and (min-width:769px) {
+    #wrap.sol .work_intro_bg {align-items: center; background-image:url(./../../resources/images/work/sol/img_intro.jpg);}
+    #wrap.sol .work_title {color:#171010; padding:0 140px;}
+    #wrap.sol .work_sol_01 {margin-bottom:270px;}
+    #wrap.sol .mascot {margin:0;}
+    #wrap.sol .mascot img {position:absolute; right:22%; width:12%; z-index:1; transform: translateY(-50%);}
+    #wrap.sol .work_sol_03 {padding:200px 0 220px;}
 }

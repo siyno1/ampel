@@ -222,7 +222,7 @@
 }
 
 /* 768해상도 아래는 모바일로 */
-@media all and (max-width:769px) {
+@media all and (max-width:768px) {
     /* main . index */
     .main .parallax .horizontal {display:block; width:auto;}
     .main_visual {width:auto; height:auto;}
