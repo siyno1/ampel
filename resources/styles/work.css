@@ -203,7 +203,11 @@
 #wrap.ibk_ventures .work_title {color:#fff; padding:0 0 0 20px;}
 #wrap.ibk_ventures .work_ibk_ventures_box {text-align:center;}
 #wrap.ibk_ventures .work_ibk_ventures_box img {max-width:100%;}
-#wrap.ibk_ventures .work_ibk_ventures_01 {padding-top:56%; background:url(./../../resources/images/work/ibk_ventures/img_01_mob.jpg) no-repeat center; background-size:cover;}
+#wrap.ibk_ventures .work_ibk_ventures_01 {overflow:hidden; position:relative;}
+/* 비디오 품질때문에 테두리 잘리도록 처리함 */
+#wrap.ibk_ventures .work_ibk_ventures_01 .video_sec {height:auto;}
+#wrap.ibk_ventures .work_ibk_ventures_01 video {min-width:101%; margin:-10px 0;}
+#wrap.ibk_ventures .work_ibk_ventures_01 .slogan {position:absolute; left:50%; top:50%; width:147px; transform: translate(-50%, -50%);}
 #wrap.ibk_ventures .work_ibk_ventures_02 {padding:80px 40px; background:#E9EEF2;}
 #wrap.ibk_ventures .work_ibk_ventures_02 ul {display:flex; flex-direction: column; gap:15px;}
 #wrap.ibk_ventures .work_ibk_ventures_03 ul {display:flex; flex-direction: column; padding:30px 0;}
@@ -211,7 +215,7 @@
 @media all and (min-width:769px) {
     #wrap.ibk_ventures .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_ventures/img_intro.jpg);}
     #wrap.ibk_ventures .work_title {padding:0 140px; letter-spacing: 40px;}
-    #wrap.ibk_ventures .work_ibk_ventures_01 {background-image:url(./../../resources/images/work/ibk_ventures/img_01.jpg);}
+    #wrap.ibk_ventures .work_ibk_ventures_01 .slogan {width:auto;}
     #wrap.ibk_ventures .work_ibk_ventures_02 {padding:260px 250px;}
     #wrap.ibk_ventures .work_ibk_ventures_02 ul {gap:80px;}
     #wrap.ibk_ventures .work_ibk_ventures_03 {padding:150px 0 200px;;}
