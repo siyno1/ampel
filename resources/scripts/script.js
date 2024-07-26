@@ -9,15 +9,17 @@ var Ampel = {
      * lenis
      * scroll 및 인터렉션 관련 필수요소
     **/
-    lenis:new Lenis({
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    }),
+    lenis:null,
     raf:function(time){
         Ampel.lenis.raf(time);
         requestAnimationFrame(Ampel.raf);
     },
     init:function(){
+        Ampel.lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+
         requestAnimationFrame(Ampel.raf);
 
         gsap.ticker.add((time)=>{
@@ -25,22 +27,12 @@ var Ampel = {
         })
 
         gsap.ticker.lagSmoothing(0);
+        gsap.registerPlugin(ScrollTrigger);
 
+        ScrollTrigger.normalizeScroll(true);
+        ScrollTrigger.config({ ignoreMobileResize: true });
 
-
-        window.addEventListener("resize", Ampel.windowResize);
-    },
-    windowResize:function(){
-        ScrollTrigger.update();
-        /**
-         * window 리사이즈 시, scrollTrigger 위치가 불명확해져,
-         * 해결 방법으로 setTimeout 함수 사용하였습니다...
-         * 더 나은 방법이 있다면 개선 필요
-        */
-
-        setTimeout(function(){
-            gsap.matchMediaRefresh();
-        },0);
+        window.addEventListener("resize", ScrollTrigger.update);
     },
     /**
      * 헤더 로고 애니메이션
@@ -129,16 +121,14 @@ var Ampel = {
  * 사이트 전역에 실행되는 스크립트
  */
 $(document).ready(function(){
-    Ampel.init();
-    Ampel.logoAnimation();
-    ScrollTrigger.normalizeScroll(true);
-    Ampel.windowResize();
-    Ampel.marquee();
     /**
      * 이미지까지 로드 이후에 스크립트 실행
     */
-    $(window).on("load", function(){
-        ScrollTrigger.config({ ignoreMobileResize: true });
+   $(window).on("load", function(){
+        Ampel.init();
+        Ampel.logoAnimation();
+        Ampel.marquee();
+
         // ScrollTrigger.normalizeScroll(true);
         //상단 바로가기 버튼
         var $btnTop = $(".btn_top");

@@ -11,9 +11,7 @@ $(document).ready(function(){
             var horizontal = document.querySelector(".horizontal");
 
             ScrollTrigger.saveStyles(horizontal);
-            var mainVisual = gsap.fromTo(horizontal, {
-
-            },{
+            var mainVisual = gsap.to(horizontal, {
                 xPercent: -100,
                 marginLeft: "100vw",
                 ease: "none",
