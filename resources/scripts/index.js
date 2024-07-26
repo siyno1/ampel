@@ -10,7 +10,10 @@ $(document).ready(function(){
             //메인 스크롤링
             var horizontal = document.querySelector(".horizontal");
 
-            var mainVisual = gsap.to(horizontal, {
+            ScrollTrigger.saveStyles(horizontal);
+            var mainVisual = gsap.fromTo(horizontal, {
+
+            },{
                 xPercent: -100,
                 marginLeft: "100vw",
                 ease: "none",
@@ -19,6 +22,7 @@ $(document).ready(function(){
                     start: "top top",
                     end:horizontal.offsetWidth * 0.5,
                     pin: true,
+                    pinType: "transform",
                     anticipatePin: 1,
                     scrub: 2,
                     invalidateOnRefresh: true
@@ -34,26 +38,24 @@ $(document).ready(function(){
                 var $name = element.querySelector(".name");
                 var $detail = element.querySelector(".detail");
 
-                gsap.to(element, {
-                    css:{
-                        transform:"translate(0, 0)"
-                    },
+                gsap.fromTo(element, {
+                    y:"30%"
+                },{
+                    y:0,
                     ease: "none",
                     scrollTrigger: {
                         trigger:element,
                         containerAnimation:mainVisual,
                         start:"left right",
                         end:"+=" + element.offsetWidth,
-                        markers: false,
                         scrub: 1
                     }
                 });
 
-                gsap.to($thumbnail, {
-                    css:{
-                        marginTop:"0",
-                        paddingBottom:"56%"
-                    },
+                gsap.fromTo($thumbnail, {
+                    scaleY:0.8
+                },{
+                    scaleY:1,
                     ease: "none",
                     scrollTrigger: {
                         trigger:element,
@@ -131,6 +133,7 @@ $(document).ready(function(){
                     ease: "none",
                     scrollTrigger: {
                         pin:true,
+                        pinType: "transform",
                         pinSpacing:false,
                         trigger:element,
                         start:"top top",

@@ -16,8 +16,8 @@
 
 .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
 .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
-.list_portfolio li {flex:none; width:40vw; transform: translate(0, 20%);}
-.list_portfolio .thumbnail {display:block; position:relative; overflow:hidden; padding-bottom:40%;}
+.list_portfolio li {flex:none; width:40vw;}
+.list_portfolio .thumbnail {display:block; position:relative; overflow:hidden; padding-bottom:56%;}
 .list_portfolio .thumbnail img {position:absolute; left:50%; top:50%; width:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .list_portfolio .info {box-sizing:border-box; position: relative; min-height:460px; padding:28px 20px 40px;}
 .list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; opacity:0; transform: translate(0, 20px);}
@@ -229,7 +229,7 @@
 
     .main_portfolio {height:auto;}
     .list_portfolio {display:block;}
-    .list_portfolio li {width:100%; transform: none;}
+    .list_portfolio li {width:100%;}
     .list_portfolio li + li {margin-top:10px;}
     .list_portfolio .thumbnail {margin-top:0; padding:0;}
     .list_portfolio .thumbnail img {position:static; transform: none;}
