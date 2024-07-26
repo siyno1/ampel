@@ -224,9 +224,47 @@
 #wrap.shinhan_bank .work_title {color:#fff; padding:0 0 0 20px;}
 #wrap.shinhan_bank .work_shinhan_bank_box {text-align:center;}
 #wrap.shinhan_bank .work_shinhan_bank_box img {max-width:100%;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .imgs {display:flex;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .imgs li {flex:1; padding-top:33%;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .imgs li:nth-child(1) {background:url(./../../resources/images/work/shinhan_bank/img_01_01.jpg) no-repeat center; background-size:cover;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .imgs li:nth-child(2) {background:url(./../../resources/images/work/shinhan_bank/img_01_02.jpg) no-repeat center; background-size:cover;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors {display:flex; flex-direction: column;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors li {box-sizing:border-box; padding:30px 0 80px 20px; text-align:left;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors li:nth-child(1) {flex:1; color:#fff; background:#3A7DF9;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors li:nth-child(2) {flex:1; color:#333; background:#DEEEFF;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors li:nth-child(3) {flex:1; color:#fff; background:#2A4475;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors strong {display:block; font-size:20px; font-weight:600;}
+#wrap.shinhan_bank .work_shinhan_bank_01 .colors span {display:block; margin-top:2px; font-size:16px; font-weight:700;}
 
+#wrap.shinhan_bank .work_shinhan_bank_02 {padding-bottom:70px;}
+#wrap.shinhan_bank .work_shinhan_bank_02 .icons {display:flex; row-gap:50px; flex-wrap:wrap; max-width:1530px; margin:0 auto; padding:80px 0;}
+#wrap.shinhan_bank .work_shinhan_bank_02 .icons li {width:33.33%;}
+#wrap.shinhan_bank .work_shinhan_bank_02 .icons img {max-width:100%; vertical-align: bottom;}
+#wrap.shinhan_bank .work_shinhan_bank_02 .pages {display:flex; flex-direction:column; gap:30px;}
+#wrap.shinhan_bank .work_shinhan_bank_02 .friends {width:280px;}
+#wrap.shinhan_bank .work_shinhan_bank_03 {background:#3A7DF9;}
+#wrap.shinhan_bank .work_shinhan_bank_04 {overflow:hidden; padding:150px 0;}
+#wrap.shinhan_bank .work_shinhan_bank_04 ul {display:flex; flex-wrap:wrap; margin:0 -50px;}
+#wrap.shinhan_bank .work_shinhan_bank_04 ul li {width:33.33%;}
+#wrap.shinhan_bank .work_shinhan_bank_04 ul li:nth-child(3n-1) {margin-top:-70px;}
 
 @media all and (min-width:769px) {
     #wrap.shinhan_bank .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/shinhan_bank/img_intro.jpg);}
     #wrap.shinhan_bank .work_title {padding:0 140px; letter-spacing: 40px;}
+    #wrap.shinhan_bank .work_shinhan_bank_01 .colors {flex-direction: row;}
+    #wrap.shinhan_bank .work_shinhan_bank_01 .colors li {padding:40px 0 140px 40px;}
+    #wrap.shinhan_bank .work_shinhan_bank_01 .colors li:nth-child(1) {flex:2;}
+
+    #wrap.shinhan_bank .work_shinhan_bank_02 .icons {row-gap: 90px; padding:200px 0;}
+    #wrap.shinhan_bank .work_shinhan_bank_02 .icons li {width:11.11%;}
+
+    #wrap.shinhan_bank .work_shinhan_bank_02 {padding-bottom:150px;}
+    #wrap.shinhan_bank .work_shinhan_bank_02 .friends {width:auto;}
+    #wrap.shinhan_bank .work_shinhan_bank_04 {padding:350px 0 200px;}
+    #wrap.shinhan_bank .work_shinhan_bank_04 ul {max-width:1360px; margin:0 auto;}
+    #wrap.shinhan_bank .work_shinhan_bank_04 ul li:nth-child(3n-1) {margin-top:-200px;}
+}
+
+@media all and (min-width:1025px) {
+    #wrap.shinhan_bank .work_shinhan_bank_01 .colors li:nth-child(1) {flex:3; padding-left:140px;}
 }
