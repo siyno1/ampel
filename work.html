@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./resources/styles/style.css">
 
     <script src="./resources/scripts/jquery-3.7.1.min.js"></script>
-    <script src="./resources/scripts/lenis.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
     <script src="./resources/scripts/gsap.min.js"></script>
     <script src="./resources/scripts/splitting.min.js"></script>
     <script src="./resources/scripts/ScrollTrigger.min.js"></script>
@@ -80,15 +80,15 @@
                     <div class="title_work">
                         <h2 data-splitting>WORK</h2>
                         <ul class="filter">
-                            <li class="active">전체</li>
-                            <li>e-Finance</li>
-                            <li>e-Governance</li>
-                            <li>e-Commerce</li>
+                            <li class="active" data-type="all">전체</li>
+                            <li data-type="e-Finance">e-Finance</li>
+                            <li data-type="e-Governance">e-Governance</li>
+                            <li data-type="e-Commerce">e-Commerce</li>
                         </ul>
                     </div>
                     <div class="wrap_work">
                         <ul class="list_work">
-                            <li>
+                            <li data-type="e-Finance">
                                 <img src="./resources/images/work/kb/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2023</span>
@@ -97,7 +97,7 @@
                                     <a class="detail" href="./work/kb.html"></a>
                                 </div>
                             </li>
-                            <li>
+                            <li data-type="e-Finance">
                                 <img src="./resources/images/work/ibk_box/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2023</span>
@@ -106,7 +106,7 @@
                                     <a class="detail" href="./work/ibk_box.html"></a>
                                 </div>
                             </li>
-                            <li>
+                            <li data-type="e-Governance">
                                 <img src="./resources/images/work/seolbi/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2022</span>
@@ -115,7 +115,7 @@
                                     <a class="detail" href="./work/seolbi.html"></a>
                                 </div>
                             </li>
-                            <li>
+                            <li data-type="e-Finance">
                                 <img src="./resources/images/work/mydata/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2021 </span>
@@ -124,7 +124,7 @@
                                     <a class="detail" href="./work/mydata.html"></a>
                                 </div>
                             </li>
-                            <li class="work-small">
+                            <li class="work-small" data-type="e-Governance">
                                 <img src="./resources/images/work/winwin/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2020</span>
@@ -133,7 +133,7 @@
                                     <a class="detail" href="./work/winwin.html"></a>
                                 </div>
                             </li>
-                            <li class="work-small">
+                            <li class="work-small" data-type="e-Finance">
                                 <img src="./resources/images/work/sol/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2019</span>
@@ -142,7 +142,7 @@
                                     <a class="detail" href="./work/sol.html"></a>
                                 </div>
                             </li>
-                            <li class="work-small">
+                            <li class="work-small" data-type="e-Commerce">
                                 <img src="./resources/images/work/foodnet/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2023</span>
@@ -151,7 +151,7 @@
                                     <a class="detail" href="./work/foodnet.html"></a>
                                 </div>
                             </li>
-                            <li class="work-small">
+                            <li class="work-small" data-type="e-Finance">
                                 <img src="./resources/images/work/ibk_ventures/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2023</span>
@@ -160,7 +160,7 @@
                                     <a class="detail" href="./work/ibk_ventures.html"></a>
                                 </div>
                             </li>
-                            <li class="work-small">
+                            <li class="work-small" data-type="e-Finance">
                                 <img src="./resources/images/work/shinhan_bank/img_work_thumb.jpg" alt="">
                                 <div class="info">
                                     <span class="year" data-splitting>@2023</span>
@@ -170,7 +170,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button type="button" class="btn_more">더보기 (1/13) +</button>
+                        <!-- <button type="button" class="btn_more">더보기 (1/13) +</button> -->
                     </div>
                 </div>
             </article>

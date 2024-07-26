@@ -31,6 +31,7 @@ var Ampel = {
     },
     windowResize:function(){
         ScrollTrigger.update();
+        ScrollTrigger.config({ ignoreMobileResize: true });
         /**
          * window 리사이즈 시, scrollTrigger 위치가 불명확해져,
          * 해결 방법으로 setTimeout 함수 사용하였습니다...

@@ -4,8 +4,10 @@ $(document).ready(function(){
     $(".filter li").on("click", function(e){
         e.stopPropagation();
         var $this = $(this);
+        var type = $this.attr("data-type");
         var $parent = $this.closest(".filter");
         var filterable = $parent.find("li:visible").length > 1;
+        var $lists = $("ul.list_work");
 
         if (filterable === false) {
             $parent.addClass("opened");
@@ -15,6 +17,13 @@ $(document).ready(function(){
         $parent.find("li").removeClass("active");
         $this.addClass("active");
         $parent.removeClass("opened");
+
+        if (type == "all") {
+            $("li",$lists).show();
+        } else {
+            $("li",$lists).hide();
+            $("li[data-type="+type+"]",$lists).show();
+        }
 
     });
 
