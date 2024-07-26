@@ -268,14 +268,14 @@
     .about-we .typo.t3 {padding-left:16px;}
     .about-we .typo.t4 {padding:0 24px 0 0; text-align:right;}
 
-    .about-we .video {margin:45px auto 0; box-sizing:border-box;}
+    .about-we .video {margin:25px auto 0; box-sizing:border-box;}
     .about-we .txt_video {margin-top:50px; font-size:16px; letter-spacing: -0.5px;}
     .about-we .txt_we {margin-top:55px; padding:0 35px; font-size:11px; letter-spacing: 0;}
 
     .about-infinite {padding:70px 16px;}
     .about-infinite .slogan {font-size:28px; line-height:100%; font-weight:700; letter-spacing: -0.5px;}
     .about-infinite .flex_infinite {flex-direction: column-reverse; margin-top:75px;}
-    .about-infinite .txt {font-size:16px; font-weight:normal;}
+    .about-infinite .txt {font-size:16px;}
     .about-infinite .photos {overflow:visible; justify-content: normal; gap:0;}
     .about-infinite .photos div {flex:0 0 auto; width: fit-content;}
     .about-infinite .wrap_ico {top:210px; right:40px; width:93px; height:93px;}

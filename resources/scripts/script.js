@@ -27,11 +27,11 @@ var Ampel = {
         gsap.ticker.lagSmoothing(0);
 
 
+
         window.addEventListener("resize", Ampel.windowResize);
     },
     windowResize:function(){
         ScrollTrigger.update();
-        ScrollTrigger.config({ ignoreMobileResize: true });
         /**
          * window 리사이즈 시, scrollTrigger 위치가 불명확해져,
          * 해결 방법으로 setTimeout 함수 사용하였습니다...
@@ -137,7 +137,8 @@ $(document).ready(function(){
     /**
      * 이미지까지 로드 이후에 스크립트 실행
     */
-   $(window).on("load", function(){
+    $(window).on("load", function(){
+        ScrollTrigger.config({ ignoreMobileResize: true });
         // ScrollTrigger.normalizeScroll(true);
         //상단 바로가기 버튼
         var $btnTop = $(".btn_top");
