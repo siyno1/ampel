@@ -138,6 +138,7 @@ Ampel.animationLists.push(function(){
     var featuredSec = document.querySelector('.main_featured');
     var floatingWrap = featuredSec.querySelector('.wrap_floating_featured');
     var floatingElement = featuredSec.querySelector('.floating_featured');
+    var floatingBg = featuredSec.querySelectorAll('.featured_bg');
 
     gsap.to(floatingElement, {
         y:0,
@@ -154,6 +155,25 @@ Ampel.animationLists.push(function(){
         },
         overwrite: "auto"
     });
+
+    floatingBg.forEach(function(bgElement, index){
+        gsap.fromTo(bgElement, {
+            'will-change': 'opacity, transform',
+            opacity: 1,
+            y:0,
+        },
+        {
+            ease: 'none',
+            y:-300,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: bgElement,
+                start: 'center bottom',
+                end:'bottom+=100 top',
+                scrub:1
+            }
+        });
+    })
 });
 
 

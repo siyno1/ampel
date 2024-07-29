@@ -64,22 +64,32 @@ var Ampel = {
 
         logosImg.forEach(function (element, index) {
             if (index === 3) return;
-            gsap.to(element, {
-                delay: 0.5,
-                css: {
-                    transform: "translate(0,0)"
-                }
-            });
+
+            var beforeOption = {
+                'will-change': 'transform'
+            };
+            var afterOption = {
+                delay:0.5
+            };
+
+            if (index === 0) {
+                beforeOption.y = "-130%";
+                afterOption.y = 0;
+            } else if (index === 1) {
+                beforeOption.x = "-130%";
+                afterOption.x = 0;
+            } else if (index === 2) {
+                beforeOption.y = "130%";
+                afterOption.y = 0;
+            }
+
+            gsap.fromTo(element, beforeOption, afterOption);
         });
 
         gsap.fromTo(logo4Img, {
-            css: {
-                transform: "translate(130%,0)"
-            },
+            x:"130%"
         }, {
-            css: {
-                transform: "translate(0,0)"
-            },
+            x:0,
             scrollTrigger: {
                 trigger: logos,
                 start: "top top",
