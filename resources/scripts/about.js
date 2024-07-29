@@ -1,22 +1,16 @@
-$(document).ready(function(){
+// about 애니메이션 push
+Ampel.animationLists.push(function(){
 
-    Splitting();
-
-    var gsapMatchMedia = gsap.matchMedia();
-
-    // 전체페이지 scrolling
-
-    window.addEventListener("load", function() {
-        var backgroundElement = document.querySelector("#wrap");
-        var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
-        scrollColorElems.forEach((colorSection, i) => {
-            var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
-            ScrollTrigger.create({
-                trigger: colorSection,
-                start: "top center",
-                onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
-                onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
-            });
+    // bg변경
+    var backgroundElement = document.querySelector("#wrap");
+    var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
+    scrollColorElems.forEach((colorSection, i) => {
+        var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
+        ScrollTrigger.create({
+            trigger: colorSection,
+            start: "top center",
+            onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
+            onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
         });
     });
 
@@ -78,12 +72,9 @@ $(document).ready(function(){
             }
         });
     });
-
-
-
     //about-we=========================
-    //about-infinite
 
+    //about-infinite
     var infiniteSec = document.querySelector('.about-infinite');
     var infiniteChars = infiniteSec.querySelectorAll('.slogan .char');
     var infiniteTxt = infiniteSec.querySelector('.txt');
@@ -143,7 +134,7 @@ $(document).ready(function(){
         }
     });
 
-    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+    Ampel.gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
         ScrollTrigger.saveStyles(infinitePhotos.querySelectorAll('img'));
 
         gsap.fromTo(infinitePhotos.querySelectorAll('img'), {
@@ -163,12 +154,9 @@ $(document).ready(function(){
             }
         });
     })
-
-
     //about-infinite============
 
     //about-solution
-
     var solutionSec = document.querySelector('.about-solution');
     var solutionChar = solutionSec.querySelector('.txt_intro');
     var solutionChars = solutionChar.querySelectorAll('.txt_intro .char');
@@ -221,8 +209,6 @@ $(document).ready(function(){
     });
 
 
-
-
     var solutionMindset = solutionSec.querySelector('.list_mindset');
     var mindsetWords = solutionMindset.querySelectorAll('.title p');
 
@@ -251,7 +237,7 @@ $(document).ready(function(){
         }, 0);
     }
 
-    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+    Ampel.gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
         var solutionBusiness = document.querySelectorAll(".list_business li");
 
         solutionBusiness.forEach((business, position) => {
@@ -307,7 +293,7 @@ $(document).ready(function(){
         }
     })
 
-    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+    Ampel.gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
         var solutionBusiness = document.querySelectorAll(".list_business li");
 
         solutionBusiness.forEach((business, position) => {
@@ -377,8 +363,6 @@ $(document).ready(function(){
         }
     })
 
-
-
     var solutionSlide = new Swiper(".solution-slide", {
         slidesPerView:1,
         centeredSlides:false,
@@ -393,9 +377,7 @@ $(document).ready(function(){
             prevEl:".solution-slide-prev"
         }
     });
-
     //about-solution=================
-
     //about-better
     var betterSec = document.querySelector('.about-better');
     var betterWords = betterSec.querySelectorAll('.word, .bar');
@@ -542,11 +524,10 @@ $(document).ready(function(){
             scrub: true
         }
     });*/
-
     //about-make=======================
 
     //about-motto
-    gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
+    Ampel.gsapMatchMedia.add("(min-width: 769px)", () => {//PC 분기점
         var mottoSec = document.querySelector('.about-motto');
         var mottoList = mottoSec.querySelectorAll('li');
 
@@ -620,7 +601,7 @@ $(document).ready(function(){
         }
     })
 
-    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+    Ampel.gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
         var mottoSec = document.querySelector('.about-motto');
         var mottoList = mottoSec.querySelectorAll('li');
 
@@ -669,8 +650,6 @@ $(document).ready(function(){
             });
         }
     });
-
-
     //about-motto================
 
     //about-history
@@ -802,7 +781,7 @@ $(document).ready(function(){
 
     });
 
-    gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
+    Ampel.gsapMatchMedia.add("(max-width: 768px)", () => {//모바일 분기점
         var infiniteSlide = new Swiper(".slide_photo", {
             slidesPerView:"auto",
             spaceBetween:5
@@ -812,5 +791,4 @@ $(document).ready(function(){
             infiniteSlide.destroy();
         }
     });
-
-});
+})

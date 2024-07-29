@@ -20,10 +20,10 @@
 .list_portfolio .thumbnail {display:block; position:relative; overflow:hidden; padding-bottom:56%;}
 .list_portfolio .thumbnail img {position:absolute; left:50%; top:50%; width:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .list_portfolio .info {box-sizing:border-box; position: relative; min-height:460px; padding:28px 20px 40px;}
-.list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px; opacity:0; transform: translate(0, 20px);}
+.list_portfolio .tags {display:flex; justify-content:space-between; font-family: 'Faktum Wide'; font-size: 24px; font-weight: 600; line-height: 130%; letter-spacing: -1px;}
 .list_portfolio .tags .year {white-space: nowrap; text-transform: uppercase;}
-.list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; padding:0 15px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis; opacity: 0; transform: translate(0, 20px);}
-.list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px; opacity: 0; transform: translate(0, 20px);}
+.list_portfolio .name {display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; overflow:hidden; height:180px; margin-top:70px; padding:0 15px; font-size:50px; font-weight:600; text-align:center; text-transform:uppercase; letter-spacing: -1px; word-break: keep-all; text-overflow: ellipsis;}
+.list_portfolio .detail {display:block; position:absolute; right:10px; bottom:40px; width:110px; height:110px;}
 .list_portfolio .detail::before {content: ''; display: block; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: url(./../images/icon_link_arrow.svg) no-repeat center; transform: translate(-50%, -50%); transition: all 0.3s; z-index:1;}
 .list_portfolio .detail::after {content:''; display:block; position:absolute; top:50%; left:50%; width:80px; height:80px; border:1px solid #171010; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.3s;}
 .list_portfolio .detail:hover::before {background-image: url(./../images/icon_link_arrow_hover.svg);}
@@ -196,22 +196,22 @@
 .wrap_work .btn_more { display: block; margin: 200px auto 0; font-size: 24px; font-weight: 500; }
 
 /* contact */
-.content_contact {padding:98px 0 100px;}
-.contact .txt {position:relative; padding:0 20px;}
-.contact .t1 {padding-top:90px; font-family: 'Faktum Wide'; font-size:200px; font-weight:500; line-height:80%; letter-spacing: -10px; text-transform: uppercase;}
-.contact .t1-wrap {display:inline-block; position:relative;}
-.contact .wrap_ico {display:block; position:absolute; top:70px; left:100%; width:160px; height:160px; margin-left:20px;}
+.contact .content_contact {padding:98px 0 100px;}
+.contact .content_contact .txt {position:relative; padding:0 20px;}
+.contact .content_contact .t1 {padding-top:90px; font-family: 'Faktum Wide'; font-size:200px; font-weight:500; line-height:80%; letter-spacing: -10px; text-transform: uppercase;}
+.contact .content_contact .t1-wrap {display:inline-block; position:relative;}
+.contact .content_contact .wrap_ico {display:block; position:absolute; top:70px; left:100%; width:160px; height:160px; margin-left:20px;}
 
-.contact .t2 {margin-top:100px; font-family: 'Faktum Wide'; font-size: 36px; font-weight:600; line-height: 100%; letter-spacing: -1px; text-transform: uppercase;}
-.contact .map {margin-top:90px; padding:0 20px;}
-.contact .infos {display:flex; justify-content:center; margin-top:125px;}
-.contact .infos dt {font-family: 'Neue Montreal'; font-size:20px;}
-.contact .infos dd {margin:10px 0 70px; font-family: 'Neue Montreal'; font-size:20px;}
-.contact .infos dd a {font-weight: 800;}
-.contact .infos dd .tel {border-bottom: 2px solid #171010;}
-.contact .talk {margin-top:80px; text-align:center;}
-.contact .talk a {display:inline-block; position:relative; padding-right:60px; font-family: 'Faktum Wide'; font-weight:600; font-size:96px; letter-spacing:-5px; text-decoration:underline;}
-.contact .talk .badge {display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(./../images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+.contact .content_contact .t2 {margin-top:100px; font-family: 'Faktum Wide'; font-size: 36px; font-weight:600; line-height: 100%; letter-spacing: -1px; text-transform: uppercase;}
+.contact .content_contact .map {margin-top:90px; padding:0 20px;}
+.contact .content_contact .infos {display:flex; justify-content:center; margin-top:125px;}
+.contact .content_contact .infos dt {font-family: 'Neue Montreal'; font-size:20px;}
+.contact .content_contact .infos dd {margin:10px 0 70px; font-family: 'Neue Montreal'; font-size:20px;}
+.contact .content_contact .infos dd a {font-weight: 800;}
+.contact .content_contact .infos dd .tel {border-bottom: 2px solid #171010;}
+.contact .content_contact .talk {margin-top:80px; text-align:center;}
+.contact .content_contact .talk a {display:inline-block; position:relative; padding-right:60px; font-family: 'Faktum Wide'; font-weight:600; font-size:96px; letter-spacing:-5px; text-decoration:underline;}
+.contact .content_contact .talk .badge {display:block; position:absolute; top: 0; left:100%; width:82px; height:56px; margin-left:-80px; border-radius:50px; background:#fff url(./../images/icon_post.png) no-repeat center; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
 
 
 @media all and (max-width:1920px) {
@@ -367,20 +367,20 @@
     .list_work li .detail::after {content:none;}
 
     /* contact */
-    .content_contact {overflow:hidden; padding:60px 0 10px;}
-    .contact .txt {padding:0 15px;}
-    .contact .t1 {padding-top:50px; font-size:58px; letter-spacing: -2px;}
-    .contact .wrap_ico {top:-40px; left:auto; right:10px; width:55px; height:55px; margin:0;}
-    .contact .t2 {margin-top:40px; font-size:20px;}
-    .contact .map {margin-top:40px; padding:0 15px;}
+    .contact .content_contact {overflow:hidden; padding:60px 0 10px;}
+    .contact .content_contact .txt {padding:0 15px;}
+    .contact .content_contact .t1 {padding-top:50px; font-size:58px; letter-spacing: -2px;}
+    .contact .content_contact .wrap_ico {top:-40px; left:auto; right:10px; width:55px; height:55px; margin:0;}
+    .contact .content_contact .t2 {margin-top:40px; font-size:20px;}
+    .contact .content_contact .map {margin-top:40px; padding:0 15px;}
 
-    .contact .infos {margin-top:40px; text-align:center;}
-    .contact .infos dd {margin:10px 0 40px;}
-    .contact .infos dd a {font-weight:normal; border-bottom: 1px solid #171010;}
+    .contact .content_contact .infos {margin-top:40px; text-align:center;}
+    .contact .content_contact .infos dd {margin:10px 0 40px;}
+    .contact .content_contact .infos dd a {font-weight:normal; border-bottom: 1px solid #171010;}
 
-    .contact .talk {margin-top:30px;}
-    .contact .talk a {padding-right:53px; font-size:48px; font-weight:normal; letter-spacing: -2.4px;}
-    .contact .talk .badge {top:-8px; left: auto; right:0; width:62px; height:40px; margin:0; background-size:30px;}
+    .contact .content_contact .talk {margin-top:30px;}
+    .contact .content_contact .talk a {padding-right:53px; font-size:48px; font-weight:normal; letter-spacing: -2.4px;}
+    .contact .content_contact .talk .badge {top:-8px; left: auto; right:0; width:62px; height:40px; margin:0; background-size:30px;}
 
 
 }

@@ -30,16 +30,27 @@ var Ampel = {
         gsap.registerPlugin(ScrollTrigger);
 
         ScrollTrigger.normalizeScroll(true);
-        ScrollTrigger.config({ ignoreMobileResize: true });
+        ScrollTrigger.config({
+            ignoreMobileResize: true
+        });
 
         window.addEventListener("resize", this.debounce(() => {
             ScrollTrigger.update();
             Ampel.resetAnimations();
         }, 200));
 
+        this.animationInit();
+    },
+    animationInit:function(){
         this.logoAnimation();
         this.marquee();
         this.setGnbAnimation();
+        var pageAnimations = this.animationLists;
+        if (pageAnimations.length) {
+            for (let index = 0; index < pageAnimations.length; index++) {
+                pageAnimations[index]();
+            }
+        }
     },
     /**
      * 헤더 로고 애니메이션
@@ -118,12 +129,9 @@ var Ampel = {
     resetAnimations: function () {
         // 모든 트윈을 중지
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
         gsap.killTweensOf("*");
-        // gsap.killTweensOf(this.marquee());
-        this.logoAnimation(); // 로고 애니메이션 재시작
-        this.marquee(); // 마퀴 애니메이션 재시작
-        this.setGnbAnimation();
+
+        this.animationInit();
     },
     debounce: function (func, wait) {
         let timeout;
@@ -172,20 +180,23 @@ var Ampel = {
     },
     gnbClose:function(){
         if(Ampel.gnbAnimation) Ampel.gnbAnimation.reverse();
-    }
+    },
+    gsapMatchMedia:gsap.matchMedia(),
+    animationLists:[]
 }
 
 /**
  * 사이트 전역에 실행되는 스크립트
  */
 $(document).ready(function () {
+    if ($("[data-splitting]").length) Splitting();
+
     /**
      * 이미지까지 로드 이후에 스크립트 실행
      */
     $(window).on("load", function () {
         Ampel.init();
 
-        // ScrollTrigger.normalizeScroll(true);
         //상단 바로가기 버튼
         $(".btn_top").on("click", Ampel.goTop);
         $(".btn_gnb").on("click",Ampel.gnbOpen);

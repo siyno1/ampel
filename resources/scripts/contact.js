@@ -1,7 +1,5 @@
-$(document).ready(function(){
-
-    Splitting();
-
+//contact 애니메이션 push
+Ampel.animationLists.push(function(){
     var contactT1 = document.querySelector('.t1');
     var contactT1Chars = contactT1.querySelectorAll('.char');
     var contactT1Icon = contactT1.querySelectorAll('.wrap_ico');
@@ -16,7 +14,7 @@ $(document).ready(function(){
         scale: 1,
         yPercent: 0,
         stagger: 0.1
-    }, 0);
+    });
 
     gsap.fromTo(contactT1Icon, {
         'will-change': 'transform',
@@ -28,7 +26,7 @@ $(document).ready(function(){
         ease: 'back(3)',
         xPercent: 0,
         yPercent: 0
-    }, 0);
+    });
 
 
     var infos = document.querySelector('.infos');
@@ -77,8 +75,10 @@ $(document).ready(function(){
             y:0
         });
     })
+})
 
 
+$(document).ready(function(){
     $("[data-clipboard]").on("click", function(){
         navigator.clipboard.writeText("경기도 고양시 일산동구 애현로 60 암펠BD");
     });
