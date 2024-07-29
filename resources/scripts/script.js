@@ -123,8 +123,8 @@ var Ampel = {
 $(document).ready(function(){
     /**
      * 이미지까지 로드 이후에 스크립트 실행
-    */
-   $(window).on("load", function(){
+     */
+    $(window).on("load", function(){
         Ampel.init();
         Ampel.logoAnimation();
         Ampel.marquee();
