@@ -165,7 +165,7 @@ Ampel.animationLists.push(function(){
         {
             ease: 'none',
             y:-300,
-            opacity: 0,
+            opacity: 0.3,
             scrollTrigger: {
                 trigger: bgElement,
                 start: 'center bottom',
