@@ -151,32 +151,34 @@ Ampel.animationLists.push(function(){
             invalidateOnRefresh: true,
             scrub: 1,
             anticipatePin:1
-        }
+        },
+        overwrite: "auto"
     });
 });
 
 
 $(document).ready(function(){
-    $(window).on("load", function(){
-        // 포트폴리오 버튼
-        var btnDetails = document.querySelectorAll('.detail');
+    if (!$.data(window, 'portfolioMouseMove')) { // 중복 체크
+        $(window).on("load", function(){
+            var btnDetails = document.querySelectorAll('.detail');
 
-        btnDetails.forEach(el => el.addEventListener('mousemove', function(e) {
-            const pos = this.getBoundingClientRect();
-            const mx = e.clientX - pos.left - pos.width/2;
-            const my = e.clientY - pos.top - pos.height/2;
+            btnDetails.forEach(el => el.addEventListener('mousemove', function(e) {
+                const pos = this.getBoundingClientRect();
+                const mx = e.clientX - pos.left - pos.width/2;
+                const my = e.clientY - pos.top - pos.height/2;
 
-            this.style.transform = 'translate('+ mx * 0.15 +'px, '+ my * 0.3 +'px)';
-            this.style.transform += 'rotate3d('+ mx * -0.1 +', '+ my * -0.3 +', 0, 12deg)';
-            //this.children[0].style.transform = 'translate('+ mx * 0.025 +'px, '+ my * 0.075 +'px)';
-        }));
+                this.style.transform = 'translate('+ mx * 0.15 +'px, '+ my * 0.3 +'px)';
+                this.style.transform += 'rotate3d('+ mx * -0.1 +', '+ my * -0.3 +', 0, 12deg)';
+            }));
 
-        btnDetails.forEach(el => el.addEventListener('mouseleave', function() {
-            this.style.transform = 'translate3d(0px, 0px, 0px)';
-            this.style.transform += 'rotate3d(0, 0, 0, 0deg)';
-            //this.children[0].style.transform = 'translate3d(0px, 0px, 0px)';
-        }));
-    });
+            btnDetails.forEach(el => el.addEventListener('mouseleave', function() {
+                this.style.transform = 'translate3d(0px, 0px, 0px)';
+                this.style.transform += 'rotate3d(0, 0, 0, 0deg)';
+            }));
+
+            $.data(window, 'portfolioMouseMove', true); // 중복 체크 완료
+        });
+    }
 });
 
 //메인 임시 비주얼
