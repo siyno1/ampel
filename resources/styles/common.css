@@ -50,7 +50,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 [data-clipboard] {display:inline-block; padding-right:25px; background: url(./../images/icon_clipboard.svg) no-repeat right center; background-size:contain; cursor: pointer;}
 #loading {position:fixed; top:0; left:0; width:100%; height:100%; background:#171010; z-index:1000;}
 #loading .count {display:block; position:absolute; font-family: 'Faktum Wide'; font-size:800; font-size:100px; color:#fff; right:32px; bottom:32px;}
-#loading .loadingbar {display:block; position:absolute; left:0; bottom:0; height:15px; background:#fff;}
+#loading .loadingbar {display:block; position:absolute; left:0; bottom:0; height:8px; background:#fff;}
 
 
 /* 레이아웃 */
