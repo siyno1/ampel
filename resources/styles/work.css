@@ -306,15 +306,15 @@
 
 
 /* sh_lgm */
-#wrap.sh_lgm .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/sh_lgm/img_intro_mobile.jpg);}
-#wrap.sh_lgm .work_title {padding:100px 0 0 20px;}
+#wrap.sh_lgm .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/sh_lgm/img_intro_mobile.jpg);}
+#wrap.sh_lgm .work_title {padding:0 0 0 20px;}
 #wrap.sh_lgm .work_sh_lgm_box {text-align:center;}
 #wrap.sh_lgm .work_sh_lgm_box img {max-width:100%;}
 #wrap.sh_lgm .work_sh_lgm_01 {overflow:hidden; position:relative;}
 
 @media all and (min-width:769px) {
-    #wrap.ibk_moca .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_moca/img_intro.jpg);}
-    #wrap.ibk_moca .work_title {padding:0 140px;}
+    #wrap.sh_lgm .work_intro_bg {background-image:url(./../../resources/images/work/sh_lgm/img_intro.jpg);}
+    #wrap.sh_lgm .work_title {padding:0 140px;}
 }
 
 /* foodnet_fs */
