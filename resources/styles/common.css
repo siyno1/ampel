@@ -7,7 +7,7 @@ html {height:100%; overflow:hidden;}
 html, body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-size:62.5%; color:#171010;}
 
 /* scroll smooth 관련 */
-html.lenis { height: auto; }
+html.lenis { height: auto; overflow:visible; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
@@ -48,6 +48,9 @@ img {vertical-align: bottom;}
 button, input[type=button], input[type=submit], input[type=reset] { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius:0; border:0 none; background:none; cursor:pointer;}
 
 [data-clipboard] {display:inline-block; padding-right:25px; background: url(./../images/icon_clipboard.svg) no-repeat right center; background-size:contain; cursor: pointer;}
+#loading {position:fixed; top:0; left:0; width:100%; height:100%; background:#171010; z-index:1000;}
+#loading .count {display:block; position:absolute; font-family: 'Faktum Wide'; font-size:800; font-size:100px; color:#fff; right:32px; bottom:32px;}
+#loading .loadingbar {display:block; position:absolute; left:0; bottom:0; height:15px; background:#fff;}
 
 
 /* 레이아웃 */

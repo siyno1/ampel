@@ -36,6 +36,7 @@ var Ampel = {
             ignoreMobileResize: true
         });
 
+        //@@ 오류
         window.addEventListener("resize", this.debounce(() => {
             ScrollTrigger.update();
             Ampel.resetAnimations();
@@ -194,7 +195,63 @@ var Ampel = {
         if(Ampel.gnbAnimation) Ampel.gnbAnimation.reverse();
     },
     gsapMatchMedia:gsap.matchMedia(),
-    animationLists:[]
+    animationLists:[],
+    loadPercent:0,
+    loadInterval:null,
+    loaded:0,
+    loadedStart:0,
+    loadedEnd:0,
+    loading:function (callback) {
+        Ampel.loadInterval = setInterval(function(){
+            var $loading = document.getElementById("loading");
+
+            if (!$loading) {
+                if (Ampel.loadInterval) clearInterval(Ampel.loadInterval);
+                if (typeof(callback) === "function") {
+                    callback();
+                }
+
+                return;
+            }
+
+            var $percentage = $loading.querySelector(".count");
+            var $bar = $loading.querySelector(".loadingbar");
+            var iPercentage = parseInt($percentage.innerHTML);
+            var cText = "00";
+            var width = 0;
+
+            if (iPercentage > 59) {
+                if (document.readyState == "loading") iPercentage = 60;
+                if (document.readyState == "interactive") {
+                    if (iPercentage > 79) iPercentage = 80;
+                }
+            }
+
+            if (iPercentage > 98) {
+                iPercentage = 99;
+                if (document.readyState == "complete") {
+                    if (Ampel.loadInterval) clearInterval(Ampel.loadInterval);
+
+                    gsap.to($loading, {
+                        display:"none",
+                        opacity:0
+                    })
+
+                    //@@ 여기에서 callback으로 호출함
+                    if (typeof(callback) === "function") {
+                        callback();
+                    }
+                }
+            }
+
+            iPercentage++;
+            cText = pad(iPercentage);
+            width = iPercentage;
+
+            $percentage.innerHTML = cText;
+            $bar.style.width = width + "%";
+        },20);
+    }
 }
 
 /**
@@ -203,15 +260,18 @@ var Ampel = {
 $(document).ready(function () {
     if ($("[data-splitting]").length) Splitting();
 
+    //@@ Ampel.init 호출하는 부분
+    Ampel.loading(Ampel.init.bind(Ampel));
+
     /**
      * 이미지까지 로드 이후에 스크립트 실행
      */
     $(window).on("load", function () {
-        Ampel.init();
-
         //상단 바로가기 버튼
         $(".btn_top").on("click", Ampel.goTop);
         $(".btn_gnb").on("click",Ampel.gnbOpen);
         $(".btn_gnb_close").on("click", Ampel.gnbClose);
     });
 });//@ready
+
+function pad(d) {return (d < 10) ? '0' + d.toString() : d.toString();}
