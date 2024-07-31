@@ -1,19 +1,6 @@
 // about 애니메이션 push
 Ampel.animationLists.push(function(){
 
-    // bg변경
-    var backgroundElement = document.querySelector("#wrap");
-    var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
-    scrollColorElems.forEach((colorSection, i) => {
-        var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
-        ScrollTrigger.create({
-            trigger: colorSection,
-            start: "top center",
-            onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
-            onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
-        });
-    });
-
     //about-we
     var weSec = document.querySelector('.about-we');
     var weTypo = weSec.querySelector('.sec_typo');
@@ -363,20 +350,49 @@ Ampel.animationLists.push(function(){
         }
     })
 
-    var solutionSlide = new Swiper(".solution-slide", {
-        slidesPerView:1,
-        centeredSlides:false,
-        breakpoints:{
-            769: {
-                slidesPerView:2,
-                centeredSlides:true
-            }
-        },
-        navigation:{
-            nextEl:".solution-slide-next",
-            prevEl:".solution-slide-prev"
+    var solutionSlide = document.querySelector(".solution-slide");
+    var solutionHorizontal = solutionSlide.querySelector(".horizontal");
+    var solutionLists = solutionSlide.querySelector(".list_mindset");
+    var solutionHorizontalItemOne = solutionSlide.querySelector("li");
+    ScrollTrigger.saveStyles(solutionSlide, solutionHorizontal);
+
+    var windowSize = window.innerWidth / 2;
+    var xListsSize = solutionLists.offsetWidth / 2;
+    var xItemSize = solutionHorizontalItemOne.offsetWidth / 2;
+
+    var xTrigger = windowSize - xListsSize ? -(windowSize - xListsSize) : 0;
+
+    var solutionInteraction = gsap.fromTo(solutionLists, {
+        'will-change': 'transform',
+        xPercent:50
+    },{
+        xPercent:-50,
+        ease: "none",
+        scrollTrigger: {
+            trigger: solutionSlide,
+            start: "center center",
+            pin: true,
+            pinspacing:false,
+            anticipatePin: 1,
+            scrub: 2,
+            invalidateOnRefresh: true
         }
     });
+
+    // var solutionSlide = new Swiper(".solution-slide", {
+    //     slidesPerView:1,
+    //     centeredSlides:false,
+    //     breakpoints:{
+    //         769: {
+    //             slidesPerView:2,
+    //             centeredSlides:true
+    //         }
+    //     },
+    //     navigation:{
+    //         nextEl:".solution-slide-next",
+    //         prevEl:".solution-slide-prev"
+    //     }
+    // });
     //about-solution=================
     //about-better
     var betterSec = document.querySelector('.about-better');
@@ -790,5 +806,18 @@ Ampel.animationLists.push(function(){
         return function() {
             infiniteSlide.destroy();
         }
+    });
+
+    // bg변경
+    var backgroundElement = document.querySelector("#wrap");
+    var scrollColorElems = document.querySelectorAll("[data-scrollcolor]");
+    scrollColorElems.forEach((colorSection, i) => {
+        var prevColor = i === 0 ? "#171010" : scrollColorElems[i - 1].dataset.scrollcolor;
+        ScrollTrigger.create({
+            trigger: colorSection,
+            start: "top center",
+            onEnter: () => gsap.to(backgroundElement, {backgroundColor: colorSection.dataset.scrollcolor, overwrite: 'auto'}),
+            onLeaveBack: () => gsap.to(backgroundElement, {backgroundColor: prevColor, overwrite: 'auto'})
+        });
     });
 })
