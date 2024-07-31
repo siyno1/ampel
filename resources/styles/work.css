@@ -308,14 +308,44 @@
 /* sh_lgm */
 #wrap.sh_lgm .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/sh_lgm/img_intro_mobile.jpg);}
 #wrap.sh_lgm .work_title {padding:0 0 0 20px;}
-#wrap.sh_lgm .work_sh_lgm_box {text-align:center;}
+#wrap.sh_lgm .work_sh_lgm_box {text-align:center; background:#122D6E;}
 #wrap.sh_lgm .work_sh_lgm_box img {max-width:100%;}
-#wrap.sh_lgm .work_sh_lgm_01 {overflow:hidden; position:relative;}
+#wrap.sh_lgm .work_sh_lgm_01 {overflow:hidden;}
+#wrap.sh_lgm .work_sh_lgm_01 img {width:100%; vertical-align:bottom;}
+#wrap.sh_lgm .work_sh_lgm_02 {overflow:hidden; position:relative; padding-top:60px; background:url(./../../resources/images/work/sh_lgm/img_02_bg.png) no-repeat center top; background-size:contain;}
+#wrap.sh_lgm .work_sh_lgm_02 .img01 {position:relative; padding:0 20px; z-index:1;}
+#wrap.sh_lgm .work_sh_lgm_02 .ship {width:55%; margin-top:-80px;}
+#wrap.sh_lgm .work_sh_lgm_02 .img02 {margin-top:20px; padding:0 20px;}
+#wrap.sh_lgm .work_sh_lgm_02 .img02 img {width:100%;}
+#wrap.sh_lgm .work_sh_lgm_02 .img03 {margin-top:60px; padding:0 20px;}
+#wrap.sh_lgm .work_sh_lgm_02 .img03 img {width:100%;}
+#wrap.sh_lgm .work_sh_lgm_02 .icons {margin-top:60px;}
+#wrap.sh_lgm .work_sh_lgm_02 .icons02 {display:flex; justify-content:space-between; margin:60px 20px 0; padding:20px 25px; border-radius: 10px; background:#001851;}
+#wrap.sh_lgm .work_sh_lgm_02 .icons02 li {width:12.5%;}
+#wrap.sh_lgm .work_sh_lgm_03 {margin-top:60px;}
+#wrap.sh_lgm .work_sh_lgm_03 .img02 {display:flex; flex-direction: column; gap:40px; padding:60px 0 40px;}
+#wrap.sh_lgm .work_sh_lgm_04 img {width:100%;}
+#wrap.sh_lgm .work_sh_lgm_05 img {width:100%;}
+
 
 @media all and (min-width:769px) {
     #wrap.sh_lgm .work_intro_bg {background-image:url(./../../resources/images/work/sh_lgm/img_intro.jpg);}
     #wrap.sh_lgm .work_title {padding:0 140px;}
+    #wrap.sh_lgm .work_sh_lgm_02 {padding-top:280px;}
+    #wrap.sh_lgm .work_sh_lgm_02 .ship {width:auto; margin-top:-240px; text-align:left;}
+    #wrap.sh_lgm .work_sh_lgm_02 .img02 {margin:0 -110px 0 0; padding:0;}
+    #wrap.sh_lgm .work_sh_lgm_02 .img02 img {width:auto;}
+    #wrap.sh_lgm .work_sh_lgm_02 .img03 {margin-top:620px; padding:0 0 0 80px; text-align:left;}
+    #wrap.sh_lgm .work_sh_lgm_02 .img03 img {width:auto;}
+    #wrap.sh_lgm .work_sh_lgm_02 .icons {margin-top:-1170px;}
+    #wrap.sh_lgm .work_sh_lgm_02 .icons02 {margin:750px 80px 0; padding:120px 140px; border-radius: 40px;}
+    #wrap.sh_lgm .work_sh_lgm_03 {margin-top:320px;}
+    #wrap.sh_lgm .work_sh_lgm_03 .img02 {padding:0;}
+    #wrap.sh_lgm .work_sh_lgm_03 li + li {display:none;}
+    #wrap.sh_lgm .work_sh_lgm_04 {margin-top:240px;}
 }
+
+
 
 /* foodnet_fs */
 #wrap.foodnet_fs .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/foodnet_fs/img_intro_mobile.jpg);}
