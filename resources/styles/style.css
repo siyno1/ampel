@@ -17,6 +17,7 @@
 .main_portfolio {flex:none; box-sizing:border-box; height:100vh;}
 .list_portfolio {display:flex; flex-wrap:nowrap; height:100%;}
 .list_portfolio li {flex:none; width:40vw;}
+.list_portfolio li > a {display:block;}
 .list_portfolio .thumbnail {display:block; position:relative; overflow:hidden; padding-bottom:56%;}
 .list_portfolio .thumbnail img {position:absolute; left:50%; top:50%; width:100%; object-fit: cover; transform: translate(-50%, -50%);}
 .list_portfolio .info {box-sizing:border-box; position: relative; min-height:460px; padding:28px 20px 40px;}
