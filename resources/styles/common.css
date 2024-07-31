@@ -52,6 +52,8 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 #loading .count {display:block; position:absolute; font-family: 'Faktum Wide'; font-size:800; font-size:100px; color:#fff; right:32px; bottom:32px;}
 #loading .loadingbar {display:block; position:absolute; left:0; bottom:0; height:8px; background:#fff;}
 
+.btn_back {position:fixed; top:10px; left:20px; z-index:11; width:78px; height:78px; font-size:0;}
+.btn_back img {display:block; margin:0 auto;}
 
 /* 레이아웃 */
 .wrapper {position:relative; max-width:1920px; margin:0 auto;}
@@ -120,6 +122,7 @@ button, input[type=button], input[type=submit], input[type=reset] { -webkit-appe
 
 /* 768해상도 아래는 모바일로 */
 @media all and (max-width:768px) {
+    .btn_back {top:0; left:0; width:60px; height:60px;}
 
     .header_logo {top:0; left:0; height:60px;}
     .header_logo a {padding-left: 16px;}

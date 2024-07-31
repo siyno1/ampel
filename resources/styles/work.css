@@ -2,6 +2,7 @@
 #wrap.work-detail {font-family: 'Faktum Wide'; background-color:#fff;}
 #wrap.work-detail .work_title .mob_br {display:block;}
 #wrap.work-detail .work_title .pc_br {display:none;}
+#wrap.work-detail .header_logo {display:none;}
 .work_intro {position:relative; height:100vh;}
 .work_intro_wrap {clip: rect(0, auto, auto, 0); position:absolute; top:0; left:0; width:100%; height:100%;}
 .work_intro_bg {display:flex; align-items: center; position:fixed; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-position:center; background-size: cover;}
@@ -350,13 +351,37 @@
 /* foodnet_fs */
 #wrap.foodnet_fs .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/foodnet_fs/img_intro_mobile.jpg);}
 #wrap.foodnet_fs .work_title {padding:100px 0 0 20px;}
-#wrap.foodnet_fs .work_foodnet_fs_box {text-align:center;}
+#wrap.foodnet_fs .work_foodnet_fs_box {text-align:center; background:#007651; }
 #wrap.foodnet_fs .work_foodnet_fs_box img {max-width:100%;}
 #wrap.foodnet_fs .work_foodnet_fs_01 {overflow:hidden; position:relative;}
+#wrap.foodnet_fs .work_foodnet_fs_01 .imgs {display:flex; flex-direction: column;}
+#wrap.foodnet_fs .work_foodnet_fs_01 .imgs li {flex:1; padding-top:100%;}
+#wrap.foodnet_fs .work_foodnet_fs_01 .imgs li:nth-child(1) {background:url(./../../resources/images/work/foodnet_fs/img_01_01.jpg) no-repeat center; background-size:cover;}
+#wrap.foodnet_fs .work_foodnet_fs_01 .imgs li:nth-child(2) {background:url(./../../resources/images/work/foodnet_fs/img_01_02.jpg) no-repeat center; background-size:cover;}
+#wrap.foodnet_fs .work_foodnet_fs_01 .colors img {width:100%;}
+#wrap.foodnet_fs .work_foodnet_fs_02 {padding:60px 0; background:#F2F8F6;}
+#wrap.foodnet_fs .work_foodnet_fs_02 ul {display:flex; flex-direction: column; margin-top:40px;}
+#wrap.foodnet_fs .work_foodnet_fs_02 li.typo {margin-bottom:25px;}
+#wrap.foodnet_fs .work_foodnet_fs_03 .imgs {display:flex; flex-direction: column;}
+#wrap.foodnet_fs .work_foodnet_fs_03 .imgs li {flex:1; padding-top:88.88%;}
+#wrap.foodnet_fs .work_foodnet_fs_03 .imgs li:nth-child(1) {background:url(./../../resources/images/work/foodnet_fs/img_03_01.jpg) no-repeat center; background-size:cover;}
+#wrap.foodnet_fs .work_foodnet_fs_03 .imgs li:nth-child(2) {background:url(./../../resources/images/work/foodnet_fs/img_03_02.jpg) no-repeat center; background-size:cover;}
+#wrap.foodnet_fs .work_foodnet_fs_04 {padding:60px 0 65px; background:url(./../images/work/foodnet_fs/img_04_bg.jpg) no-repeat center; background-size:cover;}
+#wrap.foodnet_fs .work_foodnet_fs_05 {padding:40px 0 20px; background:url(./../images/work/foodnet_fs/img_05_bg.png) no-repeat center bottom; background-size:contain;}
+#wrap.foodnet_fs .work_foodnet_fs_05 img {vertical-align: top;}
 
 @media all and (min-width:769px) {
     #wrap.foodnet_fs .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/foodnet_fs/img_intro.jpg);}
     #wrap.foodnet_fs .work_title {padding:0 140px;}
+
+    #wrap.foodnet_fs .work_foodnet_fs_01 .imgs {flex-direction: row;}
+    #wrap.foodnet_fs .work_foodnet_fs_01 .imgs li {padding-top:50%;}
+    #wrap.foodnet_fs .work_foodnet_fs_02 {padding:0;}
+    #wrap.foodnet_fs .work_foodnet_fs_02 ul {display:none;}
+    #wrap.foodnet_fs .work_foodnet_fs_03 .imgs {flex-direction: row;}
+    #wrap.foodnet_fs .work_foodnet_fs_03 .imgs li {padding-top:37.5%;}
+    #wrap.foodnet_fs .work_foodnet_fs_04 {padding:110px 30px;}
+    #wrap.foodnet_fs .work_foodnet_fs_05 {padding:300px 0 280px;}
 }
 
 

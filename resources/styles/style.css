@@ -34,7 +34,7 @@
 .floating_featured {box-sizing:border-box; position: absolute; left: 0; top: 0; width:100%; padding:0 20px; z-index:1;}
 .title_featured {display:block;  width:100%; padding:100px 0 70px; font-family:'Faktum Wide'; font-size:21px; font-weight:700; color:#e2e5ff; /* 반전 시 #171010*/}
 .list_featured {box-sizing:border-box; border-top:1px solid #e2e5ff; z-index:1;}
-.list_featured li {display:flex; padding:25px 0; border-bottom:1px solid #e2e5ff; color:#e2e5ff;}
+.list_featured li a {display:flex; padding:25px 0; border-bottom:1px solid #e2e5ff; color:#e2e5ff;}
 .list_featured .num {flex:none; font-family: 'Faktum Wide'; margin-top:-10px; margin-right:20px; font-size:16px; font-weight:800;}
 .list_featured .title { overflow:hidden; font-size: 36px; font-weight: 300; letter-spacing: -1px; white-space: nowrap; text-overflow: ellipsis;}
 .list_featured .type {flex: none; font-family: 'Faktum Wide'; margin-top:-10px; font-size: 16px; font-weight: 800;}
@@ -247,7 +247,7 @@
     .main_featured {background:#F9F5EF;}
     .floating_featured {padding:0 15px;}
     .title_featured {padding:75px 0 30px;}
-    .list_featured li {padding:20px 0;}
+    .list_featured li a {padding:20px 0;}
     .list_featured .num {margin-top:-8px; margin-right:7px; font-size:13px;}
     .list_featured .title {font-size:16px;}
     .list_featured .type {display:none;}

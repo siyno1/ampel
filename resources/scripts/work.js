@@ -28,26 +28,27 @@ Ampel.animationLists.push(function(){
         chars.forEach(char => gsap.set(char.parentNode, { perspective: "12.5vw", overflow:"hidden" }));
         titles.forEach(char => gsap.set(char.parentNode, { perspective: "12.5vw", overflow:"hidden" }));
 
+        Ampel.gsapMatchMedia.add("(min-width: 769px)", () => {
+            gsap.fromTo(chars, {
+                'will-change': 'transform',
+                transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
+                rotateX:-100,
+            },{
+                duration:1,
+                transform: "translate3d(0, 0, 0) rotateX(0)",
+                stagger: { each: 0.08 }
+            });
 
-        gsap.fromTo(chars, {
-            'will-change': 'transform',
-            transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
-            rotateX:-100,
-        },{
-            duration:1,
-            transform: "translate3d(0, 0, 0) rotateX(0)",
-            stagger: { each: 0.08 }
-        });
-
-        gsap.fromTo(titles, {
-            'will-change': 'transform',
-            transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
-            rotateX:-100,
-        },{
-            duration:1,
-            transform: "translate3d(0, 0, 0) rotateX(0)",
-            stagger: { each: 0.08 }
-        });
+            gsap.fromTo(titles, {
+                'will-change': 'transform',
+                transform: "translate3d(0, 110%, 0) rotateX(-120deg)",
+                rotateX:-100,
+            },{
+                duration:1,
+                transform: "translate3d(0, 0, 0) rotateX(0)",
+                stagger: { each: 0.08 }
+            });
+        })
     })
 })
 

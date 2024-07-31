@@ -59,6 +59,8 @@ var Ampel = {
      * 헤더 로고 애니메이션
      */
     logoAnimation: function () {
+        if ($("#wrap").hasClass("work-detail")) return;
+
         var logo4Img = document.querySelector(".lg4 img");
         var logos = document.querySelector("h1.header_logo");
         var logosImg = logos.querySelectorAll("img");
@@ -223,16 +225,23 @@ var Ampel = {
             if (iPercentage > 59) {
                 if (document.readyState == "loading") iPercentage = 60;
                 if (document.readyState == "interactive") {
-                    if (iPercentage > 79) iPercentage = 80;
+                    if (iPercentage > 87) iPercentage = 88;
                 }
             }
 
             if (iPercentage > 98) {
-                iPercentage = 99;
                 if (document.readyState == "complete") {
                     if (Ampel.loadInterval) clearInterval(Ampel.loadInterval);
 
+                    iPercentage++;
+                    cText = pad(iPercentage);
+                    width = iPercentage;
+
+                    $percentage.innerHTML = cText;
+                    $bar.style.width = width + "%";
+
                     gsap.to($loading, {
+                        duration:1.5,
                         display:"none",
                         opacity:0
                     })
@@ -242,6 +251,7 @@ var Ampel = {
                         callback();
                     }
                 }
+                return;
             }
 
             iPercentage++;
@@ -271,6 +281,12 @@ $(document).ready(function () {
         $(".btn_top").on("click", Ampel.goTop);
         $(".btn_gnb").on("click",Ampel.gnbOpen);
         $(".btn_gnb_close").on("click", Ampel.gnbClose);
+
+        if ($(".btn_back").length) {
+            $(".btn_back").on("click", function(){
+                history.back();
+            });
+        }
     });
 });//@ready
 
