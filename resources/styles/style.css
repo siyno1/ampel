@@ -100,7 +100,7 @@
 .about-solution .horizontal {display:flex; justify-content: center;}
 .about-solution .list_mindset {display:flex; width:fit-content; box-sizing:border-box; gap:150px; flex-wrap: nowrap;}
 .about-solution .list_mindset li {box-sizing:border-box; text-align:center;}
-.about-solution .list_mindset li:first-child::after {content:''; display:block; position:absolute; left:-25vw; top:50%; right:calc(100% + 10px); height:89px; background:url(./../images/icon_slide_indicator.svg) no-repeat left center; background-size:contain; transform: translateY(-50%);}
+/* .about-solution .list_mindset li:first-child::after {content:''; display:block; position:absolute; left:-25vw; top:50%; right:calc(100% + 10px); height:89px; background:url(./../images/icon_slide_indicator.svg) no-repeat left center; background-size:contain; transform: translateY(-50%);} */
 .about-solution .list_mindset .title {display:block; font-family: 'Faktum Wide'; font-size:32px; font-weight:700; line-height: 100%; letter-spacing: -0.5px; text-transform:uppercase;}
 .about-solution .list_mindset .thumbnail {overflow:hidden; position:relative; width:fit-content; margin:78px auto 0;}
 .about-solution .list_mindset .thumbnail img {display:block;}
