@@ -291,3 +291,12 @@ $(document).ready(function () {
 });//@ready
 
 function pad(d) {return (d < 10) ? '0' + d.toString() : d.toString();}
+
+// IOS 뒤로가기 오류
+if (document.addEventListener) {
+	window.addEventListener('pageshow', function (event) {
+		if (event.persisted || window.performance && window.performance.navigation.type == 2) {
+			location.reload();
+		}
+	}, false);
+}
