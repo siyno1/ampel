@@ -387,7 +387,7 @@
 
 /* koreainvest_mob */
 #wrap.koreainvest_mob .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/koreainvest_mob/img_intro_mob.jpg);}
-#wrap.koreainvest_mob .work_title {padding:100px 0 0 0; text-align:center; color:#fff;}
+#wrap.koreainvest_mob .work_title {padding:100px 0 0 0; text-align:center; color:#fff;text-shadow: 3px 3px 6px rgb(0 0 0 / 25%);}
 #wrap.koreainvest_mob .work_koreainvest_mob_box {text-align:center;}
 #wrap.koreainvest_mob .work_koreainvest_mob_box img {max-width:100%;}
 #wrap.koreainvest_mob .work_koreainvest_mob_01 {overflow:hidden; position:relative;}
@@ -553,7 +553,7 @@
 
 /* incheon */
 #wrap.incheon .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/incheon/img_intro_mob.jpg);}
-#wrap.incheon .work_title {padding:270px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.incheon .work_title {padding:239px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
 #wrap.incheon .work_incheon_box {text-align:center;}
 #wrap.incheon .work_incheon_box img {max-width:100%;}
 #wrap.incheon .work_incheon_01 {overflow:hidden; position:relative;}
