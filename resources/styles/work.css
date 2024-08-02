@@ -391,23 +391,91 @@
 #wrap.koreainvest_mob .work_koreainvest_mob_box {text-align:center;}
 #wrap.koreainvest_mob .work_koreainvest_mob_box img {max-width:100%;}
 #wrap.koreainvest_mob .work_koreainvest_mob_01 {overflow:hidden; position:relative;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03{padding-top: 40px;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04{padding-top: 60px;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05{padding-top: 60px;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03 img {max-width: 100%;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04 img {max-width: 100%; margin-left: 0%;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05 img {max-width: 100%; margin: 0;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05{overflow: hidden;background-color: #F6F6F6;padding-bottom: 60px;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_09 > .wrapper > ul{display: flex; flex-flow: column; gap: 20px; padding: 0 20px 20px;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03 > picture > img,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04 > picture > img,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05 > picture > img{display: none;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03 > picture > .work_swiper_mob_wrap > img,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04 > picture > .work_swiper_mob_wrap > img,
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05 > picture > .work_swiper_mob_wrap > img{width: 43.3%;}
+
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_swiper_mob_wrap{display: inline-block;width: 100%;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_swiper_mob .swiper-slide > img{max-width: 100%;}
+#wrap.koreainvest_mob .work_koreainvest_mob_box .work_swiper_mob {padding: 20px;}
+.work_swiper_mob .swiper-wrapper{padding-bottom: 31px;}
+.work_swiper_mob .swiper-pagination-bullet{width: 10px; height: 10px; background-color: #fff;border: 1px solid #ccc;opacity: 1;}
+.work_swiper_mob .swiper-pagination-bullet-active{background-color: #999;border: 1px solid #999;}
+
 
 @media all and (min-width:769px) {
     #wrap.koreainvest_mob .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/koreainvest_mob/img_intro.jpg);}
     #wrap.koreainvest_mob .work_title {padding:0 140px; text-align:left;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_09 > .wrapper > ul{display: flex; flex-flow: row; gap: 40px; padding: 0 40px 40px;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_swiper_mob_wrap{display: none;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03{padding-top: 200px;max-width: 1920px;margin:0 auto;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04{padding-top: 290px;max-width: 1920px;margin:0 auto;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05{padding-top: 340px;max-width: 1920px;margin:0 auto;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03 img {max-width: 115%;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04 img {max-width: 109%; margin-left: -9%;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05 img {max-width: 115%; margin: 0 -7.5% -22%;}
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_03 > picture > img,
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_04 > picture > img,
+    #wrap.koreainvest_mob .work_koreainvest_mob_box .work_koreainvest_mob_05 > picture > img{display: inline-block;}
 }
 
 
 /* ibk_capital */
 #wrap.ibk_capital .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/ibk_capital/img_intro_mob.jpg);}
-#wrap.ibk_capital .work_title {padding:100px 0 0 20px;}
+#wrap.ibk_capital .work_title {padding:180px 0 0 20px;}
 #wrap.ibk_capital .work_ibk_capital_box {text-align:center;}
 #wrap.ibk_capital .work_ibk_capital_box img {max-width:100%;}
 #wrap.ibk_capital .work_ibk_capital_01 {overflow:hidden; position:relative;}
+#wrap.ibk_capital .work_ibk_capital_01 > .wrapper > ul{display: inline-block;}
+#wrap.ibk_capital .work_ibk_capital_02{padding: 60px 60px 0;}
+#wrap.ibk_capital .work_ibk_capital_03{padding: 0 60px 50px;}
+#wrap.ibk_capital .work_ibk_capital_05{padding-top: 50px;}
+#wrap.ibk_capital .work_ibk_capital_07{padding-bottom: 40px;}
+#wrap.ibk_capital .work_ibk_capital_08{padding:0 7px 60px;}
+#wrap.ibk_capital .work_ibk_capital_02,
+#wrap.ibk_capital .work_ibk_capital_03{background-color: #F6F9FC;}
+#wrap.ibk_capital .work_ibk_capital_05,
+#wrap.ibk_capital .work_ibk_capital_06,
+#wrap.ibk_capital .work_ibk_capital_07,
+#wrap.ibk_capital .work_ibk_capital_08{background-color: #014EBC;}
+#wrap.ibk_capital .work_ibk_capital_05 {overflow: hidden;}
+#wrap.ibk_capital .work_ibk_capital_05 > picture > img {margin-bottom: -2px;}
 
 @media all and (min-width:769px) {
     #wrap.ibk_capital .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_capital/img_intro.jpg);}
     #wrap.ibk_capital .work_title {padding:0 140px;}
+    #wrap.ibk_capital .work_ibk_capital_01 > .wrapper > ul{display: flex;}
+    #wrap.ibk_capital .work_ibk_capital_02{padding-top: 220px;}
+    #wrap.ibk_capital .work_ibk_capital_03{padding-bottom: 220px;}
+    #wrap.ibk_capital .work_ibk_capital_02,
+    #wrap.ibk_capital .work_ibk_capital_03{background-color: #F6F9FC;}
+    #wrap.ibk_capital .work_ibk_capital_05,
+    #wrap.ibk_capital .work_ibk_capital_06,
+    #wrap.ibk_capital .work_ibk_capital_07,
+    #wrap.ibk_capital .work_ibk_capital_08{background-color: #014EBC;}
+    #wrap.ibk_capital .work_ibk_capital_04 {overflow: hidden;}
+    #wrap.ibk_capital .work_ibk_capital_04 > picture > img {margin-bottom: -2px;}
+    #wrap.ibk_capital .work_ibk_capital_05{padding-top: 220px;}
+    #wrap.ibk_capital .work_ibk_capital_08{padding:0 15px 190px;}
+    #wrap.ibk_capital .work_ibk_capital_02,
+    #wrap.ibk_capital .work_ibk_capital_03,
+    #wrap.ibk_capital .work_ibk_capital_05,
+    #wrap.ibk_capital .work_ibk_capital_06,
+    #wrap.ibk_capital .work_ibk_capital_07,
+    #wrap.ibk_capital .work_ibk_capital_08{max-width: 1920px;margin:0 auto;box-sizing: border-box;}
 }
 
 
@@ -417,23 +485,40 @@
 #wrap.hanatour_channel .work_hanatour_channel_box {text-align:center;}
 #wrap.hanatour_channel .work_hanatour_channel_box img {max-width:100%;}
 #wrap.hanatour_channel .work_hanatour_channel_01 {overflow:hidden; position:relative;}
+#wrap.hanatour_channel .work_hanatour_channel_01 > .wrapper > ul{display: inline-block;}
+#wrap.hanatour_channel .work_hanatour_channel_03{background-color: #D5EAFC; padding-bottom: 40px;}
+#wrap.hanatour_channel .work_hanatour_channel_05{background-color: #5E2BB8; padding-top: 40px;}
 
 @media all and (min-width:769px) {
     #wrap.hanatour_channel .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/hanatour_channel/img_intro.jpg);}
     #wrap.hanatour_channel .work_title {padding:0 140px;}
+    #wrap.hanatour_channel .work_hanatour_channel_01 > .wrapper > ul{display: flex;}
+    #wrap.hanatour_channel .work_hanatour_channel_03{background-color: #D5EAFC; padding-bottom: 200px; max-width: 1920px; margin: 0 auto;}
+    #wrap.hanatour_channel .work_hanatour_channel_05{background-color: #5E2BB8; padding-top: 200px; max-width: 1920px; margin: 0 auto;}
 }
+
 
 
 /* ibk_bf */
 #wrap.ibk_bf .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/ibk_bf/img_intro_mob.jpg);}
-#wrap.ibk_bf .work_title {padding:100px 0 0 20px;}
+#wrap.ibk_bf .work_title {padding:100px 0 0 20px; color:#fff;}
 #wrap.ibk_bf .work_ibk_bf_box {text-align:center;}
 #wrap.ibk_bf .work_ibk_bf_box img {max-width:100%;}
 #wrap.ibk_bf .work_ibk_bf_01 {overflow:hidden; position:relative;}
+#wrap.ibk_bf .work_ibk_bf_01 > .wrapper > ul{display: inline-block;}
+#wrap.ibk_bf .work_ibk_bf_02{background-color: #F5F5F5; padding: 60px 30px 0;}
+#wrap.ibk_bf .work_ibk_bf_03{background-color: #1A90D1; padding: 30px 40px;}
+#wrap.ibk_bf .work_ibk_bf_04{overflow: hidden;}
+#wrap.ibk_bf .work_ibk_bf_04 > picture > img{margin-top: -5px; margin-bottom: -1px;}
 
 @media all and (min-width:769px) {
     #wrap.ibk_bf .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_bf/img_intro.jpg);}
     #wrap.ibk_bf .work_title {padding:0 140px;}
+    #wrap.ibk_bf .work_ibk_bf_01 > .wrapper > ul{display: flex;}
+    #wrap.ibk_bf .work_ibk_bf_02{background-color: #F5F5F5; padding-top: 260px; max-width: 1920px; margin:0 auto;}
+    #wrap.ibk_bf .work_ibk_bf_03{background-color: #1A90D1; padding: 220px 0; max-width: 1920px; margin:0 auto;}
+    #wrap.ibk_bf .work_ibk_bf_04{overflow: hidden;}
+    #wrap.ibk_bf .work_ibk_bf_04 > picture > img{margin-top: -22px; margin-bottom: -1px;}
 }
 
 
@@ -451,12 +536,47 @@
 
 /* lina_chubb */
 #wrap.lina_chubb .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/lina_chubb/img_intro_mob.jpg);}
-#wrap.lina_chubb .work_title {padding:100px 0 0 20px;}
+#wrap.lina_chubb .work_title {padding:100px 0 0 20px; color:#fff;}
 #wrap.lina_chubb .work_lina_chubb_box {text-align:center;}
 #wrap.lina_chubb .work_lina_chubb_box img {max-width:100%;}
-#wrap.lina_chubb .work_lina_chubb_01 {overflow:hidden; position:relative;}
+#wrap.lina_chubb .work_lina_chubb_01 {overflow:hidden; position:relative; background-color: #222; max-width: 1920px; margin:0 auto;}
+#wrap.lina_chubb .work_lina_chubb_02 {background-color: #222; max-width: 1920px; margin:0 auto;}
+#wrap.lina_chubb .work_lina_chubb_03 {background-color: #000; padding: 7px 4px; max-width: 1920px; margin:0 auto; box-sizing: border-box;}
+#wrap.lina_chubb .work_lina_chubb_05 {background-color: #D9D3CC; padding: 0 0 0 0; max-width: 1920px; margin:0 auto;}
 
 @media all and (min-width:769px) {
     #wrap.lina_chubb .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/lina_chubb/img_intro.jpg);}
     #wrap.lina_chubb .work_title {padding:0 140px;}
+    #wrap.lina_chubb .work_lina_chubb_03{padding: 40px 20px;}
+    #wrap.lina_chubb .work_lina_chubb_05 {padding: 0 0 260px 0;}
+}
+
+/* incheon */
+#wrap.incheon .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/incheon/img_intro_mob.jpg);}
+#wrap.incheon .work_title {padding:270px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.incheon .work_incheon_box {text-align:center;}
+#wrap.incheon .work_incheon_box img {max-width:100%;}
+#wrap.incheon .work_incheon_01 {overflow:hidden; position:relative;}
+#wrap.incheon .work_incheon_01 > .wrapper > ul{display: inline-block;}
+#wrap.incheon .work_incheon_02 {margin-top: 80px; padding: 0 20px;}
+#wrap.incheon .work_incheon_03 {margin-top: 80px; padding: 0 20px;}
+#wrap.incheon .work_incheon_04 {margin-top: 80px;}
+#wrap.incheon .work_incheon_06 {margin: 80px auto 0; padding: 0 30px;}
+#wrap.incheon .work_incheon_07 {margin: 80px auto 0; padding: 0 30px;}
+#wrap.incheon .work_incheon_08 {margin: 80px auto 0; padding: 0 30px;}
+#wrap.incheon .work_incheon_09 {margin: 80px auto 0;}
+
+
+@media all and (min-width:769px) {
+    #wrap.incheon .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/incheon/img_intro.jpg);}
+    #wrap.incheon .work_title {padding:0 140px; letter-spacing: 40px; line-height: 120px; font-size: 100px;}
+    #wrap.incheon .work_incheon_01 > .wrapper > ul{display: flex;}
+    #wrap.incheon .work_incheon_02 {margin-top: 200px;}
+    #wrap.incheon .work_incheon_03 {margin-top: 100px;}
+    #wrap.incheon .work_incheon_04 {margin-top: 200px;}
+    #wrap.incheon .work_incheon_06 {max-width: 1920px; margin: 250px auto 0; overflow: hidden;}
+    #wrap.incheon .work_incheon_08 {max-width: 1920px; margin: 220px auto 0; overflow: hidden;}
+    #wrap.incheon .work_incheon_09 {margin-top: 220px;}
+    #wrap.incheon .work_incheon_06 > picture > img {margin-right: -138px;}
+    #wrap.incheon .work_incheon_08 > picture > img {margin-left: -127px;}
 }
