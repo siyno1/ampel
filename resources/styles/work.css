@@ -650,3 +650,46 @@
     #wrap.ezbaro .work_ezbaro_03 {margin:262px auto 0; background-color: #E2E1E7;}
     #wrap.ezbaro .work_ezbaro_04 {padding: 260px 213px;}
 }
+
+
+
+/* koreaexim */
+#wrap.koreaexim .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/koreaexim/img_intro_mob.jpg);}
+#wrap.koreaexim .work_title {padding:200px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.koreaexim .work_title > br {display: none;}
+#wrap.koreaexim .work_koreaexim_box {text-align:center;}
+#wrap.koreaexim .work_koreaexim_box img {max-width:100%;}
+#wrap.koreaexim .work_koreaexim_02 {padding: 76px 30px 0;}
+#wrap.koreaexim .work_koreaexim_03 {padding: 76px 0 0;}
+#wrap.koreaexim .work_koreaexim_04 {padding: 58px 30px 40px;}
+
+
+
+@media all and (min-width:769px) {
+    #wrap.koreaexim .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/koreaexim/img_intro.jpg);}
+    #wrap.koreaexim .work_title {padding:0 140px; letter-spacing: 8px; line-height: 120px; font-size: 100px;}
+    #wrap.koreaexim .work_title > br {display: inline-block;}
+    #wrap.koreaexim .work_koreaexim_box {text-align:center;}
+    #wrap.koreaexim .work_koreaexim_02 {padding: 195px 0 0;}
+    #wrap.koreaexim .work_koreaexim_03 {padding: 178px 0 0;}
+    #wrap.koreaexim .work_koreaexim_04 {padding: 233px 215px 200px;}
+}
+
+
+
+/* supreme court */
+#wrap.supreme_court .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/supreme_court/img_intro_mob.jpg);}
+#wrap.supreme_court .work_title {padding:108px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;word-break: break-all;}
+#wrap.supreme_court .work_title .mo_br {display: inline-block;}
+#wrap.supreme_court .work_supreme_court_box {text-align:center;}
+#wrap.supreme_court .work_supreme_court_box img {max-width:100%;}
+#wrap.supreme_court .work_supreme_court_03 {padding: 54px 20px; background-color: #DEEDFD; max-width: 1920px; margin:0 auto; box-sizing: border-box;}
+
+
+@media all and (min-width:769px) {
+    #wrap.supreme_court .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/supreme_court/img_intro.jpg);}
+    #wrap.supreme_court .work_title {padding:0 140px; letter-spacing: 8px; line-height: 120px; font-size: 100px;}
+    #wrap.supreme_court .work_title .mo_br {display: none;}
+    #wrap.supreme_court .work_supreme_court_box {text-align:center;}
+    #wrap.supreme_court .work_supreme_court_03 {padding: 217px 227px 206px; background-color: #DEEDFD;}
+}
