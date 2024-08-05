@@ -580,3 +580,73 @@
     #wrap.incheon .work_incheon_06 > picture > img {margin-right: -138px;}
     #wrap.incheon .work_incheon_08 > picture > img {margin-left: -127px;}
 }
+
+
+
+/* ibk system */
+#wrap.ibk_system .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/ibk_system/img_intro_mob.jpg);}
+#wrap.ibk_system .work_title {padding:239px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.ibk_system .work_ibk_system_box {text-align:center;background-image:url(./../../resources/images/work/ibk_system/img_01_bg.jpg); background-size: contain;background-size: 147%;background-position-x: center;}
+#wrap.ibk_system .work_ibk_system_box img {max-width:100%;}
+#wrap.ibk_system .work_ibk_system_01 {padding: 80px 38px 0;}
+#wrap.ibk_system .work_ibk_system_02 {padding: 37px 0 0 38px;}
+#wrap.ibk_system .work_ibk_system_03 {padding: 30px 38px 0;}
+#wrap.ibk_system .work_ibk_system_04 {padding: 30px 23px 80px 17px;}
+#wrap.ibk_system .work_ibk_system_06 {background-color: #fff; padding: 55px 0 0 0;}
+
+
+@media all and (min-width:769px) {
+    #wrap.ibk_system .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ibk_system/img_intro.jpg);}
+    #wrap.ibk_system .work_title {padding:0 140px; letter-spacing: 40px; line-height: 120px; font-size: 100px;}
+    #wrap.ibk_system .work_ibk_system_box {text-align:center;background-image:url(./../../resources/images/work/ibk_system/img_01_bg.jpg); background-size: contain;}
+    #wrap.ibk_system .work_ibk_system_01 {padding: 167px 310px 0;}
+    #wrap.ibk_system .work_ibk_system_02 {padding: 260px 0 0 100px;}
+    #wrap.ibk_system .work_ibk_system_03 {padding: 110px 103px 0 510px;}
+    #wrap.ibk_system .work_ibk_system_04 {padding: 150px 178px 300px 100px;}
+    #wrap.ibk_system .work_ibk_system_06 {background-color: #fff; padding: 180px 178px 0 100px;}
+}
+
+
+
+/* woori card */
+#wrap.woori_card .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/woori_card/img_intro_mob.jpg);}
+#wrap.woori_card .work_title {padding:239px 0 0 20px; color: #fff; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.woori_card .work_woori_card_box {text-align:center;}
+#wrap.woori_card .work_woori_card_box img {max-width:100%;}
+#wrap.woori_card .work_woori_card_01 {padding: 15px 0 47px;background-image:url(./../../resources/images/work/woori_card/img_01_bg.jpg); background-size: 100%;}
+#wrap.woori_card .work_woori_card_02 {padding: 80px 40px 0;}
+#wrap.woori_card .work_woori_card_03 {padding: 80px 20px;}
+#wrap.woori_card .work_woori_card_04 {padding: 58px 0 34px 34px; background-color: #FAFAFA;max-width: 1920px; margin:0 auto;}
+
+
+@media all and (min-width:769px) {
+    #wrap.woori_card .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/woori_card/img_intro.jpg);}
+    #wrap.woori_card .work_title {padding:0 140px; letter-spacing: 40px; line-height: 120px; font-size: 100px;}
+    #wrap.woori_card .work_woori_card_box {text-align:center;}
+    #wrap.woori_card .work_woori_card_01 {padding: 85px 0 252px;background-image:url(./../../resources/images/work/woori_card/img_01_bg.jpg);}
+    #wrap.woori_card .work_woori_card_02 {padding: 200px 210px 0;}
+    #wrap.woori_card .work_woori_card_03 {padding: 200px 210px 200px;}
+    #wrap.woori_card .work_woori_card_04 {padding: 250px 0 194px; background-color: #FAFAFA;}
+}
+
+
+
+/* ezbaro */
+#wrap.ezbaro .work_intro_bg {align-items: flex-start; background-image:url(./../../resources/images/work/ezbaro/img_intro_mob.jpg);}
+#wrap.ezbaro .work_title {padding:239px 0 0 20px; color: #000; letter-spacing: 2px; line-height: 66px; font-size: 48px;}
+#wrap.ezbaro .work_ezbaro_box {text-align:center;}
+#wrap.ezbaro .work_ezbaro_box img {max-width:100%;}
+#wrap.ezbaro .work_ezbaro_02 {padding: 82px 37px 0;}
+#wrap.ezbaro .work_ezbaro_03 {background-color: #E2E1E7; max-width: 1920px; margin:83px auto 0;}
+#wrap.ezbaro .work_ezbaro_04 {padding: 80px 57px;}
+
+
+
+@media all and (min-width:769px) {
+    #wrap.ezbaro .work_intro_bg {align-items:center; background-image:url(./../../resources/images/work/ezbaro/img_intro.jpg);}
+    #wrap.ezbaro .work_title {padding:0 140px; letter-spacing: 10px; line-height: 120px; font-size: 100px;}
+    #wrap.ezbaro .work_ezbaro_box {text-align:center;}
+    #wrap.ezbaro .work_ezbaro_02 {padding: 251px 210px 0;}
+    #wrap.ezbaro .work_ezbaro_03 {margin:262px auto 0; background-color: #E2E1E7;}
+    #wrap.ezbaro .work_ezbaro_04 {padding: 260px 213px;}
+}
